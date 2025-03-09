@@ -1,0 +1,5 @@
+export let LASTFM_API_KEY = "202d561e5fdd095326f43d95d47dd233"
+export let LASTFM_USERNAME = "jbcarreon123"
+export let API_URL = "https://jb.is-a.dev/api"
+export let BLOG_URL = "https://jb.is-a.dev/blogs"
+export let GUESTBOOK_URL = "https://jbcarreon123.atabook.org/"

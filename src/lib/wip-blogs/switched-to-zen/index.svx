@@ -1,0 +1,64 @@
+---
+title: I switched from Firefox to Zen.
+published: 03/06/2025 12:30
+description: Mozilla changed their Terms of Use that pissed everyone, including me. So I switched!
+tags: firefox, zen, browsers
+---
+
+So, I have used Firefox for like 3 or 4 years now and this is the time where I switch to another browser.
+
+# Why?
+If you haven't seen already (or if you are living in a rock, looking at nature), Mozilla changed their
+Terms of Use on the Firefox browser.
+
+## What is it?
+Mozilla deleted the clause where they say that ``they don't sell your personal data''.
+
+In the FAQ, back then it has this:
+
+> <p class="text-xs"><a href="https://web.archive.org/web/20250130092351/https://www.mozilla.org/en-US/firefox/faq/#expand">from Internet Archive</a></p>
+> 
+> # Does Firefox sell your personal data?
+>
+> Nope. Never have, never will. And we protect you from many of the advertisers who do. Firefox products are designed to protect your privacy. That’s a promise.
+
+Now, it's gone.
+
+Also, 2 questions got changed from:
+
+> <p class="text-xs"><a href="https://web.archive.org/web/20250130092351/https://www.mozilla.org/en-US/firefox/faq/#expand">from Internet Archive</a></p>
+> 
+> # What is Firefox?
+> 
+> The Firefox Browser is the only major browser backed by a not-for-profit that doesn’t sell your personal data to advertisers while helping you protect your personal information. 
+> 
+> # Is Firefox free?
+>
+> Yep! The Firefox Browser is free. Super free, actually. No hidden costs or anything. You don’t pay anything to use it, and we don’t sell your personal data.
+
+to
+
+> # What is Firefox?
+>
+> The Firefox Browser, the only major browser backed by a not-for-profit, helps you protect your personal information. 
+>
+> # Is Firefox free?
+> 
+> Yep! The Firefox Browser is free. Super free, actually. No hidden costs or anything. You don’t pay anything to use it.
+
+Notice how ``we're not selling data'' is gone.
+
+# So, I switched.
+There are multiple browsers I could switch, here's some of them:
+
+> - Floorp
+> - Zen Browser
+> - LibreWolf
+> - Waterfox
+> - Tor
+> - Mullvad Browser (Tor browser without the onion functionality)
+
+Because I use Firefox, I'm pointing towards Firefox forks instead of Chromium-based ones, because I want
+my browsing data and stuff to be easily migrated toward each forks. I chose Zen Browser on it.
+
+# Updating this

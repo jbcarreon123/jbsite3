@@ -1,0 +1,325 @@
+@import 'tailwindcss';
+@config "../tailwind.config.js";
+@plugin "@catppuccin/tailwindcss"; 
+
+@theme inline {
+    --color-ctp-rosewater: rgba(var(--ctp-rosewater));
+    --color-ctp-flamingo: rgba(var(--ctp-flamingo));
+    --color-ctp-pink: rgba(var(--ctp-pink));
+    --color-ctp-mauve: rgba(var(--ctp-mauve));
+    --color-ctp-red: rgba(var(--ctp-red));
+    --color-ctp-maroon: rgba(var(--ctp-maroon));
+    --color-ctp-peach: rgba(var(--ctp-peach));
+    --color-ctp-yellow: rgba(var(--ctp-yellow));
+    --color-ctp-green: rgba(var(--ctp-green));
+    --color-ctp-teal: rgba(var(--ctp-teal));
+    --color-ctp-sky: rgba(var(--ctp-sky));
+    --color-ctp-sapphire: rgba(var(--ctp-sapphire));
+    --color-ctp-blue: rgba(var(--ctp-blue));
+    --color-ctp-lavender: rgba(var(--ctp-lavender));
+    --color-ctp-text: rgba(var(--ctp-text));
+    --color-ctp-subtext1: rgba(var(--ctp-subtext1));
+    --color-ctp-subtext0: rgba(var(--ctp-subtext0));
+    --color-ctp-overlay2: rgba(var(--ctp-overlay2));
+    --color-ctp-overlay1: rgba(var(--ctp-overlay1));
+    --color-ctp-overlay0: rgba(var(--ctp-overlay0));
+    --color-ctp-surface2: rgba(var(--ctp-surface2));
+    --color-ctp-surface1: rgba(var(--ctp-surface1));
+    --color-ctp-surface0: rgba(var(--ctp-surface0));
+    --color-ctp-base: rgba(var(--ctp-base));
+    --color-ctp-mantle: rgba(var(--ctp-mantle));
+    --color-ctp-crust: rgba(var(--ctp-crust));
+}
+
+.gruvbox-dark {
+    --ctp-red: 204, 36, 29;
+    --ctp-green: 152, 151, 26;
+    --ctp-yellow: 215, 153, 33;
+    --ctp-blue: 69, 133, 136;
+    --ctp-sapphire: 131, 165, 152;
+    --ctp-sky: 104, 157, 106;
+    --ctp-text: 235, 219, 178;
+    --ctp-subtext0: 168, 153, 132;
+    --ctp-overlay0: 60, 56, 54;
+    --ctp-mantle: 29, 32, 33;
+    --ctp-surface0: 80, 73, 69;
+    --ctp-base: 50, 48, 47;
+}
+
+.gruvbox-light {
+    --ctp-red: 204, 36, 29;
+    --ctp-green: 152, 151, 26;
+    --ctp-yellow: 215, 153, 33;
+    --ctp-blue: 69, 133, 136;
+    --ctp-sapphire: 7, 102, 120;
+    --ctp-sky: 104, 157, 106;
+    --ctp-text: 60, 56, 54;
+    --ctp-subtext0: 124, 111, 100;
+    --ctp-overlay0: 235, 219, 178;
+    --ctp-mantle: 249, 245, 215;
+    --ctp-surface0: 213, 196, 161;
+    --ctp-base: 242, 229, 188;
+}
+
+.high-contrast-light {
+    --ctp-red: 255, 0, 0;
+    --ctp-green: 0, 255, 0;
+    --ctp-yellow: 204, 204, 0; 
+    --ctp-blue: 0, 0, 255;
+    --ctp-sapphire: 0, 102, 204; 
+    --ctp-sky: 0, 153, 255; 
+    --ctp-text: 0, 0, 0;
+    --ctp-subtext0: 51, 51, 51; 
+    --ctp-overlay0: 240, 230, 200; 
+    --ctp-mantle: 255, 255, 255;
+    --ctp-surface0: 220, 220, 220; 
+    --ctp-base: 245, 245, 245; 
+}
+
+.high-contrast-dark {
+    --ctp-red: 255, 64, 64; 
+    --ctp-green: 102, 255, 102; 
+    --ctp-yellow: 255, 255, 102; 
+    --ctp-blue: 102, 178, 255; 
+    --ctp-sapphire: 51, 153, 255; 
+    --ctp-sky: 51, 204, 255; 
+    --ctp-text: 255, 255, 255;
+    --ctp-subtext0: 204, 204, 204; 
+    --ctp-overlay0: 48, 48, 48; 
+    --ctp-mantle: 0, 0, 0;
+    --ctp-surface0: 24, 24, 24; 
+    --ctp-base: 8, 8, 8; 
+}
+
+
+@font-face {
+    font-family: "Darumadrop One";
+    src: url('/fonts/DarumadropOne-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url('/fonts/Inter-Variable.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Commit Mono";
+    src: url('/fonts/CommitMono-Variable.ttf');
+    font-feature-settings: 'ss03' on, 'ss04' on, 'ss05' on, 'cv02' on, 'cv04' on, 'cv06' on;
+}
+
+#hoverSpan {
+    white-space: pre;
+    line-height: 1.1em;
+    z-index: 100;
+    padding: 3px;
+    transition: none !important;
+    max-width: 365px;
+    text-wrap: wrap;
+    pointer-events: none;
+    font-size: 14px;
+    background-color: rgba(var(--ctp-mantle), 0.85);
+    border: 1px solid rgba(var(--ctp-overlay0));
+    text-align: left;
+    width: fit-content;
+    height: fit-content;
+}
+
+.shiki {
+    background: none !important;
+    padding: 12px;
+    border: 1px solid rgb(var(--ctp-sapphire));
+    overflow: scroll;
+    margin: 6px 0px;
+    max-height: 50vh;
+}
+
+select, .border {
+    padding: 5px;
+    border: 1px solid rgb(var(--ctp-sapphire))
+}
+
+select:hover, .border:hover {
+    border: 1px solid rgb(var(--ctp-sky))
+}
+
+.bhv {
+    border-color: rgb(var(--ctp-sapphire));
+}
+
+.bhv:hover {
+    border-color: rgb(var(--ctp-sky));
+}
+
+.latte .shiki,
+.latte .shiki span {
+  color: var(--shiki-latte) !important;
+}
+
+.macchiato .shiki,
+.macchiato .shiki span {
+  color: var(--shiki-macchiato) !important;
+}
+
+.frappe .shiki,
+.frappe .shiki span {
+  color: var(--shiki-frappe) !important;
+}
+
+.gruvbox-dark .shiki,
+.gruvbox-dark .shiki span {
+  color: var(--shiki-gruvboxdark) !important;
+}
+
+.gruvbox-light .shiki,
+.gruvbox-light .shiki span {
+  color: var(--shiki-gruvboxlight) !important;
+}
+
+.high-contrast-dark .shiki,
+.high-contrast-dark .shiki span {
+  color: var(--shiki-highcontrastdark) !important;
+}
+
+.high-contrast-light .shiki,
+.high-contrast-light .shiki span {
+  color: var(--shiki-highcontrastlight) !important;
+}
+
+select {
+    @apply bg-ctp-base text-ctp-text
+}
+
+.skip-link {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 69420;
+    padding: 6px;
+    border: 1px solid rgba(var(--ctp-overlay0));
+}
+
+#statuscafe-username {
+    font-size: 12px;
+}
+
+#statuscafe #statuscafe-username a {
+    visibility: collapse;
+    width: 0 !important;
+    display: inline-block;
+}
+
+#statuscafe #statuscafe-username a::before {
+    visibility: visible;
+    font-family: "Commit Mono", monospace;
+    font-weight: 600;
+    font-style: normal;
+    content: "jb's status\a";
+    white-space: pre;
+    @apply text-2xl text-ctp-sapphire hover:text-ctp-blue;
+}
+
+.headerfont {
+    font-family: 'Darumadrop One', serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Commit Mono", monospace;
+    font-weight: 600;
+    font-style: normal;
+    padding-top: 8px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.inter {
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    font-family: "Commit Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+h1:not(.nf) {
+    @apply text-xl md:text-2xl;
+}
+
+h2:not(.nf) {
+    @apply text-lg md:text-xl;
+}
+
+h2:not(.nf):not(.nm), h3:not(.nf):not(:nm) {
+    margin-bottom: 8px;
+}
+
+h3:not(.nf) {
+    @apply text-sm md:text-lg;
+}
+
+pre {
+    max-width: fit-content;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+h4:not(.nf) {
+    @apply text-lg;
+    margin-bottom: 8px;
+}
+
+.code, code {
+    font-family: "Commit Mono", monospace;
+    padding: 2px;
+    border: 1px solid rgba(var(--ctp-overlay0));
+    @apply w-full
+}
+
+pre.shiki code {
+    border: none;
+}
+
+iframe {
+    transition: max-height 0.25s ease-in-out;
+}
+
+.headercolor, h1, h2, h3, h4, h5, h6  {
+    @apply text-ctp-blue
+}
+
+
+a:not(.nocol) {
+    @apply text-ctp-sapphire;
+}
+
+a:hover {
+    @apply text-ctp-sky;
+}
+
+.abd {
+    @apply border-neutral-500 
+}
+
+.abd:hover {
+    @apply border-neutral-800 
+}
+
+*:not(.oneko) {
+    @apply transition-all motion-reduce:transition-none
+}

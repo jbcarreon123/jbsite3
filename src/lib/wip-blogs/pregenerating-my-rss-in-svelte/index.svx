@@ -1,0 +1,159 @@
+---
+title: Prerendering an RSS feed in Svelte
+published: 03/07/2025 09:02
+color: 5555ff
+description: How does jb generate his site's RSS file?
+tags: rss, ssg, svelte, prerender
+---
+
+> This is what I call a "pseudo-post". Pseudo-posts are random ramblings and stuff JB makes if he doesn't have any posts to make or it's still ongoing longer than expected.
+
+> 🗒️ This devlog is intended for people who uses a SSG framework like Svelte.
+>
+> If you're on Nekoweb, and doesn't use a framework, but just want to implement RSS feeds on your site, see [joosh's tutorial about RSS feeds in Nekoweb](https://joosh.help/rss).
+
+So, RSS files. Love it or hate it, it's a way people use to read out posts, and it's tedious to make manually.
+
+In this devlog, I'm showing you my way of automatically generating the posts RSS file in my website.
+
+# Why tho?
+Even if you don't use it, someone uses RSS feeds to get notified and read posts.
+
+And also, Nekoweb has a feature called "Feeds" where you can see latest updates and posts for your followed peeps, and you can get into the global feed if you have enough followers. *How many is enough? I don't know.*
+
+![One of my posts in Nekoweb's feeds page, about annoying scripts](/imgs/blogs/pregenerating-my-rss-in-svelte/img.png)
+
+# My post workflow
+But first, let's see my workflow as this would affect your implementation of autogenerating rss feeds.
+
+I do my posts in a directory called `/blogs` in the `$lib` directory. Each posts has a unique directory to them (like this post has the `pregenerating-my-rss-in-svelte` directory). The directory name of the posts is also used as their URL (like this post uses [/blogs/pregenerating-my-rss-in-svelte](/blogs/pregenerating-my-rss-in-svelte)).
+
+Each posts are written in a Markdown-Svelte hybrid file `index.svx` and I use pretty much Markdown with a little HTML markup and sometimes, a svelte component.
+
+# Creating the file generator
+So, to generate the RSS file, we need to create the generator script for it. This lets it create the file on site build.
+
+Create a `rss.xml` directory on `src/routes` with a `+server.ts` file on the inside. This tells Svelte if the user goes to `rss.xml`, execute `+server.ts`
+
+Now, let's put something on the server file. Add this first on the file's first line before we start and save it.
+
+```ts
+export const prerender = true;
+```
+
+This will tell Svelte to execute the file on build and pregenerate the `rss.xml` file. Without this, your build process will fail and `adapter-static` (or adjacent adapters) will complain.
+
+## Mostly, you can just borrow code on your article list page.
+This is my `+page.server.ts` file for listing my posts:
+```ts
+import { json } from '@sveltejs/kit'
+import { getPosts } from '$lib/blogs/get-blogs'
+
+export async function load({ fetch, params }) {
+    let articles = await Promise.all(
+        getPosts().map(async (articleName) => {
+            const post = await import(`$lib/blogs/${articleName}/index.svx`);
+            const metadata = post.metadata;
+            const tagSplit = String(metadata.tags).split(', ')
+            const articleUrl = `/blogs/${articleName}`
+            const articleSlug = articleName
+
+            return {
+                metadata,
+                tagSplit,
+                articleUrl,
+                articleSlug
+            };
+        })
+    )
+
+    return { articles }
+}
+```
+
+Let's do some modifications on this file to meet the requirements for the server file.
+
+Firstly, change `load()` to `export const GET`:
+```ts
+import { json } from '@sveltejs/kit'
+import { getPosts } from '$lib/blogs/get-blogs'
+
+export async function load({ fetch, params }) { // [!code --]
+export const GET: RequestHandler = async () => { // [!code ++]
+    let articles = await Promise.all(
+        getPosts().map(async (articleName) => {
+            const post = await import(`$lib/blogs/${articleName}/index.svx`);
+            const metadata = post.metadata;
+            const tagSplit = String(metadata.tags).split(', ')
+            const articleUrl = `/blogs/${articleName}`
+            const articleSlug = articleName
+
+            return {
+                metadata,
+                tagSplit,
+                articleUrl,
+                articleSlug
+            };
+        })
+    )
+
+    return { articles }
+}
+```
+
+## RSS syntax
+So, here's a basic RSS syntax:
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>jb's posts</title>
+        <description>jb's personal rambling about stuff</description>
+        <link>https://jbcarreon123.nekoweb.org/</link>
+		
+        <item>
+            <title>post 1</title>
+            <description>Description of post 1</description>
+            <link>ttps://jbcarreon123.nekoweb.org/blogs/post-1</link>
+            <guid>post-1</guid>
+            <pubDate>Wed 5 Mar 2024, 06:38:00 +0800</pubDate>
+        </item>
+    </channel>
+</rss>
+```
+
+We're gonna put it on our server file:
+```ts
+    // ...
+            // [!code ++:16]
+            const rss = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>jb's posts</title>
+        <description>jb's personal rambling about stuff</description>
+        <link>https://jbcarreon123.nekoweb.org/</link>
+		
+        <item>
+            <title>post 1</title>
+            <description>Description of post 1</description>
+            <link>ttps://jbcarreon123.nekoweb.org/blogs/post-1</link>
+            <guid>post-1</guid>
+            <pubDate>Wed 5 Mar 2024, 06:38:00 +0800</pubDate>
+        </item>
+    </channel>
+</rss>`
+
+            return {
+                metadata,
+                tagSplit,
+                articleUrl,
+                articleSlug,
+                rss // [!code ++]
+            };
+        })
+    )
+
+    // ...
+```
+
+Now, we modify it for our needs, as because that will just put the strings there.

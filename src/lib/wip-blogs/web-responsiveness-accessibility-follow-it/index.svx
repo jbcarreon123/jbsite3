@@ -1,0 +1,8 @@
+---
+title: Web responsiveness and why you should follow it on your site
+published: 03/06/2025 12:30
+description: Most people browse the Internet on their phones, and you should make your site accommodate that!
+tags: indie-web, responsive-web
+---
+
+So, 

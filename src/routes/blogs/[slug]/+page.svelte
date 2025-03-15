@@ -114,10 +114,14 @@
 </div>
 
 <style lang="postcss">
-	* :global {
-		.content p {
+	.content :global {
+		p {
 			padding: 6px 0px;
 		}
+	}
+
+	* :global {
+		
 
 		h1,
 		h2,

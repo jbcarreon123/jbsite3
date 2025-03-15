@@ -297,7 +297,7 @@
 			src="https://rubybulbs.nekoweb.org/img/newbutt.png"
 			width="88px"
 			height="31px"
-			title="eyeorb.net"
+			title="rubybulbs.net"
 			alt=""
 			loading="lazy"
 		/></a
@@ -329,6 +329,36 @@
 			loading="lazy"
 		/></a
 	>
+	<a href="https://ivrry.nekoweb.org/" target="_blank"
+		><img
+			src="https://ivrry.nekoweb.org/assets/images/button.png"
+			title="ivrry"
+			alt=""
+			loading="lazy"
+		/></a
+	>
+	<a href="https://raccoonbutt.com/" target="_blank"
+		><img
+			src="https://raccoonbutt.com/static/images/button.gif"
+			title="raccoonbutt.com"
+			alt=""
+			loading="lazy"
+		/></a
+	>
+	<a href="https://olivia.nekoweb.org/" target="_blank"
+		><img
+			src="https://olivia.nekoweb.org/images/badge.png"
+			title="Liv site"
+			alt=""
+			loading="lazy"
+		/></a
+	>
+	<a href="https://nandraid.moe" target="_blank"
+		><img src="/imgs/buttons/nandraid.gif" title="Randopaizer/Nandraid" alt="" loading="lazy" /></a
+	>
+	<a target="_blank" class="w-fit shrink-0" href="https://kalechips.net/responsive/index">
+		<img src="/imgs/buttons/responsive-web-directory.png" alt="Responsive Web Directory" title="Responsive Web Directory" />
+	</a>
 </div>
 
 <style>
@@ -346,6 +376,7 @@
 
 	.btn-container:has(img:hover) img:not(:hover) {
 		z-index: 1;
-		filter: brightness(0.25) blur(2px);
+		opacity: 0.5;
+		filter: blur(2px);
 	}
 </style>

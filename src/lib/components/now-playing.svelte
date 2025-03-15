@@ -98,60 +98,60 @@
 	$: nowPlaying = $nowPlayingStore;
 </script>
 
-<div use:autoAnimate>
-	{#if nowPlaying}
-    {#key nowPlaying.isPlaying}
-		<h1 in:fade id="np-status" class=" headercolor pb-2 text-2xl">
-			{#if nowPlaying.isPlaying}
-				Currently playing
-			{:else}
-				Last played
-			{/if}
-		</h1>
-    {/key}
-		<div class="flex items-center justify-center">
-			<div class="flex-1/4 p-1">
-        {#key nowPlaying.image}
-				{#if nowPlaying.image && nowPlaying.image[2] && nowPlaying.image[2]['#text']}
-					<img
-						src={nowPlaying.image[2]['#text']}
-						class="aspect-square "
-						alt='{nowPlaying.artist['#text']}: {nowPlaying.name}'
-						width="auto"
-						height="auto"
-						loading="lazy"
-            			in:fade out:fade
-					/>
+	<div use:autoAnimate>
+		{#if nowPlaying}
+		{#key nowPlaying.isPlaying}
+			<h1 in:fade id="np-status" class=" headercolor pb-2">
+				{#if nowPlaying.isPlaying}
+					Currently playing
+				{:else}
+					Last played
 				{/if}
-        {/key}
+			</h1>
+		{/key}
+			<div class="flex items-center justify-center">
+				<div class="flex-1/4 p-1">
+			{#key nowPlaying.image}
+					{#if nowPlaying.image && nowPlaying.image[2] && nowPlaying.image[2]['#text']}
+						<img
+							src={nowPlaying.image[2]['#text']}
+							class="aspect-square "
+							alt='{nowPlaying.artist['#text']}: {nowPlaying.name}'
+							width="auto"
+							height="auto"
+							loading="lazy"
+							in:fade out:fade
+						/>
+					{/if}
+			{/key}
+				</div>
+				<div class="flex-3/4 p-1">
+			{#key nowPlaying.name}
+					<a
+						class="nocol text-ellipsis"
+						href={nowPlaying.url}
+						id="np-title"
+						target="_blank" rel="noopener" in:fade out:fade
+						aria-labelledby="np-status np-title"
+						aria-describedby="np-artist np-album np-lnk"
+					>
+						<div class="mt-[-6px] text-ctp-sapphire hover:text-ctp-blue text-3xl sm:text-2xl">
+							{nowPlaying.name}
+						</div></a
+					>
+					<p class="text-sm" id="np-artist" in:fade out:fade>by {nowPlaying.artist['#text']}</p>
+					{#if nowPlaying.album && nowPlaying.album['#text'] && nowPlaying.name !== nowPlaying.album['#text'] && nowPlaying.artist['#text'] !== nowPlaying.album['#text']}
+						<p class="text-sm" id="np-album" in:fade out:fade>in {nowPlaying.album['#text']}</p>
+					{/if}
+					<p class="sr-only" id="np-lnk">
+						Press enter to go to song's last.fm page
+					</p>
+			{/key}
+				</div>
 			</div>
-			<div class="flex-3/4 p-1">
-        {#key nowPlaying.name}
-				<a
-					class="nocol text-ellipsis"
-					href={nowPlaying.url}
-					id="np-title"
-					target="_blank" rel="noopener" in:fade out:fade
-					aria-labelledby="np-status np-title"
-					aria-describedby="np-artist np-album np-lnk"
-				>
-					<div class="mt-[-6px] text-ctp-sapphire hover:text-ctp-blue text-3xl sm:text-2xl">
-						{nowPlaying.name}
-					</div></a
-				>
-				<p class="text-sm" id="np-artist" in:fade out:fade>by {nowPlaying.artist['#text']}</p>
-				{#if nowPlaying.album && nowPlaying.album['#text'] && nowPlaying.name !== nowPlaying.album['#text'] && nowPlaying.artist['#text'] !== nowPlaying.album['#text']}
-					<p class="text-sm" id="np-album" in:fade out:fade>in {nowPlaying.album['#text']}</p>
-				{/if}
-				<p class="sr-only" id="np-lnk">
-					Press enter to go to song's last.fm page
-				</p>
-        {/key}
-			</div>
-		</div>
-	{:else if error}
-		<p style="color: red;">Error: {error}</p>
-	{:else}
-		<p>Loading...</p>
-	{/if}
-</div>
+		{:else if error}
+			<p style="color: red;">Error: {error}</p>
+		{:else}
+			<p>Loading...</p>
+		{/if}
+	</div>

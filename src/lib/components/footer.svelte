@@ -16,9 +16,7 @@
                 title="Nekoweb (button by maxpixels)"
             /></a
         >
-        <a target="_blank" rel="noopener" class="w-fit shrink-0" href="https://kalechips.net/responsive/index">
-            <img src="/imgs/buttons/responsive-web-directory.png" alt="Responsive Web Directory" title="Responsive Web Directory" />
-        </a>
+        <a href="https://districts.nekoweb.org/" target="_blank"><img alt="Nekoweb Districts" title="Nekoweb Districts" src="https://districts.nekoweb.org/img/districts002.png"></a>
         <img src="/imgs/buttons/mobilefriendly.png" alt="Mobile friendly" title="This site is mobile friendly!" />
     </div>
 </div>

@@ -43,7 +43,7 @@
 	}
 </script>
 
-{#if $isBlog}
+{#if $isBlog && createNestedList(blogToc).length < 1}
 	<div id="toc" class="w-full" use:autoAnimate>
 		<div class="p-1.5">
 			<h1 class="nf headercolor mt-[-6px] pb-2 text-2xl">Table of Contents</h1>

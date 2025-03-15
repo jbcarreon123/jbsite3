@@ -22,7 +22,7 @@
                 break;
             case 'fwrd':
             case 'next':
-                ret = mems[mem-1] ?? mems[0]
+                ret = mems[mem+1] ?? mems[0]
                 location.replace('//' + ret.host)
                 break;
             case 'rand':

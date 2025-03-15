@@ -21,5 +21,12 @@
         "pitch": "A place where I share most of the things I do on the interwebs. Mostly stuff on life, privacy, programming, and design.",
         "type": "13+",
         "button": "https://reduxflakes.nekoweb.org/public/img/buttons/reduc_anim.gif"
+    },
+    {
+        "host": "ivrry.nekoweb.org",
+        "username": "ivrry",
+        "framework": "Custom",
+        "pitch": "It serves as a place for me to dump my projects and thoughts on the wide web",
+        "button": "https://ivrry.nekoweb.org/assets/images/button.png"
     }
 ]

@@ -111,12 +111,23 @@
 
 	onMount(() => {
 		setInterval(function() {
+			document.querySelectorAll('[data-hover]').forEach((el) => {
+				if (!el.dataset.hoverContent) {
+					el?.removeEventListener('mousemove', mouseMove);
+					el?.removeEventListener('mouseout', mouseOut);
+					el.dataset.hoverContent = el.dataset.hover;
+					el.dataset.hover = '';
+					el.title = '';
+					el?.addEventListener('mousemove', mouseMove);
+					el?.addEventListener('mouseout', mouseOut);
+				}
+			})
 			document.querySelectorAll('img').forEach((el) => {
 				if (!el.dataset.hoverContent) {
 					el?.removeEventListener('mousemove', mouseMove);
 					el?.removeEventListener('mouseout', mouseOut);
 					let name: string = `${(el.title) ? `${el?.title.replaceAll(': ', ':<br />')}<br />` : `${el?.alt.replaceAll(': ', ':<br />')}<br />`}`
-					el.dataset.hoverContent = `${name!=="<br />"? name : ''}${el.parentElement?.hasAttribute('href')? el.parentElement.href : ''}`;
+					el.dataset.hoverContent = `${name!=="<br />"? `<span class="el">${name}</span>` : ''}${el.parentElement?.hasAttribute('href')? `<span class="link">${el.parentElement.href}</span>` : ''}`;
 					el.title = '';
 					el?.addEventListener('mousemove', mouseMove);
 					el?.addEventListener('mouseout', mouseOut);
@@ -126,27 +137,40 @@
 				if (!el.dataset.hoverContent && !el.href.includes(window.location.hostname)) {
 					el?.removeEventListener('mousemove', mouseMove);
 					el?.removeEventListener('mouseout', mouseOut);
-					el.dataset.hoverContent = `${el.href}`;
+					el.dataset.hoverContent = `<span class="link">${el.href}</span>`;
 					el?.addEventListener('mousemove', mouseMove);
 					el?.addEventListener('mouseout', mouseOut);
 				}
 			})
 		}, 500)
 
+		document.querySelectorAll('[data-hover]').forEach((el) => {
+			if (!el.dataset.hoverContent) {
+				el?.removeEventListener('mousemove', mouseMove);
+				el?.removeEventListener('mouseout', mouseOut);
+				el.dataset.hoverContent = el.dataset.hover;
+				el.dataset.hover = '';
+				el.title = '';
+				el?.addEventListener('mousemove', mouseMove);
+				el?.addEventListener('mouseout', mouseOut);
+			}
+		})
 		document.querySelectorAll('img').forEach((el) => {
-			el?.removeEventListener('mousemove', mouseMove);
-			el?.removeEventListener('mouseout', mouseOut);
-			let name: string = `${(el.title) ? `${el?.title.replaceAll(': ', ':<br />')}<br />` : `${el?.alt.replaceAll(': ', ':<br />')}<br />`}`
-			el.dataset.hoverContent = `${name!=="<br />"? name : ''}${el.parentElement?.hasAttribute('href')? el.parentElement.href : ''}`;
-			el.title = '';
-			el?.addEventListener('mousemove', mouseMove);
-			el?.addEventListener('mouseout', mouseOut);
+			if (!el.dataset.hoverContent) {
+				el?.removeEventListener('mousemove', mouseMove);
+				el?.removeEventListener('mouseout', mouseOut);
+				let name: string = `${(el.title) ? `${el?.title.replaceAll(': ', ':<br />')}<br />` : `${el?.alt.replaceAll(': ', ':<br />')}<br />`}`
+				el.dataset.hoverContent = `${name!=="<br />"? `<span class="el">${name}</span>` : ''}${el.parentElement?.hasAttribute('href')? `<span class="link">${el.parentElement.href}</span>` : ''}`;
+				el.title = '';
+				el?.addEventListener('mousemove', mouseMove);
+				el?.addEventListener('mouseout', mouseOut);
+			}
 		});
 		document.querySelectorAll('a:not(:has(img))').forEach((el) => {
 			if (!el.dataset.hoverContent && !el.href.includes(window.location.hostname)) {
 				el?.removeEventListener('mousemove', mouseMove);
 				el?.removeEventListener('mouseout', mouseOut);
-				el.dataset.hoverContent = `${el.href}`;
+				el.dataset.hoverContent = `<span class="link">${el.href}</span>`;
 				el?.addEventListener('mousemove', mouseMove);
 				el?.addEventListener('mouseout', mouseOut);
 			}

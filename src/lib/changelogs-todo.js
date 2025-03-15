@@ -2,6 +2,10 @@ import { fromZonedTime, toZonedTime } from 'date-fns-tz';
 
 export let changelogs = [
     {
+        date: fromZonedTime(new Date("03/10/2025 09:10"), 'Asia/Manila'),
+        content: "Fixed the SSGRing permalink redirect, forgot that next is still goes to left page"
+    },
+    {
         date: fromZonedTime(new Date("03/09/2025 21:19"), 'Asia/Manila'),
         content: "New implementation of the hover tooltip! Now it follows your cursor! Also more site buttons on /links, and added Apartment Webring"
     },

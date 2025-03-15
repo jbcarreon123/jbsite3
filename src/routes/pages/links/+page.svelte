@@ -69,24 +69,16 @@
         </div>
     </div>        
 
-    <webring-container>
-        <config key="type" value="gruvbox-dark"></config>
-        <config key="font" value="Overused Grotesk, Arial, sans-serif"></config>
-        <config key="fill" value="false"></config>
-    
-        <script src="https://palette.nekoweb.org/webring.js"></script>
-    </webring-container>
-
-    <div id='apartment-webring'>
-        <script type="text/javascript" src="https://darkosparko.nekoweb.org/webrings/apartments-webring/apartment-webring-variables.js"></script>
-        <script type="text/javascript" src="https://darkosparko.nekoweb.org/webrings/apartments-webring/apartment-webring-widget.js"></script>
-    </div> 
-
     <div id='focusfirst-webring'>
         <script type="text/javascript" src="https://www.beepbird.net/webring/onionring-variables.js"></script>
         <script type="text/javascript" src="https://www.beepbird.net/webring/onionring-widget.js"></script>
         <noscript><a href='https://www.beepbird.net/index.html'><img src="https://www.beepbird.net/webring/focusfirst.png" alt="Focus First Index"></a></noscript>
     </div>
+
+    <div id='apartment-webring'>
+        <script type="text/javascript" src="https://darkosparko.nekoweb.org/webrings/apartments-webring/apartment-webring-variables.js"></script>
+        <script type="text/javascript" src="https://darkosparko.nekoweb.org/webrings/apartments-webring/apartment-webring-widget.js"></script>
+    </div> 
 </div>
 
 <Buttons />
@@ -111,9 +103,3 @@
 
     <iframe style="border:none" class="aspect-square max-h-2xs w-full max-w-2xs" src="https://dimden.neocities.org/navlink/" title="neolink"></iframe>
 </div>
-
-<style>
-    #apartment-webring {
-        margin: 0 !important;
-    }
-</style>

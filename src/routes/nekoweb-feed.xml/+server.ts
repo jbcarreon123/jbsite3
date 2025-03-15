@@ -5,6 +5,7 @@ import { getPosts } from '$lib/blogs/get-blogs';
 import markdownit from 'markdown-it';
 import { readFile, readFileSync } from 'node:fs';
 import { miniRambles } from '$lib/changelogs-todo';
+import { fromZonedTime } from 'date-fns-tz';
 
 function rmIncompTags(text: string): string {
     const componentRegex = /<[A-Z][a-zA-Z0-9]*(\s[^>]*)*(\/>|>)/g;
@@ -74,10 +75,10 @@ export const GET: RequestHandler = async () => {
     ${posts.map(post => `
     <item>
       <title>${post.metadata.title}</title>
-      <description>${post.metadata.description}</description>
+      ${(post.metadata.description)? `<description>${post.metadata.description}</description>` : ''}
       <link>https://jbcarreon123.nekoweb.org${post.articleUrl}</link>
       <guid>${(post.content)? `${post.articleUrl.split('/')[post.articleUrl.split('/').length - 1]}` : `${post.metadata.dateStr}`}</guid>
-      <pubDate>${new Date(post.metadata.published).toUTCString()}</pubDate>
+      <pubDate>${fromZonedTime(new Date(post.metadata.published), 'GMT').toUTCString()}</pubDate>
       ${(post.content)? `<content:encoded><![CDATA[${post.content}]]></content:encoded>` : ''}
     </item>`).join('')}
   </channel>

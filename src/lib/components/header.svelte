@@ -33,6 +33,7 @@
 				<a href="/credits">Credits</a>
 				<a href="/links">Links</a>
 				<a href="/about">About</a>
+				<a href="/accessibility">Accessibility</a>
 				<a href="https://jbcarreon123.atabook.org"> Sign my guestbook! </a>
 				<a href="https://nekoweb.org/follow/jbcarreon123" target="_blank" rel="noopener" aria-label="Follow me on Nekoweb!"> [+] </a>
 			</div>

@@ -50,7 +50,8 @@
         <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
         <div class="contentContainer z-60" onkeyup={onKeyUp} onclick={onBgClick} role="dialog">
             <div class="content max-w-[95vw] md:max-w-[75vw] text-center items-center flex justify-center flex-col gap-2">
-                <img src={imagePath} alt={alt} />
+                <!-- svelte-ignore a11y_click_events_have_key_events -->
+                <a href={imagePath}><img src={imagePath} alt={alt} /></a>
                 <p>{alt} - <a href={imagePath} target="_blank" rel="noopener">Go to raw</a></p>
             </div>
         </div>

@@ -63,6 +63,8 @@
 		let el = document.getElementById('page-content');
 		if (el) {
 			el.scrollIntoView();
+			el.focus();
+			el.click();
 		}
 		showSkipLink = false;
 		hasInteracted = true;

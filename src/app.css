@@ -117,6 +117,10 @@
     --ctp-base: 245, 245, 245; 
 }
 
+p {
+    padding: 2px 0px;
+}
+
 .high-contrast-dark {
     --ctp-red: 255, 64, 64; 
     --ctp-green: 102, 255, 102; 

@@ -1,4 +1,4 @@
-let members = await fetch('https://jbcarreon123.nekoweb.org/webrings/ssgring/members.json');
+let members = await fetch('https://jbcarreon123.github.io/webrings/ssgring/members.json');
 
 export default {
   match: 'host',

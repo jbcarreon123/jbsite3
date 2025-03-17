@@ -212,7 +212,9 @@
 <Background />
 
 {#if enableOneko}
-	<Oneko />
+	<div class="print:hidden">
+		<Oneko />
+	</div>
 {/if}
 
 <span id="hoverSpan" style="position:fixed;display:none;">
@@ -234,13 +236,13 @@
 		{@render children()}
 	</main>
 	<aside
-		class="m-0.5 flex w-full flex-wrap border-2 border-ctp-overlay0 pb-3 md:flex-1/4 md:flex-col"
+		class="print:hidden m-0.5 flex w-full flex-wrap border-2 border-ctp-overlay0 pb-3 md:flex-1/4 md:flex-col"
 		use:autoAnimate
 	>
 		<Sidebar />
 	</aside>
 </div>
-<footer>
+<footer class="print:hidden">
 	<Footer />
 </footer>
 </div>

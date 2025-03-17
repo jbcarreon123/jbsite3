@@ -30,6 +30,14 @@
         <p>Whether it's Svelte, Astro, 11ty, or something, if it's a SSG framework, it's allowed.</p>
     </li>
     <li>
+        <h2>Don't be an asshole.</h2>
+        <p>Do not try to spam, or do stupid stuff just so I can let you join. It will just result to you likely getting denied.</p>
+    </li>
+    <li>
+        <h2>You must be at least 13 years old to apply.</h2>
+        <p>If I found out you're under 13 years old, your site will be removed and you'll be barred from future applications. <b>Do not complain.</b></p>
+    </li>
+    <li>
         <h2>Sites should be your own creation.</h2>
         <p>Although websites that uses a template or layout template (but modified it) is allowed, I don't allow websites built using site builders.</p>
         <p>Plagiarizing someone's site, though, is strictly not allowed.</p>
@@ -96,7 +104,7 @@
     <code>brat</code> on the script tag if you want the default pmoring style.
 </p>
 
-<h2>Members</h2>
+<h2 id="members">Members</h2>
 <table>
     <tbody>
         <tr>

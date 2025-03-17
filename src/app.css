@@ -31,6 +31,30 @@
     --color-ctp-crust: rgba(var(--ctp-crust));
 }
 
+#c_container .c-text {
+    text-align: left;
+}
+
+@media print
+{    
+    #c_inputDiv, .c-site, #c_widget button {
+        display: none;
+    }
+
+    #c_container .c-replyContainer {
+        display: block !important;
+    }
+
+    * {
+        color: black !important;
+        border-color: black !important;
+    }
+
+    p {
+        text-align: justify;
+    }
+}
+
 .gruvbox-dark {
     --ctp-red: 204, 36, 29;
     --ctp-green: 152, 151, 26;
@@ -44,6 +68,23 @@
     --ctp-mantle: 29, 32, 33;
     --ctp-surface0: 80, 73, 69;
     --ctp-base: 50, 48, 47;
+}
+
+@media (prefers-color-scheme: light) {
+    .gruvbox-dark {
+        --ctp-red: 204, 36, 29;
+        --ctp-green: 152, 151, 26;
+        --ctp-yellow: 215, 153, 33;
+        --ctp-blue: 69, 133, 136;
+        --ctp-sapphire: 7, 102, 120;
+        --ctp-sky: 104, 157, 106;
+        --ctp-text: 60, 56, 54;
+        --ctp-subtext0: 124, 111, 100;
+        --ctp-overlay0: 235, 219, 178;
+        --ctp-mantle: 249, 245, 215;
+        --ctp-surface0: 213, 196, 161;
+        --ctp-base: 242, 229, 188;
+    }
 }
 
 .gruvbox-light {

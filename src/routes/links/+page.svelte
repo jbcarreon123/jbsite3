@@ -82,6 +82,17 @@
         <script type="text/javascript" src="https://darkosparko.nekoweb.org/webrings/apartments-webring/apartment-webring-widget.js"></script>
     </div> 
 
+    <div style="text-align:center">
+        <a href="https://baccyflap.com/noai/?prv&s=jcr" target="_top">« prev</a> |
+        <a href="https://baccyflap.com/noai" target="_blank">no ai webring</a>
+        <a style="font-size:60%" href="https://baccyflap.com/noai/?rnd" target="_top">(random)</a> |
+        <a href="https://baccyflap.com/noai/?nxt&s=jcr" target="_top">next »</a>
+    </div> 
+
+    <div>
+        <script src="https://astracelestine.nekoweb.org/webring/tropical-rice-bowl/widgettext.js"></script>
+    </div>
+
     <div id='focusfirst-webring'>
         <script type="text/javascript" src="https://www.beepbird.net/webring/onionring-variables.js"></script>
         <script type="text/javascript" src="https://www.beepbird.net/webring/onionring-widget.js"></script>

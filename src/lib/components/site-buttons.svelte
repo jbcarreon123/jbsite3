@@ -353,11 +353,29 @@
 			loading="lazy"
 		/></a
 	>
-	<a href="https://nandraid.moe" target="_blank"
-		><img src="/imgs/buttons/nandraid.gif" title="Randopaizer/Nandraid" alt="" loading="lazy" /></a
-	>
+	<a class="w-fit shrink-0" href="https://nandraid.moe" target="_blank">
+		<img
+			src="/imgs/buttons/nandraid.gif"
+			title="Randopaizer/Nandraid" 
+			alt=""
+			loading="lazy"
+		/>
+	</a>
+	<a target="_blank" class="w-fit shrink-0" href="https://lel.nekoweb.org">
+		<img
+			decoding="async"
+			loading="lazy"
+			src="/imgs/buttons/lel@Button.png"
+			title="lel@button"
+			alt="lel@nekoweb button"
+		/>
+	</a>
 	<a target="_blank" class="w-fit shrink-0" href="https://kalechips.net/responsive/index">
-		<img src="/imgs/buttons/responsive-web-directory.png" alt="Responsive Web Directory" title="Responsive Web Directory" />
+		<img
+			src="/imgs/buttons/responsive-web-directory.png"
+			alt="Responsive Web Directory"
+			title="Responsive Web Directory"
+		/>
 	</a>
 </div>
 

@@ -1,4 +1,4 @@
-<header>
+<header class="print:hidden">
 	<div class="grid grid-cols-1 justify-items-center pt-4 pb-8">
 		<a href="/" class="nocol" aria-label="jbcarreon123">
 			<div

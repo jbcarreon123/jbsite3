@@ -1,8 +1,14 @@
 ---
-title: Web responsiveness and why you should follow it on your site
+title: "Web responsiveness and accessibility: why you should follow it on your site"
 published: 03/06/2025 12:30
-description: Most people browse the Internet on their phones, and you should make your site accommodate that!
-tags: indie-web, responsive-web
+description: Most people browse the Internet on their phones, and some people browse the Internet on a screen reader, and you should make your site accommodate that!
+tags: indie-web, responsive-web, accessible-web
 ---
 
-So, 
+So, I've seen so many indie sites that is saying "not mobile responsive" or "better viewed on *this resolution*" or "*that resolution*" and it still bothers me that why does most indie sites nowadays, does not consider supporting mobile???
+
+Based on StatCounter, mobile users contributes to 62.38% on browsing the Internet, and seeing these sites that does not work well on mobile, makes most of the people on that population to just turn back and close your site. Look, it's much better if everyone can see your site, right???
+
+Also site accessibility. Not everyone has perfect 20/20 vision. Not everyone has perfect color perception (not even me). Not every people can see your site well, and yes, that includes desktop users. Not everyone likes super fast flashing images and animations (that includes me). So, making your site accessible (even on some of them) are a great way to tell that you know this problem and actively helping to fix it.
+# Why though? I could just not make it not?
+Yes, you can not make it mobile friendly, but if your site isn't even super that layout friendly, please ***please*** make your site mobile friendly. 

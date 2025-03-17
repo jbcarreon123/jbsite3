@@ -5,6 +5,10 @@ on:
     branches: [master]
   workflow_dispatch:
 
+env:
+  NEKOWEB_APIKEY: ${{env.NEKOWEB_APIKEY}}
+  NEKOWEB_COOKIE: ${{env.NEKOWEB_COOKIE}}
+
 permissions:
   contents: read
   pages: write

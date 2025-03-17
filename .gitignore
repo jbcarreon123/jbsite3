@@ -3,7 +3,6 @@ node_modules
 # Not should be pushed
 routes/bg-test
 
-svelte.config.js
 
 # Output
 .output

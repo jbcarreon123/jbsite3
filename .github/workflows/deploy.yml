@@ -1,4 +1,4 @@
-name: Deploy to GH Pages (Backup host)
+name: Deploy to Nekoweb and GH Pages (Backup host)
 
 on:
   push:

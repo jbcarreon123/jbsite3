@@ -5,10 +5,6 @@ on:
     branches: [master]
   workflow_dispatch:
 
-env:
-  NEKOWEB_APIKEY: ${{env.NEKOWEB_APIKEY}}
-  NEKOWEB_COOKIE: ${{env.NEKOWEB_COOKIE}}
-
 permissions:
   contents: read
   pages: write
@@ -24,8 +20,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Check variables
-        run: env
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
       - name: Install dependencies
@@ -33,6 +27,8 @@ jobs:
       - name: Build jbsite
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
+          NEKOWEB_APIKEY: ${{ secrets.NEKOWEB_APIKEY }}
+          NEKOWEB_COOKIE: ${{ secrets.NEKOWEB_COOKIE }}
         run: bun run build
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3

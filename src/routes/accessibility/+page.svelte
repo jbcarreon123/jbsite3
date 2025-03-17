@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Accessibility on jb's site</title>
+</svelte:head>
+
 <h1>Accessibility</h1>
 <p>jbSite is designed to be accessible on the start, and you should too for your site!</p>
 <p>

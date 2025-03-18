@@ -2,6 +2,10 @@ import { fromZonedTime, toZonedTime } from 'date-fns-tz';
 
 export let changelogs = [
     {
+        date: fromZonedTime(new Date("03/18/2025 11:35"), 'Asia/Manila'),
+        content: "Service workers!!!!!!! Also a lot of stuff I forgot to put here lol"
+    },
+    {
         date: fromZonedTime(new Date("03/10/2025 09:10"), 'Asia/Manila'),
         content: "Fixed the SSGRing permalink redirect, forgot that next is still goes to left page"
     },

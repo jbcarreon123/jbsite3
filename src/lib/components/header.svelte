@@ -1,5 +1,27 @@
+<script>
+	import { onMount } from "svelte";
+
+	onMount(() => {
+		const offlineDialog = document.getElementById('offline');
+		function updateOfflineStatus() {
+			if (!navigator.onLine) {
+				offlineDialog.style.display = 'block';
+			} else {
+				offlineDialog.style.display = 'none';
+			}
+		}
+		updateOfflineStatus();
+		window.addEventListener('online', updateOfflineStatus);
+		window.addEventListener('offline', updateOfflineStatus);
+	})
+</script>
+
 <header class="print:hidden">
-	<div class="grid grid-cols-1 justify-items-center pt-4 pb-8">
+	<div id="offline" style="display:none" class="border-2 border-ctp-yellow p-1.5 m-5">
+		<p>You're offline. jbSite will load but some pages might not load correctly (or just throw 500 Internal Error)</p>
+	</div>
+
+	<div class="grid grid-cols-1 justify-items-center pt-2 pb-8">
 		<a href="/" class="nocol" aria-label="jbcarreon123">
 			<div
 				class="h a headercolor headerfont max mb-[-46px] flex h-20 flex-row text-5xl font-semibold sm:mb-0 sm:text-7xl"

@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: nekoweb
+      url: 'https://jbcarreon123.nekoweb.org'
     steps:
       - name: Checkout
         uses: actions/checkout@v3

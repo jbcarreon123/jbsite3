@@ -196,6 +196,14 @@
 			loading="lazy"
 		/></a
 	>
+	<a href="https://xan.lol/" target="_blank"
+		><img
+			src="https://xan.lol/img/btn/meta.gif"
+			title="Xan Surnamehere"
+			alt="Xan Surnamehere"
+			loading="lazy"
+		/></a
+	>
 	<a href="https://metakabe.nekoweb.org/" target="_blank">
 		<img
 			src="https://metakabe.nekoweb.org/Buttons/kabebutton.gif"

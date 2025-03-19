@@ -50,24 +50,42 @@
         <script type="text/javascript" src="https://beaus-silly-folder.nekoweb.org/my-webrings/FCWL/onionring-variables.js"></script>
         <script type="text/javascript" src="https://beaus-silly-folder.nekoweb.org/my-webrings/FCWL/widgets/philippines.js"></script>
     </div>
+
+    <div class="text-left max-w-md">
+        <div>
+            <a href="https://webring.bucketfish.me/" class="py-4" target="_blank"><h1 class=" mt-[-6px] pb-2 text-2xl text-ctp-sapphire hover:text-ctp-blue">bucket webring!</h1></a>
+            <div class="flex flex-row w-full text-center pb-4">
+                <a class="grow" href="https://webring.bucketfish.me/redirect.html?to=prev&name=jbcarreon123" >&lt; prev</a>
+                <a class="grow" href="https://webring.bucketfish.me/redirect.html?to=random&name=jbcarreon123" >rand</a>
+                <a class="grow" href="https://webring.bucketfish.me/redirect.html?to=next&name=jbcarreon123" >next &gt;</a>
+            </div>
+        </div>
     
-    <div>
-        <a href="https://webring.bucketfish.me/" class="py-4" target="_blank"><h1 class=" mt-[-6px] pb-2 text-2xl text-ctp-sapphire hover:text-ctp-blue">bucket webring!</h1></a>
-        <div class="flex flex-row w-full text-center pb-4">
-            <a class="grow" href="https://webring.bucketfish.me/redirect.html?to=prev&name=jbcarreon123" >&lt; prev</a>
-            <a class="grow" href="https://webring.bucketfish.me/redirect.html?to=random&name=jbcarreon123" >rand</a>
-            <a class="grow" href="https://webring.bucketfish.me/redirect.html?to=next&name=jbcarreon123" >next &gt;</a>
+        <div style="">
+            <a href="//mr.jhorn.net/index.php"><img src="//mr.jhorn.net/assets/button.gif" alt="Musicring"></a>
+            <div class="flex flex-row min-w-3xs text-center pb-4">
+                <a class="grow" href="//mr.jhorn.net/prev.php?slug=jbcarreon123">&lt; prev</a>
+                <a class="grow" href="//mr.jhorn.net/rand.php">rand</a>
+                <a class="grow" href="//mr.jhorn.net/next.php?slug=jbcarreon123">next &gt;</a>
+            </div>
+        </div>
+
+        <div>
+            <a href="https://baccyflap.com/noai/?prv&s=jcr" target="_top">« prev</a> |
+            <a href="https://baccyflap.com/noai" target="_blank">no ai webring</a>
+            <a style="font-size:60%" href="https://baccyflap.com/noai/?rnd" target="_top">(random)</a> |
+            <a href="https://baccyflap.com/noai/?nxt&s=jcr" target="_top">next »</a>
+        </div> 
+    
+        <div>
+            <script src="https://astracelestine.nekoweb.org/webring/tropical-rice-bowl/widgettext.js"></script>
+        </div>
+        
+        <div>
+            <script defer src="https://mechagic.party/1stylescripts/gitgudring.js"></script>
         </div>
     </div>
-
-    <div style="">
-        <a href="//mr.jhorn.net/index.php"><img src="//mr.jhorn.net/assets/button.gif" alt="Musicring"></a>
-        <div class="flex flex-row min-w-3xs text-center pb-4">
-            <a class="grow" href="//mr.jhorn.net/prev.php?slug=jbcarreon123">&lt; prev</a>
-            <a class="grow" href="//mr.jhorn.net/rand.php">rand</a>
-            <a class="grow" href="//mr.jhorn.net/next.php?slug=jbcarreon123">next &gt;</a>
-        </div>
-    </div>        
+    
 
     <webring-container>
         <config key="type" value="gruvbox-dark"></config>
@@ -81,17 +99,6 @@
         <script type="text/javascript" src="https://darkosparko.nekoweb.org/webrings/apartments-webring/apartment-webring-variables.js"></script>
         <script type="text/javascript" src="https://darkosparko.nekoweb.org/webrings/apartments-webring/apartment-webring-widget.js"></script>
     </div> 
-
-    <div style="text-align:center">
-        <a href="https://baccyflap.com/noai/?prv&s=jcr" target="_top">« prev</a> |
-        <a href="https://baccyflap.com/noai" target="_blank">no ai webring</a>
-        <a style="font-size:60%" href="https://baccyflap.com/noai/?rnd" target="_top">(random)</a> |
-        <a href="https://baccyflap.com/noai/?nxt&s=jcr" target="_top">next »</a>
-    </div> 
-
-    <div>
-        <script src="https://astracelestine.nekoweb.org/webring/tropical-rice-bowl/widgettext.js"></script>
-    </div>
 
     <div id='focusfirst-webring'>
         <script type="text/javascript" src="https://www.beepbird.net/webring/onionring-variables.js"></script>

@@ -60,13 +60,6 @@
 </div>
 
 <style>
-    .imgvwr {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100vw !important;
-        height: 100vh !important;
-    }
 
     div :global {
         .imgvwr.hide {
@@ -114,6 +107,14 @@
     @keyframes show2 {
         from { transform: scale(0.95); }
         to { transform: scale(1); }
+    }
+
+    .imgvwr {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
     }
 
     .imgvwr .contentContainer {

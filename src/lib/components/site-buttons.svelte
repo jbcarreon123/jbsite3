@@ -136,8 +136,12 @@
 		/></a
 	>
 	<a target="_blank" rel="noopener" href="https://layercake.nekoweb.org/"
-		><img src="https://files.catbox.moe/h7nelz.gif" title="Layercake"
-			alt="Layercake" loading="lazy" /></a
+		><img
+			src="https://files.catbox.moe/h7nelz.gif"
+			title="Layercake"
+			alt="Layercake"
+			loading="lazy"
+		/></a
 	>
 	<a href="https://beaus-silly-folder.nekoweb.org" target="_blank" rel="noopener" class="links"
 		><img
@@ -213,8 +217,7 @@
 		/>
 	</a>
 	<a href="https://ethxn.xyz/" target="_blank"
-		><img src="/imgs/buttons/ethxn-button.gif" loading="lazy" title="ethxn"
-			alt="ethxn" /></a
+		><img src="/imgs/buttons/ethxn-button.gif" loading="lazy" title="ethxn" alt="ethxn" /></a
 	>
 	<a href="https://chataigne.nekoweb.org/" target="_blank"
 		><img
@@ -329,8 +332,12 @@
 		/></a
 	>
 	<a href="https://satorikeiko.nekoweb.org/" target="_blank"
-		><img src="/imgs/buttons/satorikeiko.png" title="Satorikeiko"
-			alt="Satorikeiko"  loading="lazy" /></a
+		><img
+			src="/imgs/buttons/satorikeiko.png"
+			title="Satorikeiko"
+			alt="Satorikeiko"
+			loading="lazy"
+		/></a
 	>
 	<a href="https://ceat.nekoweb.org/" target="_blank"
 		><img
@@ -368,7 +375,7 @@
 		<img
 			src="/imgs/buttons/nandraid.gif"
 			title="Randopaizer/Nandraid"
-			alt="Randopaizer/Nandraid" 
+			alt="Randopaizer/Nandraid"
 			loading="lazy"
 		/>
 	</a>
@@ -381,6 +388,22 @@
 			alt="lel@nekoweb button"
 		/>
 	</a>
+	<a href="https://strudelfatpaws.neocities.org" target="_blank"
+		><img
+			src="https://strudelfatpaws.neocities.org/badge.gif"
+			loading="lazy"
+			title="strudel fatpaws"
+			alt="strudelfatpaws"
+		/></a
+	>
+	<a href="https://arataka.neocities.org" target="_blank"
+		><img
+			src="https://arataka.neocities.org/image/88by31.gif"
+			loading="lazy"
+			alt="arataka"
+			title="arataka"
+		/></a
+	>
 	<a target="_blank" class="w-fit shrink-0" href="https://kalechips.net/responsive/index">
 		<img
 			src="/imgs/buttons/responsive-web-directory.png"

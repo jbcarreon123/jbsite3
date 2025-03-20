@@ -35,5 +35,11 @@
         "framework": "<a href='https://www.11ty.dev/' target='_blank'>Eleventy</a>",
         "pitch": "A very cool personal website that is owned by a cockroach that learned how to type.",
         "button": "https://file.garden/ZvadqiE050beWbgP/buttons/mechagic_button.webp"
+    },
+    {
+        "host": "inaccessible.nekoweb.org",
+        "username": "inaccessible",
+        "framework": "<a href='https://www.svelte.dev/' target='_blank'>Svelte/SvelteKit</a>",
+        "pitch": "The Most Inaccessible Website (in Nekoweb at Least)"
     }
 ]

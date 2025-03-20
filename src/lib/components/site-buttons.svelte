@@ -404,6 +404,14 @@
 			title="arataka"
 		/></a
 	>
+	<a href="https://luxfero.nekoweb.org/" target="_blank">
+		<img
+			src="https://luxfero.nekoweb.org/buttons/lux_fero.gif"
+			loading="lazy"
+			alt="Lux Fero"
+			title="Lux_Fero"
+		/>
+	</a>
 	<a target="_blank" class="w-fit shrink-0" href="https://kalechips.net/responsive/index">
 		<img
 			src="/imgs/buttons/responsive-web-directory.png"

@@ -1,5 +1,6 @@
 <script>
 	import { bookmarks } from '$lib/bookmarks/bookmarks';
+	import { MetaTags } from 'svelte-meta-tags';
 
 	function groupArrayByCategory(arr) {
 		const result = {};
@@ -24,6 +25,14 @@
 <svelte:head>
 	<title>Bookmarks</title>
 </svelte:head>
+
+<MetaTags
+	openGraph={{
+		title: "Bookmarks",
+		type: 'website',
+        description: `Contains some helpful links that you might want to check out!`
+	}}
+/>
 
 <h1 class="headercolor text-4xl leading-snug">Bookmarks</h1>
 <p>Here's some helpful links that you might want to check out!</p>

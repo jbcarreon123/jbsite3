@@ -9,6 +9,7 @@
 	} from '@shikijs/transformers';
 	import { browser } from '$app/environment';
 	import { onMount } from 'svelte';
+	import { MetaTags } from 'svelte-meta-tags';
     
     onMount(async () => {
         const options = {
@@ -52,6 +53,17 @@
             })
     })
 </script>
+
+<MetaTags
+	openGraph={{
+		title: "JB's Comment Widget Auto Reload Addon",
+		type: 'website',
+        description: `This thing is just a really simple modification on 
+Ayano's Comment Widget that makes it so the widget auto reloads when the user 
+submits a comment. This is made because I can't stand why it would need a reload 
+when you submit a comment.`
+	}}
+/>
 
 <h1>Comment Widget Auto Reload Addon</h1>
 <p>

@@ -51,8 +51,8 @@
     let widgetHtml = config.defaultWidget;
     if (i > -1) {
         const ctx = {
-            prev: config.list.at(i - 1),
-            next: config.list.at(i + 1),
+            prev: config.list.at(i - 1) ?? config.list.at(config.list.length - 1),
+            next: config.list.at(i + 1) ?? config.list.at(0),
             index: i,
             random: config.list[Math.floor(Math.random() * config.list.length)],
             list: config.list,

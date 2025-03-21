@@ -32,7 +32,10 @@
         return contents;
     }
 
-    const generateB64UniqueIDBrowser = () => btoa(Date.now().toString(36) + Math.random().toString(36).substr(2));
+    const generateB64UniqueIDBrowser = () => {
+        console.log('%aWARNING\n%bSSGRing detected that crypto.randomUUID() is not defined. It will still work, albeit it\'ll use a fallback (which is from UUID to now Base64 randomness). This is likely caused by you visiting this page in HTTP, not HTTPS, and note that some webring scripts might not work in HTTP.', 'color: red; font-size: 32px;', 'font-size:16px;')
+        return btoa(Date.now().toString(36) + Math.random().toString(36).substr(2))
+    };
 
     async function asyncReplace(str, asyncFn) {
         const matches = extractAllContentBetweenBraces(str);

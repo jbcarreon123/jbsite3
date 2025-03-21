@@ -52,7 +52,7 @@
 				<a href="/blogs">Posts</a>
 				<a href="/contact">Contact</a>
 				<a href="/projects">Projects</a>
-				<a href="/credits">Credits</a>
+				<a href="/bookmarks">Bookmarks</a>
 				<a href="/links">Links</a>
 				<a href="/about">About</a>
 				<a href="/accessibility">Accessibility</a>

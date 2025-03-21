@@ -18,6 +18,8 @@ export async function load({ params }) {
 			description
 		};
 	} catch (e) {
+		console.error(e)
+
 		if (dev) {
 			const post = await import(`$lib/wip-blogs/${params.slug.replace('.svx', '')}/index.svx`);
 			const { title, published, image, tags, description } = post.metadata;

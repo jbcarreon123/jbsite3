@@ -88,7 +88,7 @@ document.getElementsByTagName('head')[0].appendChild(c_cssLink);
 // HTML Form
 var v_mainHtml = `
     <div id="c_inputDiv">
-        <form id="c_form" onsubmit="c_submitButton.disabled = true; v_submitted = true;" method="post" target="c_hiddenIframe" action="https://docs.google.com/forms/d/e/${s_formId}/formResponse"></form>
+        <form id="c_form" onsubmit="c_submitButton.disabled = true; v_submitted = true; refreshForm();" method="post" target="c_hiddenIframe" action="https://docs.google.com/forms/d/e/${s_formId}/formResponse"></form>
     </div>
     <div id="c_container">${s_loadingText}</div>
 `;
@@ -109,7 +109,7 @@ var v_formHtml = `
     
     <input name="entry.${s_adminId}" class="entry-admin" id="entry.${s_adminId}" type="text" style="display:none;pointer-events: none;" value="false">
 
-    <input id="c_submitButton" onclick="refreshForm()" name="c_submitButton" type="submit" value="${s_submitButtonLabel}" disabled>
+    <input id="c_submitButton" name="c_submitButton" type="submit" value="${s_submitButtonLabel}" disabled>
 `;
 
 // Insert main HTML to page

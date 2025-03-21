@@ -72,7 +72,7 @@
 
     const widget = document.createElement('div');
     widget.id = 'pmoring';
-    widget.dataset.pmoId = crypto.randomUUID() ?? generateB64UniqueIDBrowser();
+    widget.dataset.pmoId = crypto.randomUUID ? crypto.randomUUID() : generateB64UniqueIDBrowser();
     widget.innerHTML = widgetHtml;
     widget.classList.value = `${s?.classList.value}`
     s?.parentElement?.insertBefore(widget, s);

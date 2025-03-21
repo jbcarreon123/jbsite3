@@ -32,6 +32,8 @@
         return contents;
     }
 
+    const generateB64UniqueIDBrowser = () => btoa(Date.now().toString(36) + Math.random().toString(36).substr(2));
+
     async function asyncReplace(str, asyncFn) {
         const matches = extractAllContentBetweenBraces(str);
         console.log(matches)
@@ -70,7 +72,7 @@
 
     const widget = document.createElement('div');
     widget.id = 'pmoring';
-    widget.dataset.pmoId = crypto.randomUUID();
+    widget.dataset.pmoId = crypto.randomUUID() ?? generateB64UniqueIDBrowser();
     widget.innerHTML = widgetHtml;
     widget.classList.value = `${s?.classList.value}`
     s?.parentElement?.insertBefore(widget, s);

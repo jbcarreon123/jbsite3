@@ -1,5 +1,6 @@
 import { mdsvex, escapeSvelte } from 'mdsvex';
 import adapter from 'svelte-adapter-nekoweb';
+import staticAdapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import rehypeExternalLinks from 'rehype-external-links';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';

@@ -237,6 +237,10 @@ export const bookmarks: Bookmark[] = [
                 url: '/utils/ayano-autoreload',
                 name: 'JB\'s Auto Reload Addon'
             },
+            {
+                url: '/utils/ayano-markdown',
+                name: 'JB\'s Markdown Addon'
+            },
             
         ],
         recommended: true

@@ -19,6 +19,50 @@
 	import { MetaTags } from 'svelte-meta-tags';
 	import LeftSidebar from '$lib/components/left-sidebar.svelte';
 
+	import { codeToHtml, createHighlighter } from 'shiki';
+
+	onMount(async () => {
+		const options = {
+			toggle: 2000
+		};
+
+		const themes = [
+			'catppuccin-mocha',
+			'catppuccin-latte',
+			'catppuccin-macchiato',
+			'catppuccin-frappe',
+			'min-dark',
+			'min-light',
+			'github-dark-high-contrast',
+			'github-light-high-contrast'
+		];
+		const highlighter = await createHighlighter({
+			themes: themes,
+			langs: ['html', 'js']
+		});
+
+		document.querySelectorAll('textarea.shiki-code').forEach(async (v) => {
+			let hast = await highlighter.codeToHtml(v.value, {
+				lang: v.dataset.lang,
+				themes: {
+					mocha: 'catppuccin-mocha',
+					latte: 'catppuccin-latte',
+					macchiato: 'catppuccin-macchiato',
+					frappe: 'catppuccin-frappe',
+					gruvboxdark: 'min-dark',
+					gruvboxlight: 'min-light',
+					highcontrastdark: 'github-dark-high-contrast',
+					highcontrastlight: 'github-light-high-contrast'
+				},
+				defaultColor: 'mocha'
+			});
+			let el = document.createElement('div');
+			el.innerHTML = hast;
+			v.parentElement?.appendChild(el);
+			v.remove();
+		});
+	});
+
 	let skipLink: HTMLLinkElement = $state();
 	let showSkipLink = $state(false);
 	let hasInteracted = false;
@@ -88,21 +132,21 @@
 		}
 	}
 
-	let imgHover: string | undefined = $state(undefined)
+	let imgHover: string | undefined = $state(undefined);
 	function mouseMove(ev) {
 		let span = document.querySelector('#hoverSpan');
 		span.style.display = 'block';
-		if ((span?.scrollWidth + ev.clientX + 15) >= document.body.clientWidth){
-			span.style.right = `${(document.body.clientWidth - ev.clientX + 10)}px`;
-			span.style.left = ''
+		if (span?.scrollWidth + ev.clientX + 15 >= document.body.clientWidth) {
+			span.style.right = `${document.body.clientWidth - ev.clientX + 10}px`;
+			span.style.left = '';
 		} else {
 			span.style.left = `${ev.clientX + 10}px`;
-			span.style.right = ''
+			span.style.right = '';
 		}
 		span.style.top = `${ev.clientY - span?.clientHeight}px`;
 
 		let el = document.querySelector('img:hover') ?? document.querySelector('a:hover');
-		imgHover = el.dataset.hoverContent
+		imgHover = el.dataset.hoverContent;
 	}
 
 	function mouseOut(ev) {
@@ -112,7 +156,7 @@
 	}
 
 	onMount(() => {
-		setInterval(function() {
+		setInterval(function () {
 			document.querySelectorAll('[data-hover]').forEach((el) => {
 				if (!el.dataset.hoverContent) {
 					el?.removeEventListener('mousemove', mouseMove);
@@ -123,13 +167,13 @@
 					el?.addEventListener('mousemove', mouseMove);
 					el?.addEventListener('mouseout', mouseOut);
 				}
-			})
+			});
 			document.querySelectorAll('img').forEach((el) => {
 				if (!el.dataset.hoverContent) {
 					el?.removeEventListener('mousemove', mouseMove);
 					el?.removeEventListener('mouseout', mouseOut);
-					let name: string = `${(el.title) ? `${el?.title.replaceAll(': ', ':<br />')}<br />` : `${el?.alt.replaceAll(': ', ':<br />')}<br />`}`
-					el.dataset.hoverContent = `${name!=="<br />"? `<span class="el">${name}</span>` : ''}${el.parentElement?.hasAttribute('href')? `<span class="link">${el.parentElement.href}</span>` : ''}`;
+					let name: string = `${el.title ? `${el?.title.replaceAll(': ', ':<br />')}<br />` : `${el?.alt.replaceAll(': ', ':<br />')}<br />`}`;
+					el.dataset.hoverContent = `${name !== '<br />' ? `<span class="el">${name}</span>` : ''}${el.parentElement?.hasAttribute('href') ? `<span class="link">${el.parentElement.href}</span>` : ''}`;
 					el.title = '';
 					el?.addEventListener('mousemove', mouseMove);
 					el?.addEventListener('mouseout', mouseOut);
@@ -143,8 +187,8 @@
 					el?.addEventListener('mousemove', mouseMove);
 					el?.addEventListener('mouseout', mouseOut);
 				}
-			})
-		}, 500)
+			});
+		}, 500);
 
 		document.querySelectorAll('[data-hover]').forEach((el) => {
 			if (!el.dataset.hoverContent) {
@@ -156,13 +200,13 @@
 				el?.addEventListener('mousemove', mouseMove);
 				el?.addEventListener('mouseout', mouseOut);
 			}
-		})
+		});
 		document.querySelectorAll('img').forEach((el) => {
 			if (!el.dataset.hoverContent) {
 				el?.removeEventListener('mousemove', mouseMove);
 				el?.removeEventListener('mouseout', mouseOut);
-				let name: string = `${(el.title) ? `${el?.title.replaceAll(': ', ':<br />')}<br />` : `${el?.alt.replaceAll(': ', ':<br />')}<br />`}`
-				el.dataset.hoverContent = `${name!=="<br />"? `<span class="el">${name}</span>` : ''}${el.parentElement?.hasAttribute('href')? `<span class="link">${el.parentElement.href}</span>` : ''}`;
+				let name: string = `${el.title ? `${el?.title.replaceAll(': ', ':<br />')}<br />` : `${el?.alt.replaceAll(': ', ':<br />')}<br />`}`;
+				el.dataset.hoverContent = `${name !== '<br />' ? `<span class="el">${name}</span>` : ''}${el.parentElement?.hasAttribute('href') ? `<span class="link">${el.parentElement.href}</span>` : ''}`;
 				el.title = '';
 				el?.addEventListener('mousemove', mouseMove);
 				el?.addEventListener('mouseout', mouseOut);
@@ -176,7 +220,7 @@
 				el?.addEventListener('mousemove', mouseMove);
 				el?.addEventListener('mouseout', mouseOut);
 			}
-		})
+		});
 
 		setupListeners();
 	});
@@ -223,6 +267,24 @@
 	{@html imgHover}
 </span>
 
+<div id="document">
+	<Header />
+	<div class="grd m-2.5 grid grid-cols-1">
+		<main class="m-0.5 w-full px-2 pb-3 md:flex-3/4" id="page-content" use:autoAnimate>
+			{@render children()}
+		</main>
+		<aside
+			class="border-ctp-overlay0 m-0.5 flex w-full flex-wrap border-2 pb-3 md:flex-1/4 md:flex-col print:hidden"
+			use:autoAnimate
+		>
+			<Sidebar />
+		</aside>
+	</div>
+	<footer class="print:hidden">
+		<Footer />
+	</footer>
+</div>
+
 <style lang="postcss">
 	@media (width >= 52rem) {
 		.grd {
@@ -230,21 +292,3 @@
 		}
 	}
 </style>
-
-<div id="document">
-<Header />
-<div class="grd grid grid-cols-1 m-2.5">
-	<main class="m-0.5 px-2 w-full pb-3 md:flex-3/4" id="page-content" use:autoAnimate>
-		{@render children()}
-	</main>
-	<aside
-		class="print:hidden m-0.5 flex w-full flex-wrap border-2 border-ctp-overlay0 pb-3 md:flex-1/4 md:flex-col"
-		use:autoAnimate
-	>
-		<Sidebar />
-	</aside>
-</div>
-<footer class="print:hidden">
-	<Footer />
-</footer>
-</div>

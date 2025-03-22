@@ -41,13 +41,29 @@
 			)
 			.join('')}</ul>`;
 	}
+
+	let renderedList = $state([]);
+	let isRendered = $state(false);
+
+	onMount(() => {
+		setTimeout(() => {
+			const nestedList = createNestedList($blogToc)
+
+			if (nestedList.length <= 0) return;
+
+			renderedList = renderList(nestedList)
+			console.log(renderedList)
+
+			isRendered = renderedList.length > 1;
+		}, 500)
+	})
 </script>
 
-{#if $isBlog && createNestedList(blogToc).length < 1}
+{#if $isBlog && isRendered && renderedList.length > 0}
 	<div id="toc" class="w-full" use:autoAnimate>
 		<div class="p-1.5">
 			<h1 class="nf headercolor mt-[-6px] pb-2 text-2xl">Table of Contents</h1>
-			{@html renderList(createNestedList($blogToc))}
+			{@html renderedList}
 		</div>
 	</div>
 {/if}

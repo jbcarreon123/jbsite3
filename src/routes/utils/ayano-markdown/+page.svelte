@@ -12,7 +12,7 @@
 	openGraph={{
 		title: "JB's Comment Widget Markdown Addon",
 		type: 'website',
-        description: `This thing is a modification to Ayano's Comment Widget to allow your user's comments using Markdown.`
+        description: `This thing is a modification to Ayano's Comment Widget to allow your users to use Markdown on their comments.`
 	}}
 />
 

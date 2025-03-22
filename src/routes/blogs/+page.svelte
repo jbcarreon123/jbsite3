@@ -1,91 +1,111 @@
 <script>
+	import autoAnimate from '@formkit/auto-animate';
 	import { fromZonedTime, toZonedTime } from 'date-fns-tz';
 
-	export let data;
+	let { data } = $props();
 
-    let ltz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+	let ltz = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-    const sortedArticles = [...data.articles].sort((a, b) => {
-        const dateA = new Date(a.metadata.published);
-        const dateB = new Date(b.metadata.published);
-        return dateA.getTime() - dateB.getTime(); // Compare timestamps
-    }).reverse();
+	let sortedArticles = $state(
+		[...data.articles]
+			.sort((a, b) => {
+				const dateA = new Date(a.metadata.published);
+				const dateB = new Date(b.metadata.published);
+				return dateA.getTime() - dateB.getTime();
+			})
+			.reverse()
+	);
 
+	let somethingFound = $state(true);
 	function searchArticle() {
 		/**
 		 * @type { HTMLInputElement | null }
 		 */
 		const search = document.querySelector('input#search');
-		if (search) {
-			console.log(search.value)
-			let somethingFound = false;
-			document.querySelectorAll('#article .article-card').forEach((el) => {
-				/** @type { HTMLHeadingElement | null } */
-				let title = el.querySelector('#article-title');
-
-				if (title) {
-					if (!title.innerText.toLowerCase().includes(search.value.toLowerCase())) {
-						el.style.display = 'none';
-					} else {
-						el.style.display = 'block';
-						somethingFound = true;
-					}
-				}
-			})
-			if (!somethingFound) {
-				document.querySelector('#nothing').style.display = 'block'
-			} else {
-				document.querySelector('#nothing').style.display = 'none'
-			}
+		if (search && search.value) {
+			sortedArticles = sortedArticles.filter((v) => {
+				return v.metadata.title.toLowerCase().includes(search.value.toLowerCase());
+			});
+			somethingFound = sortedArticles.length > 0;
 		} else {
-			document.querySelectorAll('#article .article-card').forEach((el) => {
-				el.style.display = 'block';
-			})
+			sortedArticles = [...data.articles]
+				.sort((a, b) => {
+					const dateA = new Date(a.metadata.published);
+					const dateB = new Date(b.metadata.published);
+					return dateA.getTime() - dateB.getTime();
+				})
+				.reverse();
+			console.log(sortedArticles)
+			somethingFound = sortedArticles.length > 0;
 		}
 	}
 </script>
 
 <svelte:head>
-    <title>Jb's Posts</title>
+	<title>Jb's Posts</title>
 </svelte:head>
 
-<div class="flex flex-row flex-wrap gap-4 items-end justify-between">
+<div class="flex flex-row flex-wrap items-end justify-between gap-4">
 	<div>
-		<h1 class="title text-2xl leading-snug headercolor">Posts</h1>
+		<h1 class="title headercolor text-2xl leading-snug">Posts</h1>
 		<a href="https://jbcarreon123.nekoweb.org/rss.xml" class="pb-0.5">Get the RSS feed</a>
 	</div>
 	<div class="max-sm:w-full">
-		<input type="text" id="search" class="border max-sm:w-full" on:change={searchArticle} placeholder="Search...">
+		<input
+			type="text"
+			id="search"
+			class="border max-sm:w-full"
+			on:change={searchArticle}
+			placeholder="Search..."
+		/>
 	</div>
 </div>
 <div id="nothing" class="pt-2" style="display:none;">Nothing found :(</div>
-<ul id="article" class="flex flex-wrap gap-3">
-    {#each sortedArticles as article}
-    <li class="article-card max-sm:w-full">
-		<div class="w-full sm:max-w-2xs p-2" role="article" id="{article.articleSlug}-articleitem">
-			<div id="header-content" class="flex w-full border-b-2 border-b-ctp-overlay0 pb-2 max-w-full">
-				<div>
-					<a href={article.articleUrl} id="{article.articleSlug}-title" aria-describedby="{article.articleSlug}-description {article.articleSlug}-tags" title="{article.metadata.description}">
+<ul id="article" class="flex flex-wrap gap-3" use:autoAnimate>
+	{#key sortedArticles}
+		{#if !somethingFound}
+		<p>Nothing found :(</p>
+		{/if}
+		{#each sortedArticles as article}
+			<li class="article-card max-sm:w-full">
+				<div class="w-full p-2 sm:max-w-2xs" role="article" id="{article.articleSlug}-articleitem">
+					<div
+						id="header-content"
+						class="border-b-ctp-overlay0 flex w-full max-w-full border-b-2 pb-2"
+					>
 						<div>
-							<h2 id="article-title" class="nm title overflow-hidden max-w-[17rem] text-nowrap text-ellipsis">{article.metadata.title}</h2>
-						</div>
-					</a>
-					<div class="flex flex-wrap gap-2" aria-hidden="true">
-						{#each article.tagSplit.slice(0, 5) as tag}
-							<div class="w-fit rounded bg-ctp-base px-0.5 text-[12px]">
-								{tag}
+							<a
+								href={article.articleUrl}
+								id="{article.articleSlug}-title"
+								aria-describedby="{article.articleSlug}-description {article.articleSlug}-tags"
+								title={article.metadata.description}
+							>
+								<div>
+									<h2
+										id="article-title"
+										class="nm title max-w-[17rem] overflow-hidden text-nowrap text-ellipsis"
+									>
+										{article.metadata.title}
+									</h2>
+								</div>
+							</a>
+							<div class="flex flex-wrap gap-2" aria-hidden="true">
+								{#each article.tagSplit.slice(0, 5) as tag}
+									<div class="bg-ctp-base w-fit rounded px-0.5 text-[12px]">
+										{tag}
+									</div>
+								{/each}
 							</div>
-						{/each}
+						</div>
+					</div>
+					<div class="w-full pt-2" id="{article.articleSlug}-description">
+						{article.metadata.description}
+					</div>
+					<div class="sr-only" id="{article.articleSlug}-tags">
+						Tags: {article.tagSplit.join(', ')}
 					</div>
 				</div>
-			</div>
-			<div class="w-full pt-2" id="{article.articleSlug}-description">
-				{article.metadata.description}
-			</div>
-			<div class="sr-only" id="{article.articleSlug}-tags">
-				Tags: {article.tagSplit.join(", ")}
-			</div>
-		</div>
-	</li>
-    {/each}
+			</li>
+		{/each}
+	{/key}
 </ul>

@@ -14,6 +14,7 @@ export interface BookmarkUrl {
 }
 
 export const bookmarks: Bookmark[] = [
+    // Tutorials
     {
         name: 'W3Schools',
         category: 'Tutorials',
@@ -48,6 +49,8 @@ export const bookmarks: Bookmark[] = [
             
         ]
     },
+
+    // References
     {
         name: '<abbr title="(previously Mozilla Developer Network)">MDN Web Docs</abbr>',
         category: 'References',
@@ -62,6 +65,53 @@ export const bookmarks: Bookmark[] = [
         url: 'https://www.w3schools.com/references/index.php',
         recommended: true
     },
+    {
+        name: 'Can I use ___?',
+        category: 'References',
+        description: 'A site that tells you what\'s supported by the browsers you wanna support!',
+        url: 'https://caniuse.com/',
+        recommended: true
+    },
+
+    // Accessibility Tools
+    {
+        name: 'WAVE',
+        category: 'Accessibility Tools',
+        description: 'A website/extension that analyzes your website for common accessibility errors!',
+        url: [
+            {
+                url: 'https://wave.webaim.org/',
+                name: 'Site'
+            }, 
+            {
+                url: 'https://wave.webaim.org/extension',
+                name: 'Browser Extension'
+            }
+        ],
+        recommended: true
+    },
+    {
+        name: 'NVDA',
+        category: 'Accessibility Tools',
+        description: 'A screen reader for Windows that you can use to test your site',
+        url: 'https://www.nvaccess.org/about-nvda/',
+        recommended: true
+    },
+    {
+        name: 'JAWS',
+        category: 'Accessibility Tools',
+        description: 'Another screen reader for Windows that you can use to test your site',
+        warning: 'paid',
+        url: 'https://www.freedomscientific.com/products/software/jaws/'
+    },
+    {
+        name: 'Orca',
+        category: 'Accessibility Tools',
+        description: 'A screen reader for Linux that you can use to test your site',
+        url: 'https://orca.gnome.org/'
+    },
+
+    // SSGs
     {
         name: '<abbr title="Eleventy">11ty</abbr>',
         category: 'Static Site Generators',
@@ -82,6 +132,8 @@ export const bookmarks: Bookmark[] = [
         description: 'Another UI framework that doesn\'t use JavaScript by default!',
         url: 'https://astro.build/'
     },
+
+    // Web Hosts
     {
         name: 'Nekoweb',
         category: 'Web Hosts',
@@ -98,14 +150,14 @@ export const bookmarks: Bookmark[] = [
     {
         name: 'GitHub Pages',
         category: 'Web Hosts',
-        description: 'Another static web host. Uses GitHub.',
+        description: 'Another static web host. Uses GitHub for file management and version control.',
         url: 'https://pages.github.com/',
         recommended: true
     },
     {
         name: 'Codeberg Pages',
         category: 'Web Hosts',
-        description: 'Another static web host. Uses Codeberg.',
+        description: 'Another static web host. Uses Codeberg file management and version control.',
         url: 'https://codeberg.page/'
     },
     {
@@ -120,6 +172,24 @@ export const bookmarks: Bookmark[] = [
         description: 'A work in progress web host.',
         comingSoon: true
     },
+
+    // Resources
+    {
+        name: 'Loveberry',
+        category: 'Resources',
+        description: 'A resource page that contains very useful stuff that you might wanna use!',
+        url: 'https://loveberry.nekoweb.org/',
+        recommended: true
+    },
+    {
+        name: 'My Pillow Fort',
+        category: 'Resources',
+        description: 'Another resource page that contains very useful stuff',
+        url: 'https://mypillowfort.net',
+        recommended: true
+    },
+
+    // Nekoweb Deployment Scripts
     {
         name: 'deploy2nekoweb',
         category: 'Nekoweb Deployment Scripts',
@@ -143,6 +213,8 @@ export const bookmarks: Bookmark[] = [
         description: 'Another GitHub Action that deploys your website to Nekoweb',
         url: 'https://github.com/mp-pinheiro/nekoweb-deploy'
     },
+
+    // Widgets and Scripts
     {
         name: 'Ayano\'s Comment Widget',
         category: 'Widgets and Scripts',
@@ -173,7 +245,7 @@ export const bookmarks: Bookmark[] = [
         name: 'Status Cafe',
         category: 'Widgets and Scripts',
         description: 'Add your status to your site!',
-        warning: 'requires an account',
+        warning: 'requires an account, <a href="#neocities-scripts">note 1</a>',
         url: 'https://status.cafe/',
         recommended: true
     },
@@ -185,6 +257,8 @@ export const bookmarks: Bookmark[] = [
         url: 'https://maxpixels.moe/resources/nekoweb-stats/',
         recommended: true
     },
+
+    // Webring Scripts
     {
         name: 'pmoring',
         category: 'Webring Scripts',

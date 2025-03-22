@@ -9,7 +9,7 @@
         const dateA = new Date(a.metadata.published);
         const dateB = new Date(b.metadata.published);
         return dateA.getTime() - dateB.getTime(); // Compare timestamps
-    }).reverse().slice(0, 10);
+    }).reverse();
 
 	function searchArticle() {
 		/**
@@ -25,21 +25,21 @@
 
 				if (title) {
 					if (!title.innerText.toLowerCase().includes(search.value.toLowerCase())) {
-						el.style.visibility = 'collapse';
+						el.style.display = 'none';
 					} else {
-						el.style.visibility = 'visible';
+						el.style.display = 'block';
 						somethingFound = true;
 					}
 				}
 			})
 			if (!somethingFound) {
-				document.querySelector('#nothing').style.visibility = 'visible'
+				document.querySelector('#nothing').style.display = 'block'
 			} else {
-				document.querySelector('#nothing').style.visibility = 'collapse'
+				document.querySelector('#nothing').style.display = 'none'
 			}
 		} else {
 			document.querySelectorAll('#article .article-card').forEach((el) => {
-				el.style.visibility = 'visible';
+				el.style.display = 'block';
 			})
 		}
 	}
@@ -58,7 +58,7 @@
 		<input type="text" id="search" class="border max-sm:w-full" on:change={searchArticle} placeholder="Search...">
 	</div>
 </div>
-<div id="nothing" class="pt-2" style="visibility: collapse;">Nothing found :(</div>
+<div id="nothing" class="pt-2" style="display:none;">Nothing found :(</div>
 <ul id="article" class="flex flex-wrap gap-3">
     {#each sortedArticles as article}
     <li class="article-card max-sm:w-full">

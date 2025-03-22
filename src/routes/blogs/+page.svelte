@@ -23,6 +23,13 @@
 		 */
 		const search = document.querySelector('input#search');
 		if (search && search.value) {
+			sortedArticles = [...data.articles]
+				.sort((a, b) => {
+					const dateA = new Date(a.metadata.published);
+					const dateB = new Date(b.metadata.published);
+					return dateA.getTime() - dateB.getTime();
+				})
+				.reverse();
 			sortedArticles = sortedArticles.filter((v) => {
 				return v.metadata.title.toLowerCase().includes(search.value.toLowerCase());
 			});

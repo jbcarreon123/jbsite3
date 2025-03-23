@@ -24,6 +24,9 @@
     parsing, and DOMPurify for purifying user comments client-side.
 </p>
 <p>
+    Note that this is a client-side addon and won't sanitize comments server side. I'm working on a solution but this is I think sufficient enough unless the bad actor got access to your files and managed to update your site to remove sanitization or something.
+</p>
+<p>
     To implement this to your site, here's the steps:
 </p>
 <div class="pl-12">
@@ -76,7 +79,7 @@ comment.appendChild(text);</textarea>
         </li>
         <li>
             Lastly, let's modify the innerText to use innerHTML, like this:
-            <textarea readonly data-lang="js" class="shiki-code w-full border">text.innerText = filteredText;</textarea>
+            <textarea readonly data-lang="js" class="shiki-code w-full border">text.innerHTML = filteredText;</textarea>
         </li>
     </ol>
 </div>

@@ -54,6 +54,7 @@
 				<a href="/projects">Projects</a>
 				<a href="/bookmarks">Bookmarks</a>
 				<a href="/links">Links</a>
+				<a href="/utils">Utils</a>
 				<a href="/about">About</a>
 				<a href="/accessibility">Accessibility</a>
 				<a href="https://jbcarreon123.atabook.org"> Sign my guestbook! </a>

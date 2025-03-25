@@ -19,50 +19,6 @@
 	import { MetaTags } from 'svelte-meta-tags';
 	import LeftSidebar from '$lib/components/left-sidebar.svelte';
 
-	import { codeToHtml, createHighlighter } from 'shiki';
-
-	onMount(async () => {
-		const options = {
-			toggle: 2000
-		};
-
-		const themes = [
-			'catppuccin-mocha',
-			'catppuccin-latte',
-			'catppuccin-macchiato',
-			'catppuccin-frappe',
-			'min-dark',
-			'min-light',
-			'github-dark-high-contrast',
-			'github-light-high-contrast'
-		];
-		const highlighter = await createHighlighter({
-			themes: themes,
-			langs: ['html', 'js']
-		});
-
-		document.querySelectorAll('textarea.shiki-code').forEach(async (v) => {
-			let hast = await highlighter.codeToHtml(v.value, {
-				lang: v.dataset.lang,
-				themes: {
-					mocha: 'catppuccin-mocha',
-					latte: 'catppuccin-latte',
-					macchiato: 'catppuccin-macchiato',
-					frappe: 'catppuccin-frappe',
-					gruvboxdark: 'min-dark',
-					gruvboxlight: 'min-light',
-					highcontrastdark: 'github-dark-high-contrast',
-					highcontrastlight: 'github-light-high-contrast'
-				},
-				defaultColor: 'mocha'
-			});
-			let el = document.createElement('div');
-			el.innerHTML = hast;
-			v.parentElement?.appendChild(el);
-			v.remove();
-		});
-	});
-
 	let skipLink: HTMLLinkElement = $state();
 	let showSkipLink = $state(false);
 	let hasInteracted = false;

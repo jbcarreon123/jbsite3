@@ -2,6 +2,7 @@
 
 	import { MetaTags } from "svelte-meta-tags";
 
+    
 </script>
 
 <svelte:head>

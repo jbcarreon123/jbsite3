@@ -1,20 +1,6 @@
-<script>
-
-	import { MetaTags } from "svelte-meta-tags";
-
-</script>
-
 <svelte:head>
     <title>Comment Widget Markdown Addon</title>
 </svelte:head>
-
-<MetaTags
-	openGraph={{
-		title: "JB's Comment Widget Markdown Addon",
-		type: 'website',
-        description: `This thing is a modification to Ayano's Comment Widget to allow your users to use Markdown on their comments.`
-	}}
-/>
 
 <h1>Comment Widget Markdown Addon</h1>
 <p>

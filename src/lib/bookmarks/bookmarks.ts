@@ -81,7 +81,7 @@ export const bookmarks: Bookmark[] = [
         url: [
             {
                 url: 'https://wave.webaim.org/',
-                name: 'Site'
+                name: 'Link'
             }, 
             {
                 url: 'https://wave.webaim.org/extension',
@@ -109,6 +109,28 @@ export const bookmarks: Bookmark[] = [
         category: 'Accessibility Tools',
         description: 'A screen reader for Linux that you can use to test your site',
         url: 'https://orca.gnome.org/'
+    },
+
+    // Embed Tools
+    {
+        name: 'Open Graph Protocol Reference',
+        category: 'Embed Tools',
+        description: 'The main protocol that allows you to show a embed of your site on sites like Discord',
+        url: 'https://ogp.me/',
+        recommended: true
+    },
+    {
+        name: 'Twitter Card Reference',
+        category: 'Embed Tools',
+        description: 'A protocol that extends the Open Graph protocol. Used by Twitter, Discord, etc.',
+        url: 'https://developer.x.com/en/docs/x-for-websites/cards/overview/markup'
+    },
+    {
+        name: 'Discord Embed Debugger',
+        category: 'Embed Tools',
+        description: 'A Discord first party tool that tests and debugs link embeds for your site, that tells you how your site shows in Discord',
+        url: 'https://discord.com/developers/embeds',
+        recommended: true
     },
 
     // SSGs

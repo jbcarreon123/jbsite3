@@ -105,7 +105,7 @@
 	>
 	<a target="_blank" rel="noopener" href="https://moosyu.nekoweb.org/"
 		><img
-			src="https://moosyu.nekoweb.org/assets/button.png"
+			src="https://ze.wtf/9d6m7sun"
 			loading="lazy"
 			title="Memecompanies/Moosyu: moosyus awesome button"
 			alt="Memecompanies/Moosyu: moosyus awesome button"

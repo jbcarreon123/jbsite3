@@ -140,4 +140,18 @@
     #apartment-webring {
         margin: 0 !important;
     }
+
+    #rice-ring :global {
+        .webring-title {
+            top: 0px;
+        }
+        .webring-flex {
+            bottom: 40px;
+        }
+        .webring-footer {
+            bottom: 40px;
+        }
+
+        height: 250px;
+    }
 </style>

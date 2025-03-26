@@ -149,7 +149,7 @@
             bottom: 40px;
         }
         .webring-footer {
-            bottom: 40px;
+            margin-top: -40px;
         }
 
         height: 250px;

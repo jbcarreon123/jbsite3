@@ -80,10 +80,6 @@
         <div>
             <script src="https://astracelestine.nekoweb.org/webring/tropical-rice-bowl/widgettext.js"></script>
         </div>
-        
-        <div>
-            <script defer src="https://mechagic.party/1stylescripts/gitgudring.js"></script>
-        </div>
     </div>
     
 
@@ -95,10 +91,20 @@
         <script src="https://palette.nekoweb.org/webring.js"></script>
     </webring-container>
 
+    <div>
+        <script defer src="https://mechagic.party/1stylescripts/gitgudring.js"></script>
+    </div>
+
     <div id='apartment-webring'>
         <script type="text/javascript" src="https://darkosparko.nekoweb.org/webrings/apartments-webring/apartment-webring-variables.js"></script>
         <script type="text/javascript" src="https://darkosparko.nekoweb.org/webrings/apartments-webring/apartment-webring-widget.js"></script>
     </div> 
+
+    <div id="rice-ring">
+        <link rel="stylesheet" href="https://terakun.nekoweb.org/ricepaddy/webring.css"> 
+        <script type="text/javascript" src="https://terakun.nekoweb.org/ricepaddy/webring-variables.js"></script>
+        <script type="text/javascript" src="https://terakun.nekoweb.org/ricepaddy/webring-widget.js"></script>
+    </div>
 
     <div id='focusfirst-webring'>
         <script type="text/javascript" src="https://www.beepbird.net/webring/onionring-variables.js"></script>

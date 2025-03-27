@@ -70,7 +70,7 @@ export const GET: RequestHandler = async () => {
     <description>jb's personal rambling about stuff</description>
     <link>https://jbcarreon123.nekoweb.org/</link>
     <atom:link href="https://jbcarreon123.nekoweb.org/blogs/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+    <lastBuildDate>${new Date().toISOString()}</lastBuildDate>
     <generator>SvelteKit RSS Generator</generator>
     ${posts.map(post => `
     <item>
@@ -78,7 +78,7 @@ export const GET: RequestHandler = async () => {
       ${(post.metadata.description)? `<description>${post.metadata.description}</description>` : ''}
       <link>https://jbcarreon123.nekoweb.org${post.articleUrl}</link>
       <guid>${(post.content)? `${post.articleUrl.split('/')[post.articleUrl.split('/').length - 1]}` : `${post.metadata.dateStr}`}</guid>
-      <pubDate>${fromZonedTime(new Date(post.metadata.published), 'GMT').toUTCString()}</pubDate>
+      <pubDate>${fromZonedTime(new Date(post.metadata.published), 'GMT').toISOString()}</pubDate>
       ${(post.content)? `<content:encoded><![CDATA[${post.content}]]></content:encoded>` : ''}
     </item>`).join('')}
   </channel>

@@ -426,6 +426,9 @@
 		position: relative;
 		image-rendering: pixelated;
 		z-index: 2;
+
+		width: 88px;
+		height: 31px;
 	}
 
 	img:hover {

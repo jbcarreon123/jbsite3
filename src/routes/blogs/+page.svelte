@@ -75,7 +75,7 @@
 		{/if}
 		{#each sortedArticles as article}
 			<li class="article-card max-sm:w-full">
-				<div class="w-full p-2 sm:max-w-2xs" role="article" id="{article.articleSlug}-articleitem">
+				<div class="w-full p-2 sm:w-2xs" role="article" id="{article.articleSlug}-articleitem">
 					<div
 						id="header-content"
 						class="border-b-ctp-overlay0 flex w-full max-w-full border-b-2 pb-2"

@@ -118,6 +118,10 @@
 		p {
 			padding: 6px 0px;
 		}
+
+		img {
+			max-width: 350px;
+		}
 	}
 
 	* :global {

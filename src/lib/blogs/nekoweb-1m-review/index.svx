@@ -38,7 +38,7 @@ Another thing on the server is that some people can say offensive and uncomforta
 
 Also I feel like the discord has less moderation efforts than expected. The rules is also pretty barebones and for a person that administrated a server that have member counts on par to Nekoweb Discord, it's very much causing the lack of moderation on the server because the rules are very broad that you don't even know what rule it breaks.
 
-# Rule Review
+## Rule Review
 
 Let's review the rules on the Nekoweb Discord (as a discord server admin perspective):
 

@@ -1,5 +1,5 @@
 <div class="grid grid-cols-1 justify-items-center pt-4 pb-4 text-center">
-    <p>©️ 2024-2025 jbcarreon123. All rights reserved. <a href="https://rice.place/manifesto.html" target="_blank" rel="noopener">Copying is an act of hate.</a></p>
+    <p>© 2024-2025 jbcarreon123. All rights reserved. <a href="https://rice.place/manifesto.html" target="_blank" rel="noopener">Copying is an act of hate.</a></p>
     <p>Blog posts are licensed under CC BY-SA 4.0 unless specified.</p>
     <p>Made using <a href="https://bun.sh" target="_blank" rel="noopener">Bun</a> and <a href="https://svelte.dev/" target="_blank" rel="noopener">Svelte</a>. Hosted in <a href="https://nekoweb.org" target="_blank" rel="noopener">nekoweb</a>.</p>
 

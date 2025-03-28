@@ -38,7 +38,9 @@ Another thing on the server is that some people can say offensive and uncomforta
 
 Also I feel like the discord has less moderation efforts than expected. The rules is also pretty barebones and for a person that administrated a server that have member counts on par to Nekoweb Discord, it's very much causing the lack of moderation on the server because the rules are very broad that you don't even know what rule it breaks.
 
-Let's review the rules on the Nekoweb Discord:
+# Rule Review
+
+Let's review the rules on the Nekoweb Discord (as a discord server admin perspective):
 
 - don't be bad
 - be good
@@ -72,7 +74,7 @@ Let's review the rules on the Nekoweb Discord:
 There's some rules that should be merged into one rule, and there's some rule that people might not follow. Also, I would suggest adding rules for following the [Discord Community guidelines](https://discord.com/guidelines) and [Discord Terms of Service](https://discord.com/terms) as it aims for a server that's for everyone, and protects the younger members of a server.
 
 # Final thoughts
-I honestly enjoy Nekoweb, and enjoys being in the Discord. I have talked to many people on the server that are kind and have enthusiasm, and I wanna be part of the community. I love to chat with people and It's nice to see people making their sites and having a great time, helping others, and providing things to use on the server.
+I honestly enjoy Nekoweb, and enjoys being in the Discord. I have talked to many people on the server that are kind and have enthusiasm, and I wanna be part of the community. I love to chat with people and it's nice to see people making their sites and having a great time, helping others, and providing things to use on the server.
 
 That's about it! If you have things to say, why not comment? Also if you want to read more people reviewing Nekoweb and/or the community, check out the posts from [Crystal](https://crystal.nekoweb.org/blog/2025-03-28), [June](https://layercake.nekoweb.org/writing/articles/NWreview), and [July](https://july.lol/posts/2025/03-11) (note that this post mostly contains images).
 

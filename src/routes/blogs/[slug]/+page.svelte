@@ -70,12 +70,11 @@
 		url: `https://jbcarreon123.nekoweb.org/blogs/${data.slug}`,
 		siteName: "jb's posts",
 		type: 'article'
-	}},
-	author={"jbcarreon123"},
-	description={data.description}
+	}}
 />
 
 <svelte:head>
+	<meta name="description" content={data.description}>
 	<title>{data.title}</title>
 </svelte:head>
 

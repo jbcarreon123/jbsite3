@@ -3,8 +3,42 @@
 
     let splo;
 
+    async function pChange() {
+        let el = document.querySelector('#pre')?.value
+        
+        switch (el) {
+            case "basic-span":
+                document.querySelector('#sep').value = ""
+                document.querySelector('#tag').value = "span"
+                document.querySelector('#attrs').value = ""
+                document.querySelector('#void').checked = false
+                break;
+            case "span-tag":
+                document.querySelector('#sep').value = ""
+                document.querySelector('#tag').value = "span"
+                document.querySelector('#attrs').value = "id='span-((i))'"
+                document.querySelector('#void').checked = false
+                break;
+            case "p-split":
+                document.querySelector('#sep').value = "\\n\\n"
+                document.querySelector('#tag').value = "p"
+                document.querySelector('#attrs').value = ""
+                document.querySelector('#void').checked = false
+                break;
+            case "wrap-div":
+                document.querySelector('#sep').value = ""
+                document.querySelector('#tag').value = "div"
+                document.querySelector('#attrs').value = ""
+                document.querySelector('#void').checked = false
+                break;
+        }
+
+        fChange()
+    }
+
 	async function fChange() {
-        let spl = document.querySelector('#text-split')?.value.split('')
+        let sep = document.querySelector('#sep')?.value
+        let spl = document.querySelector('#text-split')?.value.split(sep.replaceAll('\\n', '\n'))
         let tag = document.querySelector('#tag')?.value
         let att = document.querySelector('#attrs')?.value
         let voi = document.querySelector('#void')?.checked
@@ -58,31 +92,53 @@
     Basically <a href="https://juneish.neocities.org/written/resources/?page=span-ify" target="_blank">juneish's span-ify</a>, but customizable!
 </p>
 
-<div id="cont" class="flex flex-row pt-4 gap-4">
-    <div class="w-1/2">
-        <form on:input|preventDefault={fChange}>
-            <label for="text-split">Text to split</label><br />
-            <textarea class="border w-full" id="text-split"></textarea>
-            <br /><br />
-            <label for="tag">The tag</label><br />
+<div id="cont" class="grid sm:grid-cols-2 gap-4 pt-4">
+    <div id="left" class="w-full">
+        <div>
+            <p>Presets</p>
+            <select id="pre" class="w-full" size=4 on:change={pChange}>
+                <option value="basic-span">Basic &lt;span&gt;</option>
+                <option value="span-tag">&lt;span&gt; with id</option>
+                <option value="p-split">Paragraph split (from layercake)</option>
+                <option value="wrap-div">Wrap each chars in a &lt;div&gt;!!!</option>
+            </select>
+        </div>
+        <form on:input|preventDefault={fChange} class="w-full">
+            <div>
+                <label for="text-split">Text to split</label><br />
+                <textarea class="border w-full" id="text-split"></textarea>
+            </div>
+            <div>
+                <label for="sep">The seperator (leave blank to split each character, use \n to split newlines)</label><br />
+            <input type="text" class="border w-full" id="sep" value=""/>
+            </div>
+            <div>
+                <label for="tag">The tag</label><br />
             <input type="text" class="border w-full" id="tag" value="span"/>
-            <br />
-            <input type="checkbox" id="void"> <label for="void">Void element?</label>
-            <br /><br />
-            <label for="attrs">Tag Attributes</label><br />
+            </div>
+            <div>
+                <input type="checkbox" id="void"> <label for="void">Void element?</label>
+            </div>
+            <div>
+                <label for="attrs">Tag Attributes</label><br />
             <p>Use <code>((i))</code> for the index, and<br /><code>((v))</code> for the value (useful for void tags!)</p>
-            <input type="text" class="border w-full" id="attrs" value="id='span-((i))'"/>
+            <input type="text" class="border w-full" id="attrs" value=""/>
+            </div>
             
         </form>
     </div>
-    <div id="out" class="h-full">
+    <div id="out" class="w-full h-full">
         Write something!
     </div>
 </div>
 
 <style>
-    #cont div {
-        width: calc(1 / 2 * 100%);
+    #left div {
+        padding: 6px 0;
+    }
+
+    select option {
+        padding: 5px;
     }
 
     #out :global {

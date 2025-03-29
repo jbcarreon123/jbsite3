@@ -7,6 +7,15 @@ tags: nekoweb, review
 
 Hey there! It's been a month since I joined Nekoweb and used it as the host of the new version of my site for a month now, so what do I think of it?
 
+> <p class="text-xs">Update 3/29/2025</p>
+>
+> A lot has happened on the Discord server on the past 24 hours.
+> The rules has been revamped, there are new mods and it's really cool that Dimden actually listened to the community and I am thankful for him.
+>
+> I'm also thankful for the community that pushed for this to happen, and shout out to Crystal for helping the community make this happen (honestly, thank you, a lot!)
+>
+> If you haven't already, [join Nekoweb Discord](https://discord.gg/hvfHKyVS6b)! There's some cool folks here (and I am active when I can!)
+
 # So first, how did I find Nekoweb?
 This might be the weirdest way possible that someone has found something, but here's how:
 On that day, I was watching Theo's (t3.gg) video about nice looking websites, like people who use Three.js and other stuff on their site, and I'm also looking for some inspirations for jbsite3. I don't really have the time back then yet to make something with Three.js and mess with WebGL, so I'm just looking at them in awe.

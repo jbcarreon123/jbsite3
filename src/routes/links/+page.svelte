@@ -45,7 +45,7 @@
 </div>
 
 <h1 class="headercolor pb-2">Webrings</h1>
-<div class="flex flex-auto flex-wrap gap-4 w-full">
+<div id="webrings" class="flex flex-auto flex-wrap gap-4 w-full">
     <div id='FCWL' class="pb-4">
         <script type="text/javascript" src="https://beaus-silly-folder.nekoweb.org/my-webrings/FCWL/onionring-variables.js"></script>
         <script type="text/javascript" src="https://beaus-silly-folder.nekoweb.org/my-webrings/FCWL/widgets/philippines.js"></script>
@@ -130,13 +130,13 @@
         loading="lazy"
         class="aspect-square w-full max-w-2xs"
         style="border:none;"
-        src="https://rice.nekoweb.org/nekolink.html"
+        src="https://rubybulbs.net/neko.html"
     ></iframe>
 
     <iframe style="border:none" class="aspect-square max-h-2xs w-full max-w-2xs" src="https://dimden.neocities.org/navlink/" title="neolink"></iframe>
 </div>
 
-<style>
+<style lang="postcss">
     #apartment-webring {
         margin: 0 !important;
     }
@@ -153,5 +153,11 @@
         }
 
         height: 250px;
+    }
+
+    @media (width < 40rem) {
+        #webrings > * {
+            margin: 0 auto;
+        }
     }
 </style>

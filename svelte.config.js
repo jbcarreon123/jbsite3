@@ -11,6 +11,10 @@ import { env } from 'node:process';
 import { addCopyButton } from 'shiki-transformer-copy-button'
 import { transformerNotationDiff, transformerNotationFocus, transformerMetaHighlight, transformerMetaWordHighlight, transformerNotationHighlight, transformerNotationWordHighlight } from '@shikijs/transformers';
 import { read, readFileSync } from 'node:fs';
+import remarkReadingTime from 'remark-reading-time';
+import remarkGfm from 'remark-gfm';
+import { visit } from 'unist-util-visit';
+import readingTime from 'reading-time';
 
 const options = {
 	toggle: 2000,
@@ -42,39 +46,76 @@ const highlighter = await createHighlighter({
 	]
 });
 
+function addWordCountToFrontmatterData({
+	attribute = "wordCount",
+} = {}) {
+	return function (info, file) {
+		let text = "";
+
+		visit(info, ["text", "code"], (node) => {
+			text += node.value;
+		});
+
+		file.data.fm[attribute] = text.split(/\s+/).length;
+	};
+}
+
+function addReadingTimeToFrontmatterData({
+	attribute = "readingTime",
+} = {}) {
+	return function (info, file) {
+		let text = "";
+
+		visit(info, ["text", "code"], (node) => {
+			text += node.value;
+		});
+
+		let time = readingTime(text)
+		file.data.fm[attribute] = time.text;
+	};
+}
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://svelte.dev/docs/kit/integrations
 	// for more information about preprocessors
 	preprocess: [vitePreprocess(), mdsvex({
 		rehypePlugins: [
-			[rehypeExternalLinks, {rel: ['nofollow'], target: '_blank'}],
+			[rehypeExternalLinks, { rel: ['nofollow'], target: '_blank' }],
 			[rehypeSlug],
 			[rehypeAutolinkHeadings],
-			[rehypeFigure],
+			[rehypeFigure]
+		],
+		remarkPlugins: [
+			[remarkGfm],
+			// [remarkReadingTime],
+			[addWordCountToFrontmatterData],
+			[addReadingTimeToFrontmatterData]
 		],
 		smartypants: {
 			ellipses: false
 		},
 		highlight: {
 			highlighter: async (code, lang = 'text') => {
-				const html = escapeSvelte(highlighter.codeToHtml(code, { lang, themes: {
-					mocha: 'catppuccin-mocha',
-					latte: 'catppuccin-latte',
-					macchiato: 'catppuccin-macchiato',
-					frappe: 'catppuccin-frappe',
-					gruvboxdark: gruvboxDark,
-					gruvboxlight: gruvboxLight,
-					highcontrastdark: 'github-dark-high-contrast',
-					highcontrastlight: 'github-light-high-contrast'
-				}, defaultColor: 'mocha',
-				transformers: [
-					transformerNotationDiff(),
-					transformerNotationHighlight(),
-					transformerNotationWordHighlight(),
-					transformerMetaHighlight(),
-					transformerMetaWordHighlight()
-				]}));
+				const html = escapeSvelte(highlighter.codeToHtml(code, {
+					lang, themes: {
+						mocha: 'catppuccin-mocha',
+						latte: 'catppuccin-latte',
+						macchiato: 'catppuccin-macchiato',
+						frappe: 'catppuccin-frappe',
+						gruvboxdark: gruvboxDark,
+						gruvboxlight: gruvboxLight,
+						highcontrastdark: 'github-dark-high-contrast',
+						highcontrastlight: 'github-light-high-contrast'
+					}, defaultColor: 'mocha',
+					transformers: [
+						transformerNotationDiff(),
+						transformerNotationHighlight(),
+						transformerNotationWordHighlight(),
+						transformerMetaHighlight(),
+						transformerMetaWordHighlight()
+					]
+				}));
 				return `{@html \`${html}\` }`;
 			}
 		}
@@ -83,7 +124,7 @@ const config = {
 	kit: {
 		adapter: adapter({
 			apiKey: env.NEKOWEB_APIKEY,
-		    cookie: env.NEKOWEB_COOKIE
+			cookie: env.NEKOWEB_COOKIE
 		}),
 
 		prerender: {

@@ -3,10 +3,12 @@ import { dev } from "$app/environment";
 export async function load({ params }) {
 	try {
 		const post = await import(`$lib/blogs/${params.slug.replace('.svx', '')}/index.svx`);
-		const { title, published, image, tags, description } = post.metadata;
+		const { title, published, image, tags, description, wordCount, readingTime } = post.metadata;
 		const content = post.default;
 		const tagSplit = String(tags).split(', ');
 		const slug = params.slug;
+
+		console.log(post)
 
 		return {
 			slug,
@@ -15,7 +17,9 @@ export async function load({ params }) {
 			published,
 			image,
 			tagSplit,
-			description
+			description,
+			wordCount,
+			readingTime
 		};
 	} catch (e) {
 		console.error(e)

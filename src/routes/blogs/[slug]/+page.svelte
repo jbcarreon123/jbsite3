@@ -70,50 +70,63 @@
 		url: `https://jbcarreon123.nekoweb.org/blogs/${data.slug}`,
 		siteName: "jb's posts",
 		type: 'article'
-	}}
+	}},
+	author={"jbcarreon123"},
+	description={data.description}
 />
 
 <svelte:head>
-	<title>{data.title} - Jb's Posts</title>
+	<title>{data.title}</title>
 </svelte:head>
 
 <ImageViewer bind:imagePath={imgPath} alt={imgAlt} />
 
 <article aria-labelledby="article-title">
-	<div class="w-full max-w-full px-3" id="header">
-		<div id="header-content" class="flex w-full max-w-full justify-between">
-			<div class="self-end">
-				<h1 id="article-title" class="nf title headercolor text-2xl md:text-4xl leading-snug">{data.title}</h1>
-			</div>
-			<div class="justify-items-end self-end">
-				<p class="text-right">
-					{toZonedTime(dPubl, ltz).toLocaleDateString()}
-				</p>
-				<div class="flex justify-end text-nowrap gap-1 text-right">
-					{#each data.tagSplit.slice(0, 5) as tag}
-						<div class="mono w-fit rounded bg-ctp-base text-[12px]">
-							{tag}
-						</div>
-					{/each}
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="p-1 m-2.5" use:autoAnimate>
+	<header>
+		<h1 id="article-title" class="title nf text-2xl md:text-3xl">{data.title}</h1>
+		<span class="text-sm flex flex-row flex-wrap">
+			<p id="author">by jbcarreon123</p>
+			<p>•</p>
+			<p>published {toZonedTime(dPubl, ltz).toLocaleDateString()}</p>
+			<p>•</p>
+			<p>in {data.tagSplit.join(', ')}</p>
+			<p>•</p>
+			<p>{data.wordCount} words</p>
+			<p>•</p>
+			<p>{data.readingTime}</p>
+		</span>
+		<p class="description">{data.description}</p>
+	</header>
+	<div class="p-1" use:autoAnimate>
         <BlogToc />
     </div>
-	<div class="content mx-3 pt-1">
+	<div class="content mx-2 pt-1">
 		<svelte:component this={data.content} />
 	</div>
 </article>
-<div use:autoAnimate>
+<div>
 	<script type="text/javascript" src="/lib/purify.min.js"></script>
 	<script src="/lib/showdown.min.js"></script>
 	<script src="/lib/comment-widget.js?post={data.slug}" defer></script>
-	<div id="c_widget"></div>
+	<div id="c_widget" use:autoAnimate></div>
 </div>
 
 <style lang="postcss">
+	header {
+		span {
+			p {
+				padding: 0 5px;
+			}	
+		}
+
+		h1, > p {
+			padding-left: 5px;
+		}
+
+		padding-bottom: 6px;
+		border-bottom: 1px solid rgba(var(--ctp-overlay0));
+	}
+
 	.content :global {
 		p {
 			padding: 6px 0px;

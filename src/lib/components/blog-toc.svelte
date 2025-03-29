@@ -60,7 +60,7 @@
 </script>
 
 {#if $isBlog && isRendered && renderedList.length > 0}
-	<div id="toc" class="w-full" use:autoAnimate>
+	<div id="toc" class="w-full m-2.5" use:autoAnimate>
 		<div class="p-1.5">
 			<h1 class="nf headercolor mt-[-6px] pb-2 text-2xl">Table of Contents</h1>
 			{@html renderedList}

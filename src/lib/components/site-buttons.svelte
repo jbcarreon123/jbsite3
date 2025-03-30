@@ -412,6 +412,22 @@
 			title="Lux_Fero"
 		/>
 	</a>
+	<a href="https://metatronius.net" target="_blank"
+		><img
+			src="https://metatronius.net/buttons/2.png"
+			loading="lazy"
+			alt="metatronius"
+			title="metatronius"
+		/></a
+	>
+	<a href="https://tsukinio.nekoweb.org" target="_blank"
+		><img
+			src="/imgs/buttons/tsukinio.gif"
+			loading="lazy"
+			alt="metatronius"
+			title="metatronius"
+		/></a
+	>
 	<a target="_blank" class="w-fit shrink-0" href="https://kalechips.net/responsive/index">
 		<img
 			src="/imgs/buttons/responsive-web-directory.png"

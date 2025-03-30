@@ -157,7 +157,7 @@
 
     @media (width < 40rem) {
         #webrings > * {
-            margin: 0 auto;
+            margin: 0 auto !important;
         }
     }
 </style>

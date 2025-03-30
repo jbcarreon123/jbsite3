@@ -3,7 +3,7 @@
     <p>Blog posts are licensed under CC BY-SA 4.0 unless specified.</p>
     <p>Made using <a href="https://bun.sh" target="_blank" rel="noopener">Bun</a> and <a href="https://svelte.dev/" target="_blank" rel="noopener">Svelte</a>. Hosted in <a href="https://nekoweb.org" target="_blank" rel="noopener">nekoweb</a>.</p>
 
-    <div class="fbtn grid grid-flow-col pt-2 gap-2">
+    <div class="fbtn flex flex-wrap justify-center pt-2 gap-2">
         <img src="/imgs/buttons/anybrowser.gif" alt="Any modern browser and OS!" title="This site is best viewed in any modern browser and OS!" />
         <a target="_blank" rel="noopener" class="w-fit shrink-0" href="https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_animation_with_SMIL">
             <img src="/imgs/buttons/smil.svg" alt="Enhanced with SMIL :D" title="Enhanced with SMIL :D" />
@@ -26,6 +26,9 @@
 		image-rendering: pixelated;
 		position: relative;
 		z-index: 2;
+
+		width: 88px;
+		height: 31px;
 	}
 
 	img:hover {
@@ -36,6 +39,7 @@
 
 	.fbtn:has(img:hover) img:not(:hover) {
 		z-index: 1;
-		filter: brightness(0.25) blur(1px);
+        opacity: 0.5;
+		filter: blur(1px);
 	}
 </style>

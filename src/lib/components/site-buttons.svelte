@@ -1,24 +1,24 @@
 <script lang="ts">
-	import type Freezeframe from 'freezeframe';
-	import { onMount } from 'svelte';
+	// import type Freezeframe from 'freezeframe';
+	// import { onMount } from 'svelte';
 
-	let fre: Freezeframe;
+	// let fre: Freezeframe;
 
-	onMount(async () => {
-		let f = await import('freezeframe');
-		let freezeframe = f.default;
+	// onMount(async () => {
+	// 	let f = await import('freezeframe');
+	// 	let freezeframe = f.default;
 
-		fre = new freezeframe('.buttons', {
-			responsive: false,
-			trigger: false,
-			warnings: false
-		});
-	});
+	// 	fre = new freezeframe('.buttons', {
+	// 		responsive: false,
+	// 		trigger: false,
+	// 		warnings: false
+	// 	});
+	// });
 </script>
 
-<div class="flex justify-center pb-2">
+<!-- <div class="flex justify-center pb-2">
 	<button class="border" onclick={() => fre.toggle()}>Play/Pause Animated Buttons</button>
-</div>
+</div> -->
 <div
 	class="buttons btn-container flex w-[100%] flex-auto flex-wrap items-center justify-center gap-1"
 >
@@ -60,14 +60,16 @@
 			loading="lazy"
 			title="pawpyrus.art"
 			alt="pawpyrus.art"
+			data-eighteen="true"
 		/></a
 	>
-	<a target="_blank" rel="noopener" class="w-fit shrink-0" href="https://rice.place/"
+	<a target="_blank" rel="noopener" class="w-fit shrink-0" href="https://web.archive.org/web/rice.place/"
 		><img
 			src="https://rice.nekoweb.org/button/riceplace.png"
 			loading="lazy"
 			title="rice.place"
 			alt="rice.place"
+			data-archive="true"
 		/></a
 	>
 	<a target="_blank" rel="noopener" href="https://moosyu.nekoweb.org/"
@@ -116,14 +118,6 @@
 			loading="lazy"
 			title="Sol/Ultrakill: click for a FREE gabriel plushie!"
 			alt="Sol/Ultrakill: click for a FREE gabriel plushie!"
-		/></a
-	>
-	<a target="_blank" rel="noopener" href="https://moosyu.nekoweb.org/"
-		><img
-			src="https://ze.wtf/9d6m7sun"
-			loading="lazy"
-			title="Memecompanies/Moosyu: moosyus awesome button"
-			alt="Memecompanies/Moosyu: moosyus awesome button"
 		/></a
 	>
 	<a target="_blank" rel="noopener" href="https://july.lol"
@@ -272,14 +266,6 @@
 			title="LibraryofGurkistan: HELLO MORTAL"
 			alt="LibraryofGurkistan: HELLO MORTAL"
 			loading="lazy"
-		/></a
-	>
-	<a target="_blank" rel="noopener" href="https://moosyu.nekoweb.org/"
-		><img
-			src="https://moosyu.nekoweb.org/assets/button.png"
-			loading="lazy"
-			title="Memecompanies/Moosyu: moosyus awesome button"
-			alt="Memecompanies/Moosyu: moosyus awesome button"
 		/></a
 	>
 	<a href="https://ducdat0507.github.io/" target="_blank"
@@ -477,10 +463,6 @@
 	}
 
 	img:hover {
-		border: 3px solid var(--color-ctp-overlay0)
-	}
-
-	/* img:hover {
 		z-index: 5;
 		transform: scale(1.25);
 		filter: blur(0);
@@ -490,5 +472,5 @@
 		z-index: 1;
 		opacity: 0.5;
 		filter: blur(2px);
-	} */
+	}
 </style>

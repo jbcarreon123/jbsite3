@@ -228,6 +228,12 @@ pre:hover button.copy {
     color: rgba(var(--ctp-subtext0))
 }
 
+#hoverSpan .warn {
+    font-size: 13px;
+    font-style: italic;
+    color: rgba(var(--ctp-yellow))
+}
+
 #hoverSpan .title {
     font-size: 18px;
 }

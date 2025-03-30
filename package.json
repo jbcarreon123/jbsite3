@@ -58,10 +58,12 @@
 		"remark-reading-time": "^2.0.1",
 		"remark-retext": "^6.0.0",
 		"retext-english": "^5.0.0",
+		"rss-parser": "^3.13.0",
 		"shiki": "^3.1.0",
 		"shiki-transformer-copy-button": "^0.0.3",
 		"svelte-adapter-nekoweb": "^2.2.1",
 		"svelte-meta-tags": "^4.1.0",
-		"unist-util-visit": "^5.0.0"
+		"unist-util-visit": "^5.0.0",
+		"url": "^0.11.4"
 	}
 }

@@ -128,8 +128,10 @@
 				if (!el.dataset.hoverContent) {
 					el?.removeEventListener('mousemove', mouseMove);
 					el?.removeEventListener('mouseout', mouseOut);
+					let archive = Boolean(el.dataset.archive);
+					let eighteen = Boolean(el.dataset.eighteen);
 					let name: string = `${el.title ? `${el?.title.replaceAll(': ', ':<br />')}<br />` : `${el?.alt.replaceAll(': ', ':<br />')}<br />`}`;
-					el.dataset.hoverContent = `${name !== '<br />' ? `<span class="el">${name}</span>` : ''}${el.parentElement?.hasAttribute('href') ? `<span class="link">${el.parentElement.href}</span>` : ''}`;
+					el.dataset.hoverContent = `${name !== '<br />' ? `<span class="el title">${name}</span>` : ''}${eighteen? '<span class="text-ctp-yellow"><i>Site might contain 18+ content</i></span>' : ''}${archive ? '<span class="text-ctp-yellow">Redirects to Wayback Machine (either site is dead or webmaster on hiatus)</span>' : ''}${el.parentElement?.hasAttribute('href') ? `<span class="link">${el.parentElement.href}</span>` : ''}`;
 					el.title = '';
 					el?.addEventListener('mousemove', mouseMove);
 					el?.addEventListener('mouseout', mouseOut);
@@ -158,16 +160,18 @@
 			}
 		});
 		document.querySelectorAll('img').forEach((el) => {
-			if (!el.dataset.hoverContent) {
-				el?.removeEventListener('mousemove', mouseMove);
-				el?.removeEventListener('mouseout', mouseOut);
-				let name: string = `${el.title ? `${el?.title.replaceAll(': ', ':<br />')}<br />` : `${el?.alt.replaceAll(': ', ':<br />')}<br />`}`;
-				el.dataset.hoverContent = `${name !== '<br />' ? `<span class="el">${name}</span>` : ''}${el.parentElement?.hasAttribute('href') ? `<span class="link">${el.parentElement.href}</span>` : ''}`;
-				el.title = '';
-				el?.addEventListener('mousemove', mouseMove);
-				el?.addEventListener('mouseout', mouseOut);
-			}
-		});
+				if (!el.dataset.hoverContent) {
+					el?.removeEventListener('mousemove', mouseMove);
+					el?.removeEventListener('mouseout', mouseOut);
+					let archive = Boolean(el.dataset.archive);
+					let eighteen = Boolean(el.dataset.eighteen);
+					let name: string = `${el.title ? `${el?.title.replaceAll(': ', ':<br />')}<br />` : `${el?.alt.replaceAll(': ', ':<br />')}<br />`}`;
+					el.dataset.hoverContent = `${name !== '<br />' ? `<span class="el">${name}</span>` : ''}${eighteen? '<span class="warn">Site might contain 18+ content</span><br />' : ''}${archive ? '<span class="warn">Redirects to Wayback Machine (either site is dead or webmaster on hiatus)</span><br />' : ''}${el.parentElement?.hasAttribute('href') ? `<span class="link">${el.parentElement.href}</span>` : ''}`;
+					el.title = '';
+					el?.addEventListener('mousemove', mouseMove);
+					el?.addEventListener('mouseout', mouseOut);
+				}
+			});
 		document.querySelectorAll('a:not(:has(img))').forEach((el) => {
 			if (!el.dataset.hoverContent && !el.href.includes(window.location.hostname)) {
 				el?.removeEventListener('mousemove', mouseMove);

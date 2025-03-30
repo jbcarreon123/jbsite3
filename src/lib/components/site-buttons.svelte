@@ -1,12 +1,27 @@
-<script>
+<script lang="ts">
+	import type Freezeframe from 'freezeframe';
 	import { onMount } from 'svelte';
 
-	function getRandomArbitrary(min, max) {
-		return Math.random() * (max - min) + min;
-	}
+	let fre: Freezeframe;
+
+	onMount(async () => {
+		let f = await import('freezeframe');
+		let freezeframe = f.default;
+
+		fre = new freezeframe('.buttons', {
+			responsive: false,
+			trigger: false,
+			warnings: false
+		});
+	});
 </script>
 
-<div class="btn-container flex w-[100%] flex-auto flex-wrap items-center justify-center gap-1">
+<div class="flex justify-center pb-2">
+	<button class="border" onclick={() => fre.toggle()}>Play/Pause Animated Buttons</button>
+</div>
+<div
+	class="buttons btn-container flex w-[100%] flex-auto flex-wrap items-center justify-center gap-1"
+>
 	<a target="_blank" rel="noopener" class="w-fit shrink-0" href="https://dimden.dev/"
 		><img
 			src="https://dimden.dev/services/images/88x31.gif"
@@ -443,11 +458,29 @@
 		image-rendering: pixelated;
 		z-index: 2;
 
-		width: 88px;
-		height: 31px;
+		max-width: 88px;
+		max-height: 31px;
+		overflow: hidden;
+	}
+
+	a :global {
+		.ff-loading-icon::before {
+			background-image: none;
+			content: "Loading";
+			overflow: hidden;
+
+			width: 88px;
+			height: 31px;
+
+			margin: 0 auto;
+		}
 	}
 
 	img:hover {
+		border: 3px solid var(--color-ctp-overlay0)
+	}
+
+	/* img:hover {
 		z-index: 5;
 		transform: scale(1.25);
 		filter: blur(0);
@@ -457,5 +490,5 @@
 		z-index: 1;
 		opacity: 0.5;
 		filter: blur(2px);
-	}
+	} */
 </style>

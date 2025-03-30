@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 @config "../tailwind.config.js";
-@plugin "@catppuccin/tailwindcss"; 
+@plugin "@catppuccin/tailwindcss";
 
 @theme inline {
     --color-ctp-rosewater: rgba(var(--ctp-rosewater));
@@ -35,9 +35,11 @@
     text-align: left;
 }
 
-@media print
-{    
-    #c_inputDiv, .c-site, #c_widget button {
+@media print {
+
+    #c_inputDiv,
+    .c-site,
+    #c_widget button {
         display: none;
     }
 
@@ -105,16 +107,16 @@
 .high-contrast-light {
     --ctp-red: 255, 0, 0;
     --ctp-green: 0, 255, 0;
-    --ctp-yellow: 204, 204, 0; 
+    --ctp-yellow: 204, 204, 0;
     --ctp-blue: 0, 0, 255;
-    --ctp-sapphire: 0, 102, 204; 
-    --ctp-sky: 0, 153, 255; 
+    --ctp-sapphire: 0, 102, 204;
+    --ctp-sky: 0, 153, 255;
     --ctp-text: 0, 0, 0;
-    --ctp-subtext0: 51, 51, 51; 
-    --ctp-overlay0: 240, 230, 200; 
+    --ctp-subtext0: 51, 51, 51;
+    --ctp-overlay0: 240, 230, 200;
     --ctp-mantle: 255, 255, 255;
-    --ctp-surface0: 220, 220, 220; 
-    --ctp-base: 245, 245, 245; 
+    --ctp-surface0: 220, 220, 220;
+    --ctp-base: 245, 245, 245;
 }
 
 p {
@@ -122,18 +124,18 @@ p {
 }
 
 .high-contrast-dark {
-    --ctp-red: 255, 64, 64; 
-    --ctp-green: 102, 255, 102; 
-    --ctp-yellow: 255, 255, 102; 
-    --ctp-blue: 102, 178, 255; 
-    --ctp-sapphire: 51, 153, 255; 
-    --ctp-sky: 51, 204, 255; 
+    --ctp-red: 255, 64, 64;
+    --ctp-green: 102, 255, 102;
+    --ctp-yellow: 255, 255, 102;
+    --ctp-blue: 102, 178, 255;
+    --ctp-sapphire: 51, 153, 255;
+    --ctp-sky: 51, 204, 255;
     --ctp-text: 255, 255, 255;
-    --ctp-subtext0: 204, 204, 204; 
-    --ctp-overlay0: 48, 48, 48; 
+    --ctp-subtext0: 204, 204, 204;
+    --ctp-overlay0: 48, 48, 48;
     --ctp-mantle: 0, 0, 0;
-    --ctp-surface0: 24, 24, 24; 
-    --ctp-base: 8, 8, 8; 
+    --ctp-surface0: 24, 24, 24;
+    --ctp-base: 8, 8, 8;
 }
 
 
@@ -153,6 +155,55 @@ p {
     src: url('/fonts/CommitMono-Variable.ttf');
     font-feature-settings: 'ss03' on, 'ss04' on, 'ss05' on, 'cv02' on, 'cv04' on, 'cv06' on;
 }
+
+pre:has(code) {
+    position: relative;
+}
+
+pre button.copy {
+    opacity: 0;
+}
+
+pre:hover button.copy {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    padding: 5px;
+    height: 32px;
+    width: 32px;
+    opacity: 1;
+    display: flex;
+
+    
+
+    & span {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    & .ready {
+        background-image: url(/imgs/copy/ready.svg);
+    }
+
+    & .success {
+        display: none;
+        background-image: url(/imgs/copy/copied.svg);
+    }
+
+    &.copied {
+        & .success {
+            display: block;
+        }
+
+        & .ready {
+            display: none;
+        }
+    }
+}
+
 
 #hoverSpan {
     white-space: pre;
@@ -190,12 +241,18 @@ p {
     max-height: 50vh;
 }
 
-select, .border {
+select,
+.border,
+button.copy {
     padding: 5px;
-    border: 1px solid rgb(var(--ctp-sapphire))
+    border: 1px solid rgb(var(--ctp-sapphire));
+    color: rgb(var(--ctp-sapphire));
 }
 
-select:hover, .border:hover {
+select:hover,
+.border:hover,
+button.copy:hover {
+    color: rgb(var(--ctp-sky));
     border: 1px solid rgb(var(--ctp-sky))
 }
 
@@ -209,37 +266,37 @@ select:hover, .border:hover {
 
 .latte .shiki,
 .latte .shiki span {
-  color: var(--shiki-latte) !important;
+    color: var(--shiki-latte) !important;
 }
 
 .macchiato .shiki,
 .macchiato .shiki span {
-  color: var(--shiki-macchiato) !important;
+    color: var(--shiki-macchiato) !important;
 }
 
 .frappe .shiki,
 .frappe .shiki span {
-  color: var(--shiki-frappe) !important;
+    color: var(--shiki-frappe) !important;
 }
 
 .gruvbox-dark .shiki,
 .gruvbox-dark .shiki span {
-  color: var(--shiki-gruvboxdark) !important;
+    color: var(--shiki-gruvboxdark) !important;
 }
 
 .gruvbox-light .shiki,
 .gruvbox-light .shiki span {
-  color: var(--shiki-gruvboxlight) !important;
+    color: var(--shiki-gruvboxlight) !important;
 }
 
 .high-contrast-dark .shiki,
 .high-contrast-dark .shiki span {
-  color: var(--shiki-highcontrastdark) !important;
+    color: var(--shiki-highcontrastdark) !important;
 }
 
 .high-contrast-light .shiki,
 .high-contrast-light .shiki span {
-  color: var(--shiki-highcontrastlight) !important;
+    color: var(--shiki-highcontrastlight) !important;
 }
 
 select {
@@ -281,7 +338,12 @@ select {
     font-style: normal;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Commit Mono", monospace;
     font-weight: 600;
     font-style: normal;
@@ -310,7 +372,8 @@ h2:not(.nf) {
     @apply text-lg md:text-xl;
 }
 
-h2:not(.nf):not(.nm), h3:not(.nf):not(:nm) {
+h2:not(.nf):not(.nm),
+h3:not(.nf):not(:nm) {
     margin-bottom: 8px;
 }
 
@@ -339,7 +402,8 @@ h4:not(.nf) {
     margin-bottom: 8px;
 }
 
-.code, code {
+.code,
+code {
     font-family: "Commit Mono", monospace;
     padding: 2px;
     border: 1px solid rgba(var(--ctp-overlay0));
@@ -354,7 +418,13 @@ iframe {
     transition: max-height 0.25s ease-in-out;
 }
 
-.headercolor, h1, h2, h3, h4, h5, h6  {
+.headercolor,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     @apply text-ctp-blue
 }
 
@@ -368,11 +438,11 @@ a:hover {
 }
 
 .abd {
-    @apply border-neutral-500 
+    @apply border-neutral-500
 }
 
 .abd:hover {
-    @apply border-neutral-800 
+    @apply border-neutral-800
 }
 
 *:not(.oneko) {

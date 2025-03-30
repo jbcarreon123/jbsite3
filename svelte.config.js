@@ -36,14 +36,7 @@ const themes = [
 ];
 const highlighter = await createHighlighter({
 	themes: themes,
-	langs: languages,
-	transformers: [
-		transformerNotationDiff(),
-		transformerNotationHighlight(),
-		transformerNotationWordHighlight(),
-		transformerMetaHighlight(),
-		transformerMetaWordHighlight()
-	]
+	langs: languages
 });
 
 function addWordCountToFrontmatterData({
@@ -113,7 +106,8 @@ const config = {
 						transformerNotationHighlight(),
 						transformerNotationWordHighlight(),
 						transformerMetaHighlight(),
-						transformerMetaWordHighlight()
+						transformerMetaWordHighlight(),
+						addCopyButton(),
 					]
 				}));
 				return `{@html \`${html}\` }`;

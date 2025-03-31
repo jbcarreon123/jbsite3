@@ -67,7 +67,7 @@
 	openGraph={{
 		title: data.title,
 		description: data.description,
-		url: `https://jbcarreon123.nekoweb.org/blogs/${data.slug}`,
+		url: `https://jbcarreon123.nekoweb.org/posts/${data.slug}`,
 		siteName: "jb's posts",
 		type: 'article'
 	}}

@@ -10,7 +10,7 @@
             data-sveltekit-preload-data="hover"
         >
             <a href="/">Home</a>
-            <a href="/blogs">Posts</a>
+            <a href="/posts">Posts</a>
             <a href="/contact">Contact</a>
             <a href="/projects">Projects</a>
             <a href="/credits">Credits</a>

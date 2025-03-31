@@ -49,12 +49,13 @@
 				data-sveltekit-preload-data="hover"
 			>
 				<a href="/">Home</a>
-				<a href="/blogs">Posts</a>
+				<a href="/posts">Posts</a>
 				<a href="/contact">Contact</a>
 				<a href="/projects">Projects</a>
 				<a href="/bookmarks">Bookmarks</a>
 				<a href="/links">Links</a>
 				<a href="/utils">Utils</a>
+				<a href="/tutorials">Tutorials</a>
 				<a href="/about">About</a>
 				<a href="/accessibility">Accessibility</a>
 				<a href="https://jbcarreon123.atabook.org"> Sign my guestbook! </a>

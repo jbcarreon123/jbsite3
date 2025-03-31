@@ -425,8 +425,8 @@
 		><img
 			src="/imgs/buttons/tsukinio.gif"
 			loading="lazy"
-			alt="metatronius"
-			title="metatronius"
+			alt="tsukinio"
+			title="Tsukinio:: Chiikawa Edition"
 		/></a
 	>
 	<a target="_blank" class="w-fit shrink-0" href="https://kalechips.net/responsive/index">

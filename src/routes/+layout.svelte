@@ -130,8 +130,14 @@
 					el?.removeEventListener('mouseout', mouseOut);
 					let archive = Boolean(el.dataset.archive);
 					let eighteen = Boolean(el.dataset.eighteen);
-					let name: string = `${el.title ? `${el?.title.replaceAll(': ', ':<br />')}<br />` : `${el?.alt.replaceAll(': ', ':<br />')}<br />`}`;
-					el.dataset.hoverContent = `${name !== '<br />' ? `<span class="el title">${name}</span>` : ''}${eighteen ? '<span class="text-ctp-yellow"><i>Site might contain 18+ content</i></span><br />' : ''}${archive ? '<span class="text-ctp-yellow">Redirects to Wayback Machine (either site is dead or webmaster on hiatus)</span><br />' : ''}${el.parentElement?.hasAttribute('href') ? `<span class="link">${el.parentElement.href}</span>` : ''}`;
+					let desc = el.dataset.desc;
+					let targetbl = false;
+					if (el.parentElement && el.parentElement.tagName.toLowerCase() === 'a') {
+						let ael: HTMLAnchorElement = el.parentElement as HTMLAnchorElement;
+						targetbl = ael.target === '_blank';
+					}
+					let name: string = `${el.title ? `${el?.title.replaceAll(': ', ':<br />').replaceAll('::<br />', ': ')}<br />` : `${el?.alt.replaceAll(': ', ':<br />').replaceAll('::<br />', ': ')}<br />`}`;
+					el.dataset.hoverContent = `${name !== '<br />' ? `<span class="el title">${name}</span>` : ''}${desc ? `<span>${desc}</span><br />` : ''}${eighteen ? '<span class="text-ctp-yellow"><i>Site might contain 18+ content</i></span><br />' : ''}${archive ? '<span class="text-ctp-yellow">Redirects to Wayback Machine (either site is dead or webmaster on hiatus)</span><br />' : ''}${el.parentElement?.hasAttribute('href') ? `<span class="link">${el.parentElement.href}${targetbl ? ' ⬏' : ''}</span>` : ''}`;
 					el.title = '';
 					el?.addEventListener('mousemove', mouseMove);
 					el?.addEventListener('mouseout', mouseOut);
@@ -141,7 +147,8 @@
 				if (!el.dataset.hoverContent && !el.href.includes(window.location.hostname)) {
 					el?.removeEventListener('mousemove', mouseMove);
 					el?.removeEventListener('mouseout', mouseOut);
-					el.dataset.hoverContent = `<span class="link">${el.href}</span>`;
+					let targetbl = (el as HTMLAnchorElement).target === '_blank';
+					el.dataset.hoverContent = `<span class="link">${el.href}${targetbl ? ' ⬏' : ''}</span>`;
 					el?.addEventListener('mousemove', mouseMove);
 					el?.addEventListener('mouseout', mouseOut);
 				}
@@ -165,8 +172,14 @@
 				el?.removeEventListener('mouseout', mouseOut);
 				let archive = Boolean(el.dataset.archive);
 				let eighteen = Boolean(el.dataset.eighteen);
-				let name: string = `${el.title ? `${el?.title.replaceAll(': ', ':<br />')}<br />` : `${el?.alt.replaceAll(': ', ':<br />')}<br />`}`;
-				el.dataset.hoverContent = `${name !== '<br />' ? `<span class="el title">${name}</span>` : ''}${eighteen ? '<span class="text-ctp-yellow"><i>Site might contain 18+ content</i></span><br />' : ''}${archive ? '<span class="text-ctp-yellow">Redirects to Wayback Machine (either site is dead or webmaster on hiatus)</span><br />' : ''}${el.parentElement?.hasAttribute('href') ? `<span class="link">${el.parentElement.href}</span>` : ''}`;
+				let desc = el.dataset.desc;
+				let targetbl = false;
+				if (el.parentElement && el.parentElement.tagName.toLowerCase() === 'a') {
+					let ael: HTMLAnchorElement = el.parentElement as HTMLAnchorElement;
+					targetbl = ael.target === '_blank';
+				}
+				let name: string = `${el.title ? `${el?.title.replaceAll(': ', ':<br />').replaceAll('::<br />', ': ')}<br />` : `${el?.alt.replaceAll(': ', ':<br />').replaceAll('::<br />', ': ')}<br />`}`;
+				el.dataset.hoverContent = `${name !== '<br />' ? `<span class="el title">${name}</span>` : ''}${desc ? `<span>${desc}</span><br />` : ''}${eighteen ? '<span class="text-ctp-yellow"><i>Site might contain 18+ content</i></span><br />' : ''}${archive ? '<span class="text-ctp-yellow">Redirects to Wayback Machine (either site is dead or webmaster on hiatus)</span><br />' : ''}${el.parentElement?.hasAttribute('href') ? `<span class="link">${el.parentElement.href}${targetbl ? ' ⬏' : ''}</span>` : ''}`;
 				el.title = '';
 				el?.addEventListener('mousemove', mouseMove);
 				el?.addEventListener('mouseout', mouseOut);
@@ -176,7 +189,8 @@
 			if (!el.dataset.hoverContent && !el.href.includes(window.location.hostname)) {
 				el?.removeEventListener('mousemove', mouseMove);
 				el?.removeEventListener('mouseout', mouseOut);
-				el.dataset.hoverContent = `<span class="link">${el.href}</span>`;
+				let targetbl = (el as HTMLAnchorElement).target === '_blank';
+				el.dataset.hoverContent = `<span class="link">${el.href}${targetbl ? ' ⬏' : ''}</span>`;
 				el?.addEventListener('mousemove', mouseMove);
 				el?.addEventListener('mouseout', mouseOut);
 			}

@@ -115,7 +115,6 @@ export default {
 
     .phone {
         background-image: url(//nekoweb.org/assets/nekopattern.png);
-        width: inherit;
         height: 350px;
         background-position: center;
         background-repeat: repeat;
@@ -193,7 +192,9 @@ export default {
     }
 
     font: 11pt "MS PGothic", Tahoma, Verdana;
-    box-sizing: content-box;
+    * {
+        box-sizing: border-box;
+    }
     }
   `
 }

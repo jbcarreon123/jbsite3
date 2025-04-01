@@ -191,6 +191,7 @@ export default {
     }
 
     font: 11pt "MS PGothic", Tahoma, Verdana;
+    box-sizing: content-box;
     }
   `
 }

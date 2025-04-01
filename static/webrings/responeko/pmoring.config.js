@@ -99,6 +99,8 @@ export default {
         text-align: center;
         background-color: rgba(32, 32, 32, 128);
         padding: 6px;
+        text-shadow: none;
+        color: white;
     }
 
     .phone-container {

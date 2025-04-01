@@ -1,0 +1,147 @@
+<script>
+	import { memoryUsage } from "process";
+	import { onMount } from "svelte";
+
+    let mems;
+    onMount(async () => {
+        let req = await fetch('/webrings/responeko/members.json')
+        mems = await req.json()
+    })
+</script>
+
+<svelte:head>
+    <title>Responeko Webring</title>
+</svelte:head>
+
+<h1 class="headercolor">Responeko Webring</h1>
+<p>A webring for Nekoweb sites that is responsive by design.</p>
+
+
+<div class="w-md">
+    <script src="/webrings/responeko/pmoring.js"></script>
+</div>
+
+<h2>Guidelines</h2>
+<p>Here's the guidelines for joining this webring:</p>
+<ol class="list-decimal pl-12">
+    <li>
+        <h2>Your site must be on Nekoweb.</h2>
+        <p><b>This is important</b>!</p>
+    </li>
+    <li>
+        <h2>Don't be an asshole.</h2>
+        <p>Do not try to spam, or do stupid stuff just so I can let you join. It will just result to you likely getting denied.</p>
+    </li>
+    <li>
+        <h2>You must be at least 13 years old to apply.</h2>
+        <p>If I found out you're under 13 years old, your site will be removed and you'll be barred from future applications. <b>Do not complain.</b></p>
+    </li>
+    <li>
+        <h2>Sites should be your own creation.</h2>
+        <p>Although websites that uses a template or layout template (but modified it) is allowed, I don't allow websites built using site builders.</p>
+        <p>Plagiarizing someone's site, though, is strictly not allowed.</p>
+    </li>
+    <li>
+        <h2>Your site should have something on it.</h2>
+        <p>Just a simple about me page will suffice.</p>
+    </li>
+    <li>
+        <h2>If your site has suggestive content on it, it should not be on the page you will link here.</h2>
+        <p>Additionally, websites that contain hate speech, illegal content, abuse, or non-artistic NSFW content is not allowed.</p>
+    </li>
+    <li>
+        <h2>After you've been joined, you need to put the widget somewhere.</h2>
+        <p>Whether it is on the homepage, the landing page, or on a dedicated webrings page, it should be visible on your site!</p>
+    </li>
+</ol>
+
+<h2>Wanna join?</h2>
+<p>Contact JB at <code>@jbcarreon123</code> on Discord (if you are on the Nekoweb discord, and recommended!), or <code>jbcarreon212@gmail.com</code> on email (make sure your email's title is Responeko Webring and mark it as important!)</p>
+<p>Tell me your:</p>
+<ul class="list-disc pl-12">
+    <li>
+        <p>Slug (Username, no spaces or special chars please!)</p>
+    </li>
+    <li>
+        <p>Framework</p>
+    </li>
+    <li>
+        <p>Age rating (if there is)</p>
+    </li>
+    <li>
+        <p>Your site button URL (optional, recommended)</p>
+    </li>
+    <li>
+        <p>Your elevator pitch</p>
+    </li>
+</ul>
+<p>and wait. I'm gonna add you and notify you via the method you've used.</p>
+
+<h2>Webring widget</h2>
+<p>If you're cool about embedding JS on your site, here's a one-liner code to end them all!</p>
+<p>Powered by <a href="https://thinliquid.github.io/pmoring/" target="_blank">pmoring</a>.</p>
+<textarea class="code">
+<script src="https://jbcarreon123.nekoweb.org/webrings/Responeko Webring/pmoring.js"></script>
+</textarea>
+<p>If not, here's the direct URLs. Note that the user needs JS so they can successfully go to the other sites.</p>
+<ul class="list-disc pl-12">
+    <li>
+        <p>Previous: <code>https://jbcarreon123.nekoweb.org/webrings/Responeko Webring/redirect?slug=[YOUR_USERNAME]&way=prev</code></p>
+    </li>
+    <li>
+        <p>Next: <code>https://jbcarreon123.nekoweb.org/webrings/Responeko Webring/redirect?slug=[YOUR_USERNAME]&way=next</code></p>
+    </li>
+    <li>
+        <p>Random: <code>https://jbcarreon123.nekoweb.org/webrings/Responeko Webring/redirect?way=rand</code></p>
+    </li>
+</ul>
+<p>Just replace <code>[YOUR_USERNAME]</code> to your username given.</p>
+
+<h2>Widget customization</h2>
+<p>
+    Use <code>#pmoring.Responeko Webring</code> for styling the widget. Also you can put the class <code>afterdark</code> or
+    <code>brat</code> on the script tag if you want the default pmoring style.
+</p>
+
+<h2 id="members">Members</h2>
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <strong>Name</strong>
+            </td>
+            <td>
+                <strong>Expression</strong>
+            </td>
+        </tr>
+        {#each mems as member}
+        <tr>
+            <td>
+                <a href="//{member.host}">{member.title}</a>
+            </td>
+            <td>
+                <img src="{member.expression}" width="105px" height="175px" alt="" />
+            </td>
+        </tr>
+        {/each}
+    </tbody>
+</table>
+
+<style>
+    table tr td:not(:last-child) {
+        padding-right: 25px;
+    }
+
+    table tr td {
+        padding: 5px;
+        border: 1px solid rgb(var(--ctp-overlay0));
+    }
+
+    li p {
+        padding-left: 12px;
+    }
+
+    li h2 {
+        padding-top: 6px;
+    }
+</style>

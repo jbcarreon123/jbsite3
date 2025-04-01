@@ -70,7 +70,7 @@
         <p>Your site URL, and </p>
     </li>
     <li>
-        <p>a expression image that is at least 105x175.</p>
+        <p>a link of your expression image that is at least 105x175.</p>
     </li>
 </ul>
 <p>and wait. I'm gonna add you and notify you via the method you've used.</p>

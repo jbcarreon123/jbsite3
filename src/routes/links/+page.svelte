@@ -42,6 +42,7 @@
 <h1 class="headercolor pb-2"><a href="/webrings">My webrings</a></h1>
 <div class="flex flex-auto flex-wrap gap-4 w-full">
     <script src="/webrings/ssgring/pmoring.js"></script>
+    <script src="/webrings/responeko/pmoring.js"></script>
 </div>
 
 <h1 class="headercolor pb-2">Webrings</h1>

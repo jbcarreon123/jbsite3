@@ -104,8 +104,8 @@ export default {
     }
 
     .phone-container {
-        height: 350px;
-        width: calc(350px * 0.5);
+        height: 370px;
+        width: calc(370px * 0.5);
 
         border: 12px solid black;
         border-radius: 10px;

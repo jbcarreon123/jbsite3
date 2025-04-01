@@ -168,7 +168,7 @@ export default {
     }
 
     .item .img {
-        background-image: var(--img, url(/placeholder.png));
+        background-image: var(--img, url(https://jbcarreon123.nekoweb.org/imgs/responeko/placeholder.png));
         background-position: center;
         background-size: cover;
         width: calc(350px * 0.30);
@@ -180,7 +180,7 @@ export default {
     }
 
     .fallback-img {
-        background-image: url(/placeholder.png);
+        background-image: url(https://jbcarreon123.nekoweb.org/imgs/responeko/placeholder.png);
     }
 
     .divider {

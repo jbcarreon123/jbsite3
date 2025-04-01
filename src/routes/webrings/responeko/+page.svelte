@@ -17,7 +17,7 @@
 <p>A webring for Nekoweb sites that is responsive by design.</p>
 
 
-<div class="w-md">
+<div class="w-md wb-responeko">
     <script src="/webrings/responeko/pmoring.js"></script>
 </div>
 
@@ -27,6 +27,10 @@
     <li>
         <h2>Your site must be on Nekoweb.</h2>
         <p><b>This is important</b>!</p>
+    </li>
+    <li>
+        <h2>Your site must be responsive.</h2>
+        <p>This means that your site must work properly on any viewport, and especially on mobile.</p>
     </li>
     <li>
         <h2>Don't be an asshole.</h2>

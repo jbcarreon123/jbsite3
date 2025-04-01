@@ -35,6 +35,10 @@
     text-align: left;
 }
 
+* {
+    box-sizing:unset;
+}
+
 @media print {
 
     #c_inputDiv,

@@ -244,11 +244,11 @@
 <div id="document">
 	<Header />
 	<div class="grd m-2.5 grid grid-cols-1">
-		<main class="m-0.5 w-full px-2 pb-3 md:flex-3/4" id="page-content" use:autoAnimate>
+		<main class="m-0.5 mx-3 pb-3" id="page-content" use:autoAnimate>
 			{@render children()}
 		</main>
 		<aside
-			class="border-ctp-overlay0 m-0.5 flex w-full flex-wrap border-2 pb-3 md:flex-1/4 md:flex-col print:hidden"
+			class="border-ctp-overlay0 m-1 flex flex-wrap border-2 pb-3 md:flex-1/4 md:flex-col print:hidden"
 			use:autoAnimate
 		>
 			<Sidebar />

@@ -204,6 +204,10 @@ pre:hover button.copy {
     }
 }
 
+#responeko .phone {
+    background-image: url(/background.gif);
+    background-size: cover;
+}
 
 #hoverSpan {
     white-space: pre;

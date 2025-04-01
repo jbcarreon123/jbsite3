@@ -27,9 +27,10 @@
     <li>
         <h2>Your site must be on Nekoweb.</h2>
         <p><b>This is important</b>!</p>
+        <p>This also includes following the <a href="https://nekoweb.org/tos" target="_blank">Nekoweb Terms of Service</a>.</p>
     </li>
     <li>
-        <h2>Your site must be responsive.</h2>
+        <h2>Your site must be responsive, and you must make an effort to keep it responsive.</h2>
         <p>This means that your site must work properly on any viewport, and especially on mobile.</p>
     </li>
     <li>
@@ -42,8 +43,7 @@
     </li>
     <li>
         <h2>Sites should be your own creation.</h2>
-        <p>Although websites that uses a template or layout template (but modified it) is allowed, I don't allow websites built using site builders.</p>
-        <p>Plagiarizing someone's site, though, is strictly not allowed.</p>
+        <p>Although websites that uses a template or layout template (but modified it and it's responsive) is allowed, I don't allow websites built using site builders.</p>
     </li>
     <li>
         <h2>Your site should have something on it.</h2>
@@ -67,16 +67,10 @@
         <p>Slug (Username, no spaces or special chars please!)</p>
     </li>
     <li>
-        <p>Framework</p>
+        <p>Your site URL, and </p>
     </li>
     <li>
-        <p>Age rating (if there is)</p>
-    </li>
-    <li>
-        <p>Your site button URL (optional, recommended)</p>
-    </li>
-    <li>
-        <p>Your elevator pitch</p>
+        <p>a expression image that is at least 105x175.</p>
     </li>
 </ul>
 <p>and wait. I'm gonna add you and notify you via the method you've used.</p>
@@ -85,27 +79,8 @@
 <p>If you're cool about embedding JS on your site, here's a one-liner code to end them all!</p>
 <p>Powered by <a href="https://thinliquid.github.io/pmoring/" target="_blank">pmoring</a>.</p>
 <textarea class="code">
-<script src="https://jbcarreon123.nekoweb.org/webrings/Responeko Webring/pmoring.js"></script>
+<script src="https://jbcarreon123.nekoweb.org/webrings/responeko/pmoring.js"></script>
 </textarea>
-<p>If not, here's the direct URLs. Note that the user needs JS so they can successfully go to the other sites.</p>
-<ul class="list-disc pl-12">
-    <li>
-        <p>Previous: <code>https://jbcarreon123.nekoweb.org/webrings/Responeko Webring/redirect?slug=[YOUR_USERNAME]&way=prev</code></p>
-    </li>
-    <li>
-        <p>Next: <code>https://jbcarreon123.nekoweb.org/webrings/Responeko Webring/redirect?slug=[YOUR_USERNAME]&way=next</code></p>
-    </li>
-    <li>
-        <p>Random: <code>https://jbcarreon123.nekoweb.org/webrings/Responeko Webring/redirect?way=rand</code></p>
-    </li>
-</ul>
-<p>Just replace <code>[YOUR_USERNAME]</code> to your username given.</p>
-
-<h2>Widget customization</h2>
-<p>
-    Use <code>#pmoring.Responeko Webring</code> for styling the widget. Also you can put the class <code>afterdark</code> or
-    <code>brat</code> on the script tag if you want the default pmoring style.
-</p>
 
 <h2 id="members">Members</h2>
 <table>

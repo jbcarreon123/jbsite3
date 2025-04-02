@@ -15,6 +15,11 @@
         "expression": "https://yumeoi.skin/webring-files/responeko.png"
     },
     {
+        "host": "pc98.club",
+        "title": "pc98",
+        "expression": " https://pc98.club/assets/wallpaper.gif"
+    },
+    {
         "host": "libraryofgurkistan.nekoweb.org",
         "title": "HELLO MORTAL",
         "expression": ""
@@ -23,10 +28,5 @@
         "host": "32enoki.net",
         "title": "32enoki web site dot net",
         "expression": "https://32enoki.net/105x175px.png"
-    },
-    {
-        "host": "pc98.club",
-        "title": "pc98",
-        "expression": " https://pc98.club/assets/wallpaper.gif"
     }
 ]

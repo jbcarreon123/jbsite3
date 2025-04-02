@@ -17,7 +17,7 @@ export default {
   `,
 
     widget: `
-    <div class="phone-container" style="--width: 350px">
+    <div class="phone-container">
             <div class="phone">
                 <div class="btn-container top">
                     <a href="//jbcarreon123.nekoweb.org/webrings/responeko">Responeko Ring</a>
@@ -111,6 +111,8 @@ export default {
         border-radius: 10px;
 
         margin: 0 auto;
+
+        --width: 350px;
     }
 
     .phone {

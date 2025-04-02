@@ -18,5 +18,10 @@
         "host": "libraryofgurkistan.nekoweb.org",
         "title": "HELLO MORTAL",
         "expression": ""
+    },
+    {
+        "host": "32enoki.net",
+        "title": "32enoki web site dot net",
+        "expression": "https://32enoki.net/105x175px.png"
     }
 ]

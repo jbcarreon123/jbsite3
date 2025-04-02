@@ -7,7 +7,7 @@ export default {
     list: await members.json(),
 
     defaultWidget: `
-    <div class="phone-container">
+    <div class="phone-container" style="--width: 350px">
             <div class="phone not">
               <div id="responeko-phone" class="items">
                 <p>This page isn't on the Responeko Ring yet! If you are, hard reload the page!</p>
@@ -17,7 +17,7 @@ export default {
   `,
 
     widget: `
-    <div class="phone-container">
+    <div class="phone-container" style="--width: 350px">
             <div class="phone">
                 <div class="btn-container top">
                     <a href="//jbcarreon123.nekoweb.org/webrings/responeko">Responeko Ring</a>
@@ -104,8 +104,8 @@ export default {
     }
 
     .phone-container {
-        height: 374px;
-        width: calc(374px * 0.5);
+        height: calc(var(--width) + 24px);
+        width: calc(calc(var(--width) + 24px) * 0.5);
 
         border: 12px solid black;
         border-radius: 10px;
@@ -115,7 +115,7 @@ export default {
 
     .phone {
         background-image: url(//nekoweb.org/assets/nekopattern.png);
-        height: 350px;
+        height: var(--width);
         background-position: center;
         background-repeat: repeat;
     }
@@ -170,8 +170,8 @@ export default {
         background-image: var(--img, url(https://jbcarreon123.nekoweb.org/imgs/responeko/placeholder.png));
         background-position: center;
         background-size: cover;
-        width: calc(350px * 0.30);
-        height: calc(350px * 0.5);
+        width: calc(calc(var(--width) * 0.30);
+        height: calc(var(--width) * 0.5);
 
         border-radius: 7px;
 

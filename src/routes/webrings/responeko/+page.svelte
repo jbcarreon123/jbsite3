@@ -83,30 +83,27 @@
 </textarea>
 
 <h2 id="members">Members</h2>
-<table>
-    <tbody>
-        <tr>
-            <td>
-                <strong>Name</strong>
-            </td>
-            <td>
-                <strong>Expression</strong>
-            </td>
-        </tr>
-        {#each mems as member}
-        <tr>
-            <td>
-                <a href="//{member.host}">{member.title}</a>
-            </td>
-            <td>
-                <img src="{member.expression}" width="105px" height="175px" alt="" />
-            </td>
-        </tr>
-        {/each}
-    </tbody>
-</table>
+<div class="flex flex-wrap gap-2">
+    {#each mems as member}
+        <a href="//{member.host}">
+            <div class="max-w-[105px]">
+                <p class="text-nowrap overflow-hidden text-ellipsis">{member.title}</p>
+                <div class="mem-plch">
+                    <img src={member.expression} alt={member.title} />
+                </div>
+            </div>
+        </a>
+    {/each}
+</div>
 
 <style>
+    .mem-plch {
+        width: 105px;
+        height: 175px;
+
+        background-image: url(/imgs/responeko/placeholder.png);
+    }
+
     table tr td:not(:last-child) {
         padding-right: 25px;
     }

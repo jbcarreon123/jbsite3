@@ -170,7 +170,7 @@ export default {
         background-image: var(--img, url(https://jbcarreon123.nekoweb.org/imgs/responeko/placeholder.png));
         background-position: center;
         background-size: cover;
-        width: calc(calc(var(--width) * 0.30);
+        width: calc(var(--width) * 0.30);
         height: calc(var(--width) * 0.5);
 
         border-radius: 7px;

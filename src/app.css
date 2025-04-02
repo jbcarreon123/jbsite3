@@ -209,6 +209,11 @@ pre:hover button.copy {
     background-size: cover;
 }
 
+#responeko p {
+    color: white !important;
+    text-shadow: none !important;
+}
+
 #hoverSpan {
     white-space: pre;
     line-height: 1.1em;

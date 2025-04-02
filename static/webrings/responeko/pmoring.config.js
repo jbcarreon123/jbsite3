@@ -73,11 +73,11 @@ export default {
     }
 
     .btn-container.btm {
-        bottom: 50px;
+        bottom: 40px;
     }
 
     .btn-container.top {
-        top: 25px;
+        top: 15px;
     }
 
     .btn-container a {

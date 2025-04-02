@@ -120,4 +120,9 @@ export let miniRambles = [
         date: fromZonedTime(new Date("03/08/2025 02:11"), 'Asia/Manila'),
         content: "So I dual booted my laptop with Windows 11 and EndeavourOS, let's see if that will stick or I am going to distro hop."
     },
+    {
+        title: "april falls",
+        date: fromZonedTime(new Date("04/01/2025 16:35"), 'Asia/Manila'),
+        content: "So I deployed jbsite1 on my nekoweb site as my crappy april fools joke and then i realized that I accidentally made a static site generator lol"
+    },
 ]

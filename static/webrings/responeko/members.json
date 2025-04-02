@@ -28,5 +28,10 @@
         "host": "32enoki.net",
         "title": "32enoki web site dot net",
         "expression": "https://32enoki.net/105x175px.png"
+    },
+    {
+        "host": "tsukinio.nekoweb.org",
+        "title": "Tsukinio",
+        "expression": "https://tsukinio.nekoweb.org/images/responeko-ad-export.png"
     }
 ]

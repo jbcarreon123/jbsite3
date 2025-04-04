@@ -429,6 +429,14 @@
 			title="Tsukinio:: Chiikawa Edition"
 		/></a
 	>
+	<a href="https://medjed.nekoweb.org/" target="_blank">
+		<img
+			src="https://medjed.nekoweb.org/assets/images/button.jpg"
+			loading="lazy"
+			alt="Medjed"
+			title="Medjed"
+		>
+	</a>
 	<a target="_blank" class="w-fit shrink-0" href="https://kalechips.net/responsive/index">
 		<img
 			src="/imgs/buttons/responsive-web-directory.png"

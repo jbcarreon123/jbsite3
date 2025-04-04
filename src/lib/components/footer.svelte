@@ -1,5 +1,10 @@
+<script>
+    const name = __NAME__;
+    const version = __VERSION__;
+</script>
+
 <div class="grid grid-cols-1 justify-items-center pt-4 pb-4 text-center">
-    <p>© 2024-2025 jbcarreon123. All rights reserved.</p>
+    <p>jbSite3 {version} © 2024-2025 jbcarreon123. All rights reserved.</p>
     <p><a href="https://maxpixels.moe/manifesto" target="_blank" rel="noopener">Copying is an act of theft, while taking inspiration is the true act of love.</a></p>
     <p>Content are licensed under CC BY-SA 4.0 unless specified.</p>
     <p>Made using <a href="https://bun.sh" target="_blank" rel="noopener">Bun</a> and <a href="https://svelte.dev/" target="_blank" rel="noopener">Svelte</a>. Hosted in <a href="https://nekoweb.org" target="_blank" rel="noopener">nekoweb</a>.</p>

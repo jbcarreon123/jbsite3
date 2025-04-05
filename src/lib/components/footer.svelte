@@ -15,7 +15,7 @@
         </a>
         <a target="_blank" rel="noopener" class="w-fit shrink-0" href="https://team,indiefellas.net">
             <img
-                src="/buttons/indiefellas.svg"
+                src="/imgs/buttons/indiefellas.svg"
                 alt="Indiefellas"
                 title="indieweb devs with no idea what they're doing"
             />

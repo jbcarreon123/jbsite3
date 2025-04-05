@@ -13,7 +13,7 @@
         <a target="_blank" rel="noopener" class="w-fit shrink-0" href="https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_animation_with_SMIL">
             <img src="/imgs/buttons/smil.svg" alt="Enhanced with SMIL :D" title="Enhanced with SMIL :D" />
         </a>
-        <a target="_blank" rel="noopener" class="w-fit shrink-0" href="https://team,indiefellas.net">
+        <a target="_blank" rel="noopener" class="w-fit shrink-0" href="https://team.indieseas.net">
             <img
                 src="/imgs/buttons/indiefellas.svg"
                 alt="Indiefellas"

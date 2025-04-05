@@ -10,9 +10,15 @@
     <p>Made using <a href="https://bun.sh" target="_blank" rel="noopener">Bun</a> and <a href="https://svelte.dev/" target="_blank" rel="noopener">Svelte</a>. Hosted in <a href="https://nekoweb.org" target="_blank" rel="noopener">nekoweb</a>.</p>
 
     <div class="fbtn flex flex-wrap justify-center pt-2 gap-2">
-        <img src="/imgs/buttons/anybrowser.gif" alt="Any modern browser and OS!" title="This site is best viewed in any modern browser and OS!" />
         <a target="_blank" rel="noopener" class="w-fit shrink-0" href="https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_animation_with_SMIL">
             <img src="/imgs/buttons/smil.svg" alt="Enhanced with SMIL :D" title="Enhanced with SMIL :D" />
+        </a>
+        <a target="_blank" rel="noopener" class="w-fit shrink-0" href="https://team,indiefellas.net">
+            <img
+                src="/buttons/indiefellas.svg"
+                alt="Indiefellas"
+                title="indieweb devs with no idea what they're doing"
+            />
         </a>
         <a target="_blank" rel="noopener" class="w-fit shrink-0" href="https://nekoweb.org/"
             ><img

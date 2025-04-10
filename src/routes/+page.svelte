@@ -51,6 +51,9 @@
 </svelte:head>
 
 <div class="w-full p-1.5">
+	<div class="p-1.5">
+		<img class="w-full" src="/jbsitev4banner.png" alt="jbsite4, coming soon" />
+	</div>
 	<div class="border-ctp-yellow mb-3 w-full border-2 p-1.5">
 		<h1 class="headercolor mt-[-6px] pb-2 text-2xl">Warning</h1>
 		<p>This site is rated 14+ and contains mild swearing (especially on rant posts).</p>

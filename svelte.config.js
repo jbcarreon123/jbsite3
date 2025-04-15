@@ -136,7 +136,6 @@ const config = {
 				console.log(path, referrer, message)
 				return;
 			},
-			default: true,
 			entries: [
 				'*',
 				...blogs.map((post) => `/posts/${post}`),

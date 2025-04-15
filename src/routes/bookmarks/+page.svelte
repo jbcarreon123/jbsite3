@@ -42,7 +42,7 @@
 <ul class="list-disc pl-8">
 	{#each bookmarkCategories as category}
 		<li class="pl-2">
-			<a href={LinkHandler('#{category.name.toLowerCase().replaceAll(' ', '-')}')}>{category.name}</a>
+			<a href='#{category.name.toLowerCase().replaceAll(' ', '-')}'>{category.name}</a>
 		</li>
 	{/each}
 </ul>

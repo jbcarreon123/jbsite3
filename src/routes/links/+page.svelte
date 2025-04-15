@@ -55,7 +55,7 @@
 
     <div class="text-left max-w-md">
         <div>
-            <a href={LinkHandler('https://webring.bucketfish.me/" class="py-4" target="_blank"><h1 class=" mt-[-6px] pb-2 text-2xl text-ctp-sapphire hover:text-ctp-blue')}>bucket webring!</h1></a>
+            <a href={LinkHandler('https://webring.bucketfish.me/')} class="py-4" target="_blank"><h1 class=" mt-[-6px] pb-2 text-2xl text-ctp-sapphire hover:text-ctp-blue">bucket webring!</h1></a>
             <div class="flex flex-row w-full text-center pb-4">
                 <a class="grow" href={LinkHandler('https://webring.bucketfish.me/redirect.html?to=prev&name=jbcarreon123')} >&lt; prev</a>
                 <a class="grow" href={LinkHandler('https://webring.bucketfish.me/redirect.html?to=random&name=jbcarreon123')} >rand</a>
@@ -64,7 +64,7 @@
         </div>
     
         <div style="">
-            <a href={LinkHandler('//mr.jhorn.net/index.php"><img src="//mr.jhorn.net/assets/button.gif" alt="Musicring')}></a>
+            <a href={LinkHandler('//mr.jhorn.net/index.php')}><img src="//mr.jhorn.net/assets/button.gif" alt="Musicring"></a>
             <div class="flex flex-row min-w-3xs text-center pb-4">
                 <a class="grow" href={LinkHandler('//mr.jhorn.net/prev.php?slug=jbcarreon123')}>&lt; prev</a>
                 <a class="grow" href={LinkHandler('//mr.jhorn.net/rand.php')}>rand</a>

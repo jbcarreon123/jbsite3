@@ -8,13 +8,11 @@ export async function load({ fetch, params }) {
         getPosts().map(async (articleName) => {
             const post = await import(`$lib/blogs/${articleName}/index.svx`);
             const metadata = post.metadata;
-            const tagSplit = metadata.tags? String(metadata.tags).split(', ') : []
             const articleUrl = `/blogs/${articleName}`
             const articleSlug = articleName
 
             return {
                 metadata,
-                tagSplit: tagSplit ?? [],
                 articleUrl,
                 articleSlug
             };
@@ -26,13 +24,11 @@ export async function load({ fetch, params }) {
             getPostsWip().map(async (articleName) => {
                 const post = await import(`$lib/wip-blogs/${articleName}/index.svx`);
                 const metadata = post.metadata;
-                const tagSplit = String(metadata.tags).split(', ')
                 const articleUrl = `/blogs/${articleName}`
                 const articleSlug = articleName
     
                 return {
                     metadata,
-                    tagSplit,
                     articleUrl,
                     articleSlug
                 };

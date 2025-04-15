@@ -106,8 +106,6 @@
 				<p>•</p>
 				<p>published {toZonedTime(dPubl, ltz).toLocaleDateString()}</p>
 				<p>•</p>
-				<p>in {article.tags}</p>
-				<p>•</p>
 				<p>{article.wordCount} words</p>
 				<p>•</p>
 				<p>{article.readingTime}</p>

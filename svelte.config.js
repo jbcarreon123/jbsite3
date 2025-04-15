@@ -15,9 +15,9 @@ import remarkReadingTime from 'remark-reading-time';
 import remarkGfm from 'remark-gfm';
 import { visit } from 'unist-util-visit';
 import readingTime from 'reading-time';
-import { getPosts } from './src/lib/blogs/get-blogs';
-import { getTuts } from './src/lib/tutorials/get-tutorials';
-import { getUtils } from './src/lib/utils/get-utils';
+import { getPosts } from './src/lib/blogs/get-blogs.js';
+import { getTuts } from './src/lib/tutorials/get-tutorials.js';
+import { getUtils } from './src/lib/utils/get-utils.js';
 
 const options = {
 	toggle: 2000,

@@ -133,6 +133,7 @@ const config = {
 
 		prerender: {
 			handleHttpError: ({ path, referrer, message }) => {
+				console.log(path, referrer, message)
 				return;
 			},
 			default: true,

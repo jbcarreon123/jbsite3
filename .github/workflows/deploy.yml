@@ -17,9 +17,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment:
-      name: nekoweb
-      url: 'https://jbcarreon123.nekoweb.org'
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -30,8 +27,6 @@ jobs:
       - name: Build jbsite
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
-          NEKOWEB_APIKEY: ${{ secrets.NEKOWEB_APIKEY }}
-          NEKOWEB_COOKIE: ${{ secrets.NEKOWEB_COOKIE }}
         run: bun run build
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3

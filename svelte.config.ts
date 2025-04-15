@@ -15,6 +15,9 @@ import remarkReadingTime from 'remark-reading-time';
 import remarkGfm from 'remark-gfm';
 import { visit } from 'unist-util-visit';
 import readingTime from 'reading-time';
+import { getPosts } from './src/lib/blogs/get-blogs';
+import { getTuts } from './src/lib/tutorials/get-tutorials';
+import { getUtils } from './src/lib/utils/get-utils';
 
 const options = {
 	toggle: 2000,
@@ -38,6 +41,10 @@ const highlighter = await createHighlighter({
 	themes: themes,
 	langs: languages
 });
+
+let blogs = getPosts();
+let tuts = getTuts();
+let utils = getUtils();
 
 function addWordCountToFrontmatterData({
 	attribute = "wordCount",
@@ -127,7 +134,14 @@ const config = {
 		prerender: {
 			handleHttpError: ({ path, referrer, message }) => {
 				return;
-			}
+			},
+			default: true,
+			entries: [
+				'*',
+				...blogs.map((post) => `/posts/${post}`),
+				...tuts.map((post) => `/tutorials/${post}`),
+				...utils.map((post) => `/utils/${post}`),
+			]
 		}
 	},
 

@@ -1,4 +1,5 @@
 <script>
+	import { LinkHandler } from "$lib/linkhandler";
 	import autoAnimate from '@formkit/auto-animate';
 	import { fromZonedTime, toZonedTime } from 'date-fns-tz';
 

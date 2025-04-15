@@ -1,4 +1,5 @@
 <script>
+	import { LinkHandler } from "$lib/linkhandler";
 	import BlogToc from "./blog-toc.svelte";
 
 </script>
@@ -9,15 +10,15 @@
             class="flex flex-col justify-center gap-2"
             data-sveltekit-preload-data="hover"
         >
-            <a href="/">Home</a>
-            <a href="/posts">Posts</a>
-            <a href="/contact">Contact</a>
-            <a href="/projects">Projects</a>
-            <a href="/credits">Credits</a>
-            <a href="/links">Links</a>
-            <a href="/about">About</a>
-            <a href="https://jbcarreon123.atabook.org">Sign my guestbook!</a>
-            <a href="https://nekoweb.org/follow/jbcarreon123" target="_blank" rel="noopener">Follow me on Nekoweb!</a>
+            <a href={LinkHandler('/')}>Home</a>
+            <a href={LinkHandler('/posts')}>Posts</a>
+            <a href={LinkHandler('/contact')}>Contact</a>
+            <a href={LinkHandler('/projects')}>Projects</a>
+            <a href={LinkHandler('/credits')}>Credits</a>
+            <a href={LinkHandler('/links')}>Links</a>
+            <a href={LinkHandler('/about')}>About</a>
+            <a href={LinkHandler('https://jbcarreon123.atabook.org')}>Sign my guestbook!</a>
+            <a href={LinkHandler('https://nekoweb.org/follow/jbcarreon123" target="_blank" rel="noopener')}>Follow me on Nekoweb!</a>
         </div>
     </div>
 </nav>

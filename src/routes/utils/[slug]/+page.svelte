@@ -1,4 +1,5 @@
 <script>
+	import { LinkHandler } from "$lib/linkhandler";
 	import { MetaTags } from "svelte-meta-tags";
 
     let { data } = $props();

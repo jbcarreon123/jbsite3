@@ -1,4 +1,5 @@
 <script>
+	import { LinkHandler } from "$lib/linkhandler";
 	import { onMount } from "svelte";
 
 	onMount(() => {
@@ -22,7 +23,7 @@
 	</div>
 
 	<div class="grid grid-cols-1 justify-items-center pt-2 pb-8">
-		<a href="/" class="nocol" aria-label="jbcarreon123">
+		<a href={LinkHandler('/" class="nocol" aria-label="jbcarreon123')}>
 			<div
 				class="h a headercolor headerfont max mb-[-46px] flex h-20 flex-row text-5xl font-semibold sm:mb-0 sm:text-7xl"
 			>
@@ -48,18 +49,18 @@
 				class="flex w-[100%] flex-auto flex-wrap justify-center gap-5"
 				data-sveltekit-preload-data="hover"
 			>
-				<a href="/">Home</a>
-				<a href="/posts">Posts</a>
-				<a href="/contact">Contact</a>
-				<a href="/projects">Projects</a>
-				<a href="/bookmarks">Bookmarks</a>
-				<a href="/links">Links</a>
-				<a href="/utils">Utils</a>
-				<a href="/tutorials">Tutorials</a>
-				<a href="/about">About</a>
-				<a href="/accessibility">Accessibility</a>
-				<a href="https://jbcarreon123.atabook.org"> Sign my guestbook! </a>
-				<a href="https://nekoweb.org/follow/jbcarreon123" target="_blank" rel="noopener" aria-label="Follow me on Nekoweb!"> [+] </a>
+				<a href={LinkHandler('/')}>Home</a>
+				<a href={LinkHandler('/posts')}>Posts</a>
+				<a href={LinkHandler('/contact')}>Contact</a>
+				<a href={LinkHandler('/projects')}>Projects</a>
+				<a href={LinkHandler('/bookmarks')}>Bookmarks</a>
+				<a href={LinkHandler('/links')}>Links</a>
+				<a href={LinkHandler('/utils')}>Utils</a>
+				<a href={LinkHandler('/tutorials')}>Tutorials</a>
+				<a href={LinkHandler('/about')}>About</a>
+				<a href={LinkHandler('/accessibility')}>Accessibility</a>
+				<a href={LinkHandler('https://jbcarreon123.atabook.org')}> Sign my guestbook! </a>
+				<a href={LinkHandler('https://nekoweb.org/follow/jbcarreon123" target="_blank" rel="noopener" aria-label="Follow me on Nekoweb!')}> [+] </a>
 			</div>
 		</div>
 	</nav>

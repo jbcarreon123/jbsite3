@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { LinkHandler } from "$lib/linkhandler";
 	// import type Freezeframe from 'freezeframe';
 	// import { onMount } from 'svelte';
 
@@ -22,7 +23,7 @@
 <div
 	class="buttons btn-container flex w-[100%] flex-auto flex-wrap items-center justify-center gap-1"
 >
-	<a target="_blank" rel="noopener" class="w-fit shrink-0" href="https://dimden.dev/"
+	<a target="_blank" rel="noopener" class="w-fit shrink-0" href={LinkHandler('https://dimden.dev/')}
 		><img
 			src="https://dimden.dev/services/images/88x31.gif"
 			loading="lazy"
@@ -30,7 +31,7 @@
 			alt="Dimden's Hotel"
 		/></a
 	>
-	<a target="_blank" rel="noopener" class="w-fit shrink-0" href="https://nekoweb.org/"
+	<a target="_blank" rel="noopener" class="w-fit shrink-0" href={LinkHandler('https://nekoweb.org/')}
 		><img
 			src="https://nekoweb.org/assets/buttons/button5.gif"
 			loading="lazy"
@@ -38,7 +39,7 @@
 			alt="Nekoweb (button by maxpixels)"
 		/></a
 	>
-	<a target="_blank" rel="noopener" class="w-fit shrink-0" href="https://status.cafe"
+	<a target="_blank" rel="noopener" class="w-fit shrink-0" href={LinkHandler('https://status.cafe')}
 		><img
 			src="https://status.cafe/assets/button.png"
 			loading="lazy"
@@ -46,7 +47,7 @@
 			alt="Status Cafe"
 		/></a
 	>
-	<a target="_blank" rel="noopener" class="w-fit shrink-0" href="https://thinliquid.dev"
+	<a target="_blank" rel="noopener" class="w-fit shrink-0" href={LinkHandler('https://thinliquid.dev')}
 		><img
 			src="https://thinliquid.dev/thnlqd.png"
 			loading="lazy"
@@ -54,7 +55,7 @@
 			alt="thinliquid's button"
 		/></a
 	>
-	<a target="_blank" rel="noopener" class="w-fit shrink-0" href="https://pawpyrus.art"
+	<a target="_blank" rel="noopener" class="w-fit shrink-0" href={LinkHandler('https://pawpyrus.art')}
 		><img
 			src="https://pawpyrus.art/graphics/siteButton.gif"
 			loading="lazy"
@@ -63,7 +64,7 @@
 			data-eighteen="true"
 		/></a
 	>
-	<a target="_blank" rel="noopener" class="w-fit shrink-0" href="https://web.archive.org/web/rice.place/"
+	<a target="_blank" rel="noopener" class="w-fit shrink-0" href={LinkHandler('https://web.archive.org/web/rice.place/')}
 		><img
 			src="https://rice.nekoweb.org/button/riceplace.png"
 			loading="lazy"
@@ -72,7 +73,7 @@
 			data-archive="true"
 		/></a
 	>
-	<a target="_blank" rel="noopener" href="https://moosyu.nekoweb.org/"
+	<a target="_blank" rel="noopener" href={LinkHandler('https://moosyu.nekoweb.org/')}
 		><img
 			src="https://moosyu.nekoweb.org/assets/button.png"
 			loading="lazy"
@@ -80,7 +81,7 @@
 			alt="Memecompanies/Moosyu: moosyus awesome button"
 		/></a
 	>
-	<a target="_blank" rel="noopener" class="w-fit shrink-0" href="https://darkosparko.nekoweb.org/"
+	<a target="_blank" rel="noopener" class="w-fit shrink-0" href={LinkHandler('https://darkosparko.nekoweb.org/')}
 		><img
 			src="https://darkosparko.nekoweb.org/rocket-button.gif"
 			loading="lazy"
@@ -88,7 +89,7 @@
 			alt="darkosparko/Spark-Web: Rocket into the Spark-web!"
 		/></a
 	>
-	<a target="_blank" rel="noopener" href="https://max.nekoweb.org/"
+	<a target="_blank" rel="noopener" href={LinkHandler('https://max.nekoweb.org/')}
 		><img
 			src="https://max.nekoweb.org/images/button.gif"
 			loading="lazy"
@@ -96,7 +97,7 @@
 			alt="maxpixels: max's apartment"
 		/></a
 	>
-	<a target="_blank" rel="noopener" href="https://ddnikki.nekoweb.org"
+	<a target="_blank" rel="noopener" href={LinkHandler('https://ddnikki.nekoweb.org')}
 		><img
 			src="https://ddnikki.nekoweb.org/images/nikkibutton.gif"
 			loading="lazy"
@@ -104,7 +105,7 @@
 			alt="DDNikki"
 		/></a
 	>
-	<a target="_blank" rel="noopener" href="https://drfred.nekoweb.org/"
+	<a target="_blank" rel="noopener" href={LinkHandler('https://drfred.nekoweb.org/')}
 		><img
 			src="https://drfred.nekoweb.org/collection/buttons/sites/button-drfred.png"
 			loading="lazy"
@@ -112,7 +113,7 @@
 			alt="Dr. Fred: Enter the Fredzone..."
 		/></a
 	>
-	<a target="_blank" rel="noopener" href="https://ultrakill.nekoweb.org"
+	<a target="_blank" rel="noopener" href={LinkHandler('https://ultrakill.nekoweb.org')}
 		><img
 			src="https://ultrakill.nekoweb.org/awawawawa.png"
 			loading="lazy"
@@ -120,7 +121,7 @@
 			alt="Sol/Ultrakill: click for a FREE gabriel plushie!"
 		/></a
 	>
-	<a target="_blank" rel="noopener" href="https://july.lol"
+	<a target="_blank" rel="noopener" href={LinkHandler('https://july.lol')}
 		><img
 			src="https://july.lol/img/lonelyjulybutton.gif"
 			title="july.lol"
@@ -128,7 +129,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a target="_blank" rel="noopener" href="https://mechagic.party/"
+	<a target="_blank" rel="noopener" href={LinkHandler('https://mechagic.party/')}
 		><img
 			src="https://mechagic.party/2images/1button.webp"
 			loading="lazy"
@@ -136,7 +137,7 @@
 			alt="Mechagic's Fun Button"
 		/></a
 	>
-	<a target="_blank" rel="noopener" href="https://joo.sh/"
+	<a target="_blank" rel="noopener" href={LinkHandler('https://joo.sh/')}
 		><img
 			src="https://files.joo.sh/img/buttons/jooshRice.gif"
 			title="joo.sh"
@@ -144,7 +145,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a target="_blank" rel="noopener" href="https://layercake.nekoweb.org/"
+	<a target="_blank" rel="noopener" href={LinkHandler('https://layercake.nekoweb.org/')}
 		><img
 			src="https://files.catbox.moe/h7nelz.gif"
 			title="Layercake"
@@ -152,7 +153,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a href="https://beaus-silly-folder.nekoweb.org" target="_blank" rel="noopener" class="links"
+	<a href={LinkHandler('https://beaus-silly-folder.nekoweb.org" target="_blank" rel="noopener" class="links')}
 		><img
 			src="https://beaus-silly-folder.nekoweb.org/BSF.gif"
 			title="Beau's Silly Folder"
@@ -160,8 +161,8 @@
 			loading="lazy"
 		/></a
 	>
-	<!-- <a href="https://xan.lol"><img src="https://xan.lol/button.avif" ></a> -->
-	<a href="https://toasty.place/" target="_blank" rel="noopener"
+	<!-- <a href={LinkHandler('https://xan.lol"><img src="https://xan.lol/button.avif')} ></a> -->
+	<a href={LinkHandler('https://toasty.place/" target="_blank" rel="noopener')}
 		><img
 			src="https://toastofthesewn.nekoweb.org/images/buttons/pagebutton1.gif"
 			loading="lazy"
@@ -169,7 +170,7 @@
 			alt="ToastofTheSewn"
 		/></a
 	>
-	<a href="https://biofreak.world" target="_blank" rel="noopener"
+	<a href={LinkHandler('https://biofreak.world" target="_blank" rel="noopener')}
 		><img
 			src="https://softatrocity.nekoweb.org/sitebuttons/biofreak-dark.png"
 			loading="lazy"
@@ -177,7 +178,7 @@
 			alt="biofreak.world"
 		/></a
 	>
-	<a href="https://amoebalous.net/" target="_blank"
+	<a href={LinkHandler('https://amoebalous.net/" target="_blank')}
 		><img
 			src="https://amoebalous.net/images/buttons/amoebalous.png"
 			title="amoebalous.net"
@@ -185,7 +186,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a href="https://modularity.nekoweb.org/" target="_blank"
+	<a href={LinkHandler('https://modularity.nekoweb.org/" target="_blank')}
 		><img
 			src="https://modularity.nekoweb.org/mdlr.gif"
 			title="modularity"
@@ -193,7 +194,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a href="https://bang1338.nekoweb.org" target="_blank"
+	<a href={LinkHandler('https://bang1338.nekoweb.org" target="_blank')}
 		><img
 			src="https://bang1338.nekoweb.org/bang1338.gif"
 			title="Bang1338"
@@ -201,7 +202,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a href="https://bntarwarn.com/" target="_blank"
+	<a href={LinkHandler('https://bntarwarn.com/" target="_blank')}
 		><img
 			src="https://bntarwarn.com/zz_img/buttons/bntarwarn.png"
 			title="BNTarwarn"
@@ -209,7 +210,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a href="https://xan.lol/" target="_blank"
+	<a href={LinkHandler('https://xan.lol/" target="_blank')}
 		><img
 			src="https://xan.lol/img/btn/meta.gif"
 			title="Xan Surnamehere"
@@ -217,7 +218,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a href="https://metakabe.nekoweb.org/" target="_blank">
+	<a href={LinkHandler('https://metakabe.nekoweb.org/" target="_blank')}>
 		<img
 			src="https://metakabe.nekoweb.org/Buttons/kabebutton.gif"
 			loading="lazy"
@@ -225,10 +226,10 @@
 			alt="metakabe^^"
 		/>
 	</a>
-	<a href="https://ethxn.xyz/" target="_blank"
+	<a href={LinkHandler('https://ethxn.xyz/" target="_blank')}
 		><img src="/imgs/buttons/ethxn-button.gif" loading="lazy" title="ethxn" alt="ethxn" /></a
 	>
-	<a href="https://chataigne.nekoweb.org/" target="_blank"
+	<a href={LinkHandler('https://chataigne.nekoweb.org/" target="_blank')}
 		><img
 			src="https://chataigne.nekoweb.org/button1.jpg"
 			loading="lazy"
@@ -236,7 +237,7 @@
 			alt="Chataigne Online"
 		/></a
 	>
-	<a href="https://avrelsleepy.nekoweb.org/" target="_blank"
+	<a href={LinkHandler('https://avrelsleepy.nekoweb.org/" target="_blank')}
 		><img
 			src="https://avrelsleepy.nekoweb.org/assets/webbuttons/avrel.png"
 			title="avrelsleepy"
@@ -244,7 +245,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a href="https://exclave.city/" target="_blank"
+	<a href={LinkHandler('https://exclave.city/" target="_blank')}
 		><img
 			src="https://exclave.city/images/button1.gif"
 			title="Whey Isolate: Explore Exclave"
@@ -252,7 +253,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a href="https://reduxflakes.nekoweb.org/" target="_blank"
+	<a href={LinkHandler('https://reduxflakes.nekoweb.org/" target="_blank')}
 		><img
 			src="https://reduxflakes.nekoweb.org/public/img/buttons/reduc_anim.gif"
 			title="ReduxFlakes"
@@ -260,7 +261,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a href="https://libraryofgurkistan.nekoweb.org/" target="_blank"
+	<a href={LinkHandler('https://libraryofgurkistan.nekoweb.org/" target="_blank')}
 		><img
 			src="/imgs/buttons/hellomortal.png"
 			title="LibraryofGurkistan: HELLO MORTAL"
@@ -268,7 +269,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a href="https://ducdat0507.github.io/" target="_blank"
+	<a href={LinkHandler('https://ducdat0507.github.io/" target="_blank')}
 		><img
 			src="/imgs/buttons/duducat.svg"
 			title="duducat's corner on the interwebz!"
@@ -276,7 +277,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a href="https://theoliveoli.nekoweb.org/" target="_blank"
+	<a href={LinkHandler('https://theoliveoli.nekoweb.org/" target="_blank')}
 		><img
 			src="/imgs/buttons/theoliveoli.png"
 			width="88px"
@@ -286,7 +287,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a href="https://yumeoi.skin/" target="_blank"
+	<a href={LinkHandler('https://yumeoi.skin/" target="_blank')}
 		><img
 			src="/imgs/buttons/yumeo.gif"
 			width="88px"
@@ -296,7 +297,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a href="https://eyeorb.net/" target="_blank"
+	<a href={LinkHandler('https://eyeorb.net/" target="_blank')}
 		><img
 			src="https://eyeorb.net/site_button.gif"
 			width="88px"
@@ -306,7 +307,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a href="https://rubybulbs.net/" target="_blank"
+	<a href={LinkHandler('https://rubybulbs.net/" target="_blank')}
 		><img
 			src="https://rubybulbs.nekoweb.org/img/newbutt.png"
 			width="88px"
@@ -316,7 +317,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a href="https://thepersonever.net/" target="_blank"
+	<a href={LinkHandler('https://thepersonever.net/" target="_blank')}
 		><img
 			src="https://thepersonever.net/thepersoneverbutton.gif"
 			title="thepersonever"
@@ -324,7 +325,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a href="https://aoki553.nekoweb.org/" target="_blank"
+	<a href={LinkHandler('https://aoki553.nekoweb.org/" target="_blank')}
 		><img
 			src="https://aoki553.neocities.org/nekoweb/deco/aoki553button.gif"
 			title="aoki553"
@@ -332,7 +333,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a href="https://satorikeiko.nekoweb.org/" target="_blank"
+	<a href={LinkHandler('https://satorikeiko.nekoweb.org/" target="_blank')}
 		><img
 			src="/imgs/buttons/satorikeiko.png"
 			title="Satorikeiko"
@@ -340,7 +341,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a href="https://ceat.nekoweb.org/" target="_blank"
+	<a href={LinkHandler('https://ceat.nekoweb.org/" target="_blank')}
 		><img
 			src="https://ceat.nekoweb.org/img/badges/badge.png"
 			title="ceat"
@@ -348,7 +349,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a href="https://ivrry.nekoweb.org/" target="_blank"
+	<a href={LinkHandler('https://ivrry.nekoweb.org/" target="_blank')}
 		><img
 			src="https://ivrry.nekoweb.org/assets/images/button.png"
 			title="ivrry"
@@ -356,7 +357,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a href="https://raccoonbutt.com/" target="_blank"
+	<a href={LinkHandler('https://raccoonbutt.com/" target="_blank')}
 		><img
 			src="https://raccoonbutt.com/static/images/button.gif"
 			title="raccoonbutt.com"
@@ -364,7 +365,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a href="https://olivia.nekoweb.org/" target="_blank"
+	<a href={LinkHandler('https://olivia.nekoweb.org/" target="_blank')}
 		><img
 			src="https://olivia.nekoweb.org/images/badge.png"
 			title="Liv site"
@@ -372,7 +373,7 @@
 			loading="lazy"
 		/></a
 	>
-	<a class="w-fit shrink-0" href="https://nandraid.moe" target="_blank">
+	<a class="w-fit shrink-0" href={LinkHandler('https://nandraid.moe" target="_blank')}>
 		<img
 			src="/imgs/buttons/nandraid.gif"
 			title="Randopaizer/Nandraid"
@@ -380,7 +381,7 @@
 			loading="lazy"
 		/>
 	</a>
-	<a target="_blank" class="w-fit shrink-0" href="https://lel.nekoweb.org">
+	<a target="_blank" class="w-fit shrink-0" href={LinkHandler('https://lel.nekoweb.org')}>
 		<img
 			decoding="async"
 			loading="lazy"
@@ -389,7 +390,7 @@
 			alt="lel@nekoweb button"
 		/>
 	</a>
-	<a href="https://strudelfatpaws.neocities.org" target="_blank"
+	<a href={LinkHandler('https://strudelfatpaws.neocities.org" target="_blank')}
 		><img
 			src="https://strudelfatpaws.neocities.org/badge.gif"
 			loading="lazy"
@@ -397,7 +398,7 @@
 			alt="strudelfatpaws"
 		/></a
 	>
-	<a href="https://arataka.neocities.org" target="_blank"
+	<a href={LinkHandler('https://arataka.neocities.org" target="_blank')}
 		><img
 			src="https://arataka.neocities.org/image/88by31.gif"
 			loading="lazy"
@@ -405,7 +406,7 @@
 			title="arataka"
 		/></a
 	>
-	<a href="https://luxfero.nekoweb.org/" target="_blank">
+	<a href={LinkHandler('https://luxfero.nekoweb.org/" target="_blank')}>
 		<img
 			src="https://luxfero.nekoweb.org/buttons/lux_fero.gif"
 			loading="lazy"
@@ -413,7 +414,7 @@
 			title="Lux_Fero"
 		/>
 	</a>
-	<a href="https://metatronius.net" target="_blank"
+	<a href={LinkHandler('https://metatronius.net" target="_blank')}
 		><img
 			src="https://metatronius.net/buttons/2.png"
 			loading="lazy"
@@ -421,7 +422,7 @@
 			title="metatronius"
 		/></a
 	>
-	<a href="https://tsukinio.nekoweb.org" target="_blank"
+	<a href={LinkHandler('https://tsukinio.nekoweb.org" target="_blank')}
 		><img
 			src="/imgs/buttons/tsukinio.gif"
 			loading="lazy"
@@ -429,7 +430,7 @@
 			title="Tsukinio:: Chiikawa Edition"
 		/></a
 	>
-	<a href="https://medjed.nekoweb.org/" target="_blank">
+	<a href={LinkHandler('https://medjed.nekoweb.org/" target="_blank')}>
 		<img
 			src="https://medjed.nekoweb.org/assets/images/button.jpg"
 			loading="lazy"
@@ -437,7 +438,7 @@
 			title="Medjed"
 		>
 	</a>
-	<a target="_blank" class="w-fit shrink-0" href="https://kalechips.net/responsive/index">
+	<a target="_blank" class="w-fit shrink-0" href={LinkHandler('https://kalechips.net/responsive/index')}>
 		<img
 			src="/imgs/buttons/responsive-web-directory.png"
 			alt="Responsive Web Directory"

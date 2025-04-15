@@ -1,4 +1,5 @@
 <script>
+	import { LinkHandler } from "$lib/linkhandler";
 	import { onMount, onDestroy } from 'svelte';
 
 	let currentDate;

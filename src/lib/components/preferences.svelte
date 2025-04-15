@@ -1,4 +1,5 @@
 <script>
+	import { LinkHandler } from "$lib/linkhandler";
 	import { browser } from '$app/environment';
 
 	let isConfigThere = false;

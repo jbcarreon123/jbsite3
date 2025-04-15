@@ -216,7 +216,7 @@
 <div use:autoAnimate>
 	{#if showSkipLink}
 		<a
-			href="#page-content"
+			href={LinkHandler('#page-content')}
 			bind:this={skipLink}
 			class="skip-link"
 			onclick={handleSkip}

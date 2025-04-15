@@ -1,4 +1,5 @@
 <script>
+	import { LinkHandler } from "$lib/linkhandler";
 	import autoAnimate from '@formkit/auto-animate';
 	import { isBlog, blogToc } from '$lib/stores/blogTocStore';
 	import { onMount } from 'svelte';
@@ -35,7 +36,7 @@
 		return `<ul>${items
 			.map(
 				(item) =>
-					`<li><a href="${item.slug}">${item.name}</a>${
+					`<li><a href={LinkHandler('${item.slug}')}>${item.name}</a>${
 						item.children.length ? renderList(item.children) : ''
 					}</li>`
 			)

@@ -1,4 +1,5 @@
 <script>
+	import { LinkHandler } from "$lib/linkhandler";
     import Buttons from "$lib/components/buttons.svelte";
     import SiteButtons from "$lib/components/site-buttons.svelte";
     import { onMount } from 'svelte';
@@ -21,7 +22,7 @@
 <svelte:head>
     <title>Links</title>
 
-    <link rel="stylesheet" href="https://darkosparko.nekoweb.org/webrings/apartments-webring/apartment-webring-style.css">
+    <link rel="stylesheet" href={LinkHandler('https://darkosparko.nekoweb.org/webrings/apartments-webring/apartment-webring-style.css')}>
 </svelte:head>
 
 <div class="w-full border-2 border-ctp-yellow p-1.5 mb-3">
@@ -39,7 +40,7 @@
     {/if}
 </div>
 
-<h1 class="headercolor pb-2"><a href="/webrings">My webrings</a></h1>
+<h1 class="headercolor pb-2"><a href={LinkHandler('/webrings')}>My webrings</a></h1>
 <div class="flex flex-auto flex-wrap gap-4 w-full">
     <script src="/webrings/ssgring/pmoring.js"></script>
     <script src="/webrings/responeko/pmoring.js"></script>
@@ -54,28 +55,28 @@
 
     <div class="text-left max-w-md">
         <div>
-            <a href="https://webring.bucketfish.me/" class="py-4" target="_blank"><h1 class=" mt-[-6px] pb-2 text-2xl text-ctp-sapphire hover:text-ctp-blue">bucket webring!</h1></a>
+            <a href={LinkHandler('https://webring.bucketfish.me/" class="py-4" target="_blank"><h1 class=" mt-[-6px] pb-2 text-2xl text-ctp-sapphire hover:text-ctp-blue')}>bucket webring!</h1></a>
             <div class="flex flex-row w-full text-center pb-4">
-                <a class="grow" href="https://webring.bucketfish.me/redirect.html?to=prev&name=jbcarreon123" >&lt; prev</a>
-                <a class="grow" href="https://webring.bucketfish.me/redirect.html?to=random&name=jbcarreon123" >rand</a>
-                <a class="grow" href="https://webring.bucketfish.me/redirect.html?to=next&name=jbcarreon123" >next &gt;</a>
+                <a class="grow" href={LinkHandler('https://webring.bucketfish.me/redirect.html?to=prev&name=jbcarreon123')} >&lt; prev</a>
+                <a class="grow" href={LinkHandler('https://webring.bucketfish.me/redirect.html?to=random&name=jbcarreon123')} >rand</a>
+                <a class="grow" href={LinkHandler('https://webring.bucketfish.me/redirect.html?to=next&name=jbcarreon123')} >next &gt;</a>
             </div>
         </div>
     
         <div style="">
-            <a href="//mr.jhorn.net/index.php"><img src="//mr.jhorn.net/assets/button.gif" alt="Musicring"></a>
+            <a href={LinkHandler('//mr.jhorn.net/index.php"><img src="//mr.jhorn.net/assets/button.gif" alt="Musicring')}></a>
             <div class="flex flex-row min-w-3xs text-center pb-4">
-                <a class="grow" href="//mr.jhorn.net/prev.php?slug=jbcarreon123">&lt; prev</a>
-                <a class="grow" href="//mr.jhorn.net/rand.php">rand</a>
-                <a class="grow" href="//mr.jhorn.net/next.php?slug=jbcarreon123">next &gt;</a>
+                <a class="grow" href={LinkHandler('//mr.jhorn.net/prev.php?slug=jbcarreon123')}>&lt; prev</a>
+                <a class="grow" href={LinkHandler('//mr.jhorn.net/rand.php')}>rand</a>
+                <a class="grow" href={LinkHandler('//mr.jhorn.net/next.php?slug=jbcarreon123')}>next &gt;</a>
             </div>
         </div>
 
         <div>
-            <a href="https://baccyflap.com/noai/?prv&s=jcr" target="_top">« prev</a> |
-            <a href="https://baccyflap.com/noai" target="_blank">no ai webring</a>
-            <a style="font-size:60%" href="https://baccyflap.com/noai/?rnd" target="_top">(random)</a> |
-            <a href="https://baccyflap.com/noai/?nxt&s=jcr" target="_top">next »</a>
+            <a href={LinkHandler('https://baccyflap.com/noai/?prv&s=jcr" target="_top')}>« prev</a> |
+            <a href={LinkHandler('https://baccyflap.com/noai" target="_blank')}>no ai webring</a>
+            <a style="font-size:60%" href={LinkHandler('https://baccyflap.com/noai/?rnd" target="_top')}>(random)</a> |
+            <a href={LinkHandler('https://baccyflap.com/noai/?nxt&s=jcr" target="_top')}>next »</a>
         </div> 
     
         <div>
@@ -102,7 +103,7 @@
     </div> 
 
     <div id="rice-ring">
-        <link rel="stylesheet" href="https://terakun.nekoweb.org/ricepaddy/webring.css"> 
+        <link rel="stylesheet" href={LinkHandler('https://terakun.nekoweb.org/ricepaddy/webring.css')}> 
         <script type="text/javascript" src="https://terakun.nekoweb.org/ricepaddy/webring-variables.js"></script>
         <script type="text/javascript" src="https://terakun.nekoweb.org/ricepaddy/webring-widget.js"></script>
     </div>

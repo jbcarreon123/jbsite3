@@ -1,4 +1,5 @@
 <script>
+	import { LinkHandler } from "$lib/linkhandler";
 	import { onMount } from "svelte";
 
     let userAgent, userAgentDataJson;

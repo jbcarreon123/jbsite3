@@ -22,21 +22,21 @@
 
 <h1 class="mt-4">Albums I liked</h1>
 <div id="albums" class="flex flex-wrap gap-2 pt-2">
-    <a href="https://goodkid.bandcamp.com/album/good-kid-2" target="_blank">
+    <a href={LinkHandler('https://goodkid.bandcamp.com/album/good-kid-2" target="_blank')}>
         <img
             src="/imgs/albums/gk2.jpg"
             alt="Good Kid 2 by Good Kid"
             data-desc="especially Down with the King and Drifting"
         />
     </a>
-    <a href="https://soundcloud.com/goodkidband/sets/good-kid-4" target="_blank">
+    <a href={LinkHandler('https://soundcloud.com/goodkidband/sets/good-kid-4" target="_blank')}>
         <img
             src="/imgs/albums/gk4.jpg"
             alt="Good Kid 4 by Good Kid"
             data-desc="especially Break, Dance Class, and Premier Inn"
         />
     </a>
-    <a href="https://soundcloud.com/porter-robinson/sets/smile-d-2" target="_blank">
+    <a href={LinkHandler('https://soundcloud.com/porter-robinson/sets/smile-d-2" target="_blank')}>
         <img
             src="/imgs/albums/smile_d.jpg"
             alt="SMILE:: D by Porter Robinson"

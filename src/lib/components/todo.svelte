@@ -1,4 +1,5 @@
 <script>
+	import { LinkHandler } from "$lib/linkhandler";
     import { todos } from "$lib/changelogs-todo";
 </script>
 

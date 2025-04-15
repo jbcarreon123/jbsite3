@@ -1,4 +1,5 @@
 <script>
+	import { LinkHandler } from "$lib/linkhandler";
 	import { onMount } from 'svelte';
 
 	const username = 'jbcarreon123'; // change the username!!!
@@ -19,9 +20,9 @@
 			let div = document.getElementById('nekocafe-status');
 
 			div.innerHTML = `
-                <h1 id="nekocafe-poster"><a href="${profile_url + username}">Nekocafe</a></h1>
+                <h1 id="nekocafe-poster"><a href={LinkHandler('${profile_url + username}')}>Nekocafe</a></h1>
                 <p id="nekocafe-time">${time}</p>
-                <blockquote><p id="nekocafe-text"><a href="${post_url + json['id']}">${json['post']}</a></p></blockquote>
+                <blockquote><p id="nekocafe-text"><a href={LinkHandler('${post_url + json['id']}')}>${json['post']}</a></p></blockquote>
             `;
 		} catch (error) {
 			console.error(error);

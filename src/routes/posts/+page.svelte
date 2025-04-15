@@ -1,4 +1,5 @@
 <script>
+	import { LinkHandler } from "$lib/linkhandler";
 	import autoAnimate from '@formkit/auto-animate';
 	import { fromZonedTime, toZonedTime } from 'date-fns-tz';
 
@@ -55,7 +56,7 @@
 <div class="flex flex-row flex-wrap items-end justify-between gap-4">
 	<div>
 		<h1 class="title headercolor text-2xl leading-snug">Posts</h1>
-		<a href="https://jbcarreon123.nekoweb.org/rss.xml" class="pb-0.5">Get the RSS feed</a>
+		<a href={LinkHandler('https://jbcarreon123.nekoweb.org/rss.xml" class="pb-0.5')}>Get the RSS feed</a>
 	</div>
 	<div class="max-sm:w-full">
 		<input

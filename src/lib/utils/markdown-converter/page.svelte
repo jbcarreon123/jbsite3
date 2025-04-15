@@ -1,4 +1,5 @@
 <script>
+	import { LinkHandler } from "$lib/linkhandler";
 	import { codeToHtml, createHighlighter } from 'shiki';
 	import { addCopyButton } from 'shiki-transformer-copy-button';
 	import markdownit from 'markdown-it';

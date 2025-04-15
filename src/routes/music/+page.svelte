@@ -1,4 +1,5 @@
 <script>
+	import { LinkHandler } from "$lib/linkhandler";
 	import LastPlays from "$lib/components/last-plays.svelte";
 
 

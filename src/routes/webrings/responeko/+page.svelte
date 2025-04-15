@@ -1,4 +1,5 @@
 <script>
+	import { LinkHandler } from "$lib/linkhandler";
 	import { memoryUsage } from "process";
 	import { onMount } from "svelte";
 
@@ -27,7 +28,7 @@
     <li>
         <h2>Your site must be on Nekoweb.</h2>
         <p><b>This is important</b>!</p>
-        <p>This also includes following the <a href="https://nekoweb.org/tos" target="_blank">Nekoweb Terms of Service</a>.</p>
+        <p>This also includes following the <a href={LinkHandler('https://nekoweb.org/tos" target="_blank')}>Nekoweb Terms of Service</a>.</p>
     </li>
     <li>
         <h2>Your site must be responsive, and you must make an effort to keep it responsive.</h2>
@@ -77,7 +78,7 @@
 
 <h2>Webring widget</h2>
 <p>If you're cool about embedding JS on your site, here's a one-liner code to end them all!</p>
-<p>Powered by <a href="https://thinliquid.github.io/pmoring/" target="_blank">pmoring</a>.</p>
+<p>Powered by <a href={LinkHandler('https://thinliquid.github.io/pmoring/" target="_blank')}>pmoring</a>.</p>
 <textarea class="code">
 <script src="https://jbcarreon123.nekoweb.org/webrings/responeko/pmoring.js"></script>
 </textarea>
@@ -85,7 +86,7 @@
 <h2 id="members">Members</h2>
 <div class="flex flex-wrap gap-2">
     {#each mems as member}
-        <a href="//{member.host}">
+        <a href={LinkHandler('//{member.host}')}>
             <div class="max-w-[105px]">
                 <p class="text-nowrap overflow-hidden text-ellipsis">{member.title}</p>
                 <div class="mem-plch">

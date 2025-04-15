@@ -1,4 +1,5 @@
 <script>
+	import { LinkHandler } from "$lib/linkhandler";
 	import { codeToHtml, createHighlighter } from 'shiki';
 	import { addCopyButton } from 'shiki-transformer-copy-button';
 
@@ -95,7 +96,7 @@
 
 <h1>Split It!</h1>
 <p>
-	Basically <a href="https://juneish.neocities.org/written/resources/?page=span-ify" target="_blank"
+	Basically <a href={LinkHandler('https://juneish.neocities.org/written/resources/?page=span-ify" target="_blank')}
 		>juneish's span-ify</a
 	>, but customizable!
 </p>

@@ -1,4 +1,5 @@
 <script>
+	import { LinkHandler } from "$lib/linkhandler";
 	import { memoryUsage } from "process";
 	import { onMount } from "svelte";
 
@@ -80,7 +81,7 @@
 
 <h2>Webring widget</h2>
 <p>If you're cool about embedding JS on your site, here's a one-liner code to end them all!</p>
-<p>Powered by <a href="https://thinliquid.github.io/pmoring/" target="_blank">pmoring</a>.</p>
+<p>Powered by <a href={LinkHandler('https://thinliquid.github.io/pmoring/" target="_blank')}>pmoring</a>.</p>
 <textarea class="code">
 <script src="https://jbcarreon123.nekoweb.org/webrings/ssgring/pmoring.js"></script>
 </textarea>
@@ -122,7 +123,7 @@
         <tr>
             <td>
                 {console.log(mems)}
-                <a href="//{member.host}">{member.username}</a>
+                <a href={LinkHandler('//{member.host}')}>{member.username}</a>
                 <p class="text-ctp-red">{(member.type)? 'Note: ' + member.type : ''}</p>
                 {#if member.button}
                 <img src="{member.button}" alt="" />

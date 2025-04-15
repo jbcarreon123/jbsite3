@@ -1,4 +1,5 @@
 <script>
+	import { LinkHandler } from "$lib/linkhandler";
 	import Changelogs from '$lib/components/changelogs.svelte';
 	import Todo from '$lib/components/todo.svelte';
 
@@ -82,7 +83,7 @@
 		</p>
 		<p>
 			My first project at that time is <a
-				href="https://github.com/jbcarreon123/Win11CompChk"
+				href={LinkHandler('https://github.com/jbcarreon123/Win11CompChk')}
 				target="_blank"
 				rel="noopener">Win11CompChk</a
 			> which is a Windows 11 compatibility checker made in a batch file. Yes, it's slow but it is still

@@ -116,10 +116,13 @@ const config = {
 	})],
 
 	kit: {
-		adapter: adapter({
-			apiKey: env.NEKOWEB_APIKEY,
-			cookie: env.NEKOWEB_COOKIE
+		adapter: staticAdapter({
+			fallback: '404.html'
 		}),
+
+		paths: {
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+		},
 
 		prerender: {
 			handleHttpError: ({ path, referrer, message }) => {

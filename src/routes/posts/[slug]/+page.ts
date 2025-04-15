@@ -31,6 +31,8 @@ export async function load({ params }) {
 			const tagSplit = String(tags).split(', ');
 			const slug = params.slug;
 
+			console.log(post)
+
 			return {
 				slug,
 				content,

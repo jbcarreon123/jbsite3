@@ -41,5 +41,7 @@ export async function load({ fetch, params }) {
         articles = articles.concat(articlesWip)
     }
 
+    console.log(articles);
+
     return { articles }
 }

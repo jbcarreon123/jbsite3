@@ -122,6 +122,10 @@ const config = {
 			handleHttpError: ({ path, referrer, message }) => {
 				return;
 			}
+		},
+
+		paths: {
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
 		}
 	},
 

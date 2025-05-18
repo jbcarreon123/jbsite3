@@ -226,7 +226,7 @@
 		/>
 	</a>
 	<a href="https://ethxn.xyz/" target="_blank"
-		><img src="/imgs/buttons/ethxn-button.gif" loading="lazy" title="ethxn" alt="ethxn" /></a
+		><img src="/jbsite3/imgs/buttons/ethxn-button.gif" loading="lazy" title="ethxn" alt="ethxn" /></a
 	>
 	<a href="https://chataigne.nekoweb.org/" target="_blank"
 		><img
@@ -262,7 +262,7 @@
 	>
 	<a href="https://libraryofgurkistan.nekoweb.org/" target="_blank"
 		><img
-			src="/imgs/buttons/hellomortal.png"
+			src="/jbsite3/imgs/buttons/hellomortal.png"
 			title="LibraryofGurkistan: HELLO MORTAL"
 			alt="LibraryofGurkistan: HELLO MORTAL"
 			loading="lazy"
@@ -270,7 +270,7 @@
 	>
 	<a href="https://ducdat0507.github.io/" target="_blank"
 		><img
-			src="/imgs/buttons/duducat.svg"
+			src="/jbsite3/imgs/buttons/duducat.svg"
 			title="duducat's corner on the interwebz!"
 			alt="duducat's corner on the interwebz!"
 			loading="lazy"
@@ -278,7 +278,7 @@
 	>
 	<a href="https://theoliveoli.nekoweb.org/" target="_blank"
 		><img
-			src="/imgs/buttons/theoliveoli.png"
+			src="/jbsite3/imgs/buttons/theoliveoli.png"
 			width="88px"
 			height="31px"
 			title="TheOliveOli"
@@ -288,7 +288,7 @@
 	>
 	<a href="https://yumeoi.skin/" target="_blank"
 		><img
-			src="/imgs/buttons/yumeo.gif"
+			src="/jbsite3/imgs/buttons/yumeo.gif"
 			width="88px"
 			height="31px"
 			title="yumeoi.skin"
@@ -334,7 +334,7 @@
 	>
 	<a href="https://satorikeiko.nekoweb.org/" target="_blank"
 		><img
-			src="/imgs/buttons/satorikeiko.png"
+			src="/jbsite3/imgs/buttons/satorikeiko.png"
 			title="Satorikeiko"
 			alt="Satorikeiko"
 			loading="lazy"
@@ -374,7 +374,7 @@
 	>
 	<a class="w-fit shrink-0" href="https://nandraid.moe" target="_blank">
 		<img
-			src="/imgs/buttons/nandraid.gif"
+			src="/jbsite3/imgs/buttons/nandraid.gif"
 			title="Randopaizer/Nandraid"
 			alt="Randopaizer/Nandraid"
 			loading="lazy"
@@ -384,7 +384,7 @@
 		<img
 			decoding="async"
 			loading="lazy"
-			src="/imgs/buttons/lel@Button.png"
+			src="/jbsite3/imgs/buttons/lel@Button.png"
 			title="lel@button"
 			alt="lel@nekoweb button"
 		/>
@@ -423,7 +423,7 @@
 	>
 	<a href="https://tsukinio.nekoweb.org" target="_blank"
 		><img
-			src="/imgs/buttons/tsukinio.gif"
+			src="/jbsite3/imgs/buttons/tsukinio.gif"
 			loading="lazy"
 			alt="tsukinio"
 			title="Tsukinio:: Chiikawa Edition"
@@ -439,7 +439,7 @@
 	</a>
 	<a target="_blank" class="w-fit shrink-0" href="https://kalechips.net/responsive/index">
 		<img
-			src="/imgs/buttons/responsive-web-directory.png"
+			src="/jbsite3/imgs/buttons/responsive-web-directory.png"
 			alt="Responsive Web Directory"
 			title="Responsive Web Directory"
 		/>

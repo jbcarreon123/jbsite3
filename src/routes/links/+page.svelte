@@ -39,10 +39,10 @@
     {/if}
 </div>
 
-<h1 class="headercolor pb-2"><a href="/webrings">My webrings</a></h1>
+<h1 class="headercolor pb-2"><a href="/jbsite3/webrings">My webrings</a></h1>
 <div class="flex flex-auto flex-wrap gap-4 w-full">
-    <script src="/webrings/ssgring/pmoring.js"></script>
-    <script src="/webrings/responeko/pmoring.js"></script>
+    <script src="/jbsite3/webrings/ssgring/pmoring.js"></script>
+    <script src="/jbsite3/webrings/responeko/pmoring.js"></script>
 </div>
 
 <h1 class="headercolor pb-2">Webrings</h1>
@@ -63,11 +63,11 @@
         </div>
     
         <div style="">
-            <a href="//mr.jhorn.net/index.php"><img src="//mr.jhorn.net/assets/button.gif" alt="Musicring"></a>
+            <a href="/jbsite3//mr.jhorn.net/index.php"><img src="/jbsite3//mr.jhorn.net/assets/button.gif" alt="Musicring"></a>
             <div class="flex flex-row min-w-3xs text-center pb-4">
-                <a class="grow" href="//mr.jhorn.net/prev.php?slug=jbcarreon123">&lt; prev</a>
-                <a class="grow" href="//mr.jhorn.net/rand.php">rand</a>
-                <a class="grow" href="//mr.jhorn.net/next.php?slug=jbcarreon123">next &gt;</a>
+                <a class="grow" href="/jbsite3//mr.jhorn.net/prev.php?slug=jbcarreon123">&lt; prev</a>
+                <a class="grow" href="/jbsite3//mr.jhorn.net/rand.php">rand</a>
+                <a class="grow" href="/jbsite3//mr.jhorn.net/next.php?slug=jbcarreon123">next &gt;</a>
             </div>
         </div>
 

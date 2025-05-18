@@ -18,9 +18,9 @@ To implement this to your site, here's the steps:
 2.  Include both of them above where the comment script is embedded, like this:
 
     ```html
-    <script src="/lib/purify.min.js"></script>
-    <script src="/lib/showdown.min.js"></script>
-    <script src="/lib/comment-widget.js" defer></script>
+    <script src="/jbsite3/lib/purify.min.js"></script>
+    <script src="/jbsite3/lib/showdown.min.js"></script>
+    <script src="/jbsite3/lib/comment-widget.js" defer></script>
     <div id="c_widget"></div>
     ```
 3.  Put these below the configuration lines. These will be the configuration

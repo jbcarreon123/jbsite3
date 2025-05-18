@@ -36,7 +36,7 @@
 <h1>{util.name}</h1>
 <div class="flex flex-wrap gap-3">
     {#each util.utils as ut}
-    <a href="/utils/{ut.utilSlug}" class="w-full sm:w-2xs">
+    <a href="/jbsite3/utils/{ut.utilSlug}" class="w-full sm:w-2xs">
         <h2>{ut.utilName}</h2>
         <p>{ut.utilDesc}</p>
     </a>

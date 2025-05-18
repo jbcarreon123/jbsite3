@@ -11,34 +11,34 @@
 <p>I enjoy coding something, listening to music, chatting and helping people!</p>
 
 <div class="about-buttons flex flex-wrap gap-2 pt-2">
-	<img src="/imgs/id/male.png" alt="Male" />
-	<img src="/imgs/id/He_Him_They.png" alt="He/Him/They" />
-	<img src="/imgs/id/16_years_old.png" alt="16 years old" />
-	<img src="/imgs/id/filipino.png" alt="Filipino" />
-	<img src="/imgs/id/eng_second_lang.png" alt="English is my second and preferred language!" />
-	<img src="/imgs/id/left_handed.png" alt="Left-handed" />
-	<img src="/imgs/id/rat.png" alt="Year of the Rat" />
+	<img src="/jbsite3/imgs/id/male.png" alt="Male" />
+	<img src="/jbsite3/imgs/id/He_Him_They.png" alt="He/Him/They" />
+	<img src="/jbsite3/imgs/id/16_years_old.png" alt="16 years old" />
+	<img src="/jbsite3/imgs/id/filipino.png" alt="Filipino" />
+	<img src="/jbsite3/imgs/id/eng_second_lang.png" alt="English is my second and preferred language!" />
+	<img src="/jbsite3/imgs/id/left_handed.png" alt="Left-handed" />
+	<img src="/jbsite3/imgs/id/rat.png" alt="Year of the Rat" />
 </div>
 
 <h1 class="mt-4">Albums I liked</h1>
 <div id="albums" class="flex flex-wrap gap-2 pt-2">
     <a href="https://goodkid.bandcamp.com/album/good-kid-2" target="_blank">
         <img
-            src="/imgs/albums/gk2.jpg"
+            src="/jbsite3/imgs/albums/gk2.jpg"
             alt="Good Kid 2 by Good Kid"
             data-desc="especially Down with the King and Drifting"
         />
     </a>
     <a href="https://soundcloud.com/goodkidband/sets/good-kid-4" target="_blank">
         <img
-            src="/imgs/albums/gk4.jpg"
+            src="/jbsite3/imgs/albums/gk4.jpg"
             alt="Good Kid 4 by Good Kid"
             data-desc="especially Break, Dance Class, and Premier Inn"
         />
     </a>
     <a href="https://soundcloud.com/porter-robinson/sets/smile-d-2" target="_blank">
         <img
-            src="/imgs/albums/smile_d.jpg"
+            src="/jbsite3/imgs/albums/smile_d.jpg"
             alt="SMILE:: D by Porter Robinson"
             data-desc="especially Cheerleader, Russian Roulette, and Perfect Pinterest Garden"
         />

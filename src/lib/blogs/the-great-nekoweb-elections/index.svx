@@ -33,7 +33,7 @@ Also TM dropped out of the elections.
 ## It ended.
 In 12:45 PM PHT, the voting had ended, and a person that got the most votes is...
 <video width="320" height="240" controls>
-  <source src="/imgs/blogs/the-great-nekoweb-elections/vid_1.mp4" type="video/mp4">
+  <source src="/jbsite3/imgs/blogs/the-great-nekoweb-elections/vid_1.mp4" type="video/mp4">
 </video>
 <p class="text-xs">Video by maxpixels</p>
 

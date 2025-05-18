@@ -22,7 +22,7 @@
 	</div>
 
 	<div class="grid grid-cols-1 justify-items-center pt-2 pb-8">
-		<a href="/" class="nocol" aria-label="jbcarreon123">
+		<a href="/jbsite3/" class="nocol" aria-label="jbcarreon123">
 			<div
 				class="h a headercolor headerfont max mb-[-46px] flex h-20 flex-row text-5xl font-semibold sm:mb-0 sm:text-7xl"
 			>
@@ -48,16 +48,16 @@
 				class="flex w-[100%] flex-auto flex-wrap justify-center gap-5"
 				data-sveltekit-preload-data="hover"
 			>
-				<a href="/">Home</a>
-				<a href="/posts">Posts</a>
-				<a href="/contact">Contact</a>
-				<a href="/projects">Projects</a>
-				<a href="/bookmarks">Bookmarks</a>
-				<a href="/links">Links</a>
-				<a href="/utils">Utils</a>
-				<a href="/tutorials">Tutorials</a>
-				<a href="/about">About</a>
-				<a href="/accessibility">Accessibility</a>
+				<a href="/jbsite3/">Home</a>
+				<a href="/jbsite3/posts">Posts</a>
+				<a href="/jbsite3/contact">Contact</a>
+				<a href="/jbsite3/projects">Projects</a>
+				<a href="/jbsite3/bookmarks">Bookmarks</a>
+				<a href="/jbsite3/links">Links</a>
+				<a href="/jbsite3/utils">Utils</a>
+				<a href="/jbsite3/tutorials">Tutorials</a>
+				<a href="/jbsite3/about">About</a>
+				<a href="/jbsite3/accessibility">Accessibility</a>
 				<a href="https://jbcarreon123.atabook.org"> Sign my guestbook! </a>
 				<a href="https://nekoweb.org/follow/jbcarreon123" target="_blank" rel="noopener" aria-label="Follow me on Nekoweb!"> [+] </a>
 			</div>

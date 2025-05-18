@@ -10,9 +10,9 @@
 	import { browser } from '$app/environment';
 
 	const sitebtns = [
-		'<a href="https://jbcarreon123.nekoweb.org"><img src="https://jbcarreon123.nekoweb.org/sitebutton.png" alt="jb\'s site" style="image-rendering: pixelated;"/></a>',
-		'<a href="https://jbcarreon123.nekoweb.org"><img src="https://jbcarreon123.nekoweb.org/sitebuttonv2.png" alt="jb\'s site" style="image-rendering: pixelated;"/></a>',
-		'<a href="https://jbcarreon123.nekoweb.org"><img src="https://jbcarreon123.nekoweb.org/sitebutton2.png" alt="jb\'s site" style="image-rendering: pixelated;"/></a>'
+		'<a href="https://jbcarreon123.nekoweb.org"><img src="https://jbcarreon123.nekoweb.org/sitebutton.png" alt="jb\'s site" style="image-rendering: pixelated;"/jbsite3/></a>',
+		'<a href="https://jbcarreon123.nekoweb.org"><img src="https://jbcarreon123.nekoweb.org/sitebuttonv2.png" alt="jb\'s site" style="image-rendering: pixelated;"/jbsite3/></a>',
+		'<a href="https://jbcarreon123.nekoweb.org"><img src="https://jbcarreon123.nekoweb.org/sitebutton2.png" alt="jb\'s site" style="image-rendering: pixelated;"/jbsite3/></a>'
 	];
 	let sitebtnshast = $state();
 

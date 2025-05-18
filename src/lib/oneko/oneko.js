@@ -100,7 +100,7 @@
     // @ts-ignore
     nekoEl.style.zIndex = 2147483647;
 
-    let nekoFile = "/src/lib/oneko/oneko.gif"
+    let nekoFile = "/jbsite3/src/lib/oneko/oneko.gif"
     const curScript = document.currentScript
     if (curScript && curScript.dataset.cat) {
       nekoFile = curScript.dataset.cat

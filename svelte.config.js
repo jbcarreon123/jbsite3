@@ -123,6 +123,10 @@ const config = {
 				return;
 			}
 		},
+
+		paths: {
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+		}
 	},
 
 	extensions: ['.svelte', '.svx']

@@ -116,10 +116,7 @@ const config = {
 	})],
 
 	kit: {
-		adapter: adapter({
-			apiKey: env.NEKOWEB_APIKEY,
-			cookie: env.NEKOWEB_COOKIE
-		}),
+		adapter: staticAdapter(),
 
 		prerender: {
 			handleHttpError: ({ path, referrer, message }) => {

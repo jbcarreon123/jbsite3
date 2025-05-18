@@ -56,7 +56,7 @@
 <div class="np-container flex flex-auto flex-wrap gap-2 items-center justify-center" use:autoAnimate>
     {#each lastPlays as plays}
         <a href={plays.url}>
-            <img class="w-24 md:w-32" src={plays.image[2]['#text']} alt="{plays.name} by {plays.artist['#text']}" data-hover="<span class='title'>{plays.name}</span><br /><span class='info'>by {plays.artist['#text']}{plays.album['#text']? `<br>in ${plays.album['#text']}`: ''}</span><br /><span class='link'>{plays.url}</link>"/jbsite3/>
+            <img class="w-24 md:w-32" src={plays.image[2]['#text']} alt="{plays.name} by {plays.artist['#text']}" data-hover="<span class='title'>{plays.name}</span><br /><span class='info'>by {plays.artist['#text']}{plays.album['#text']? `<br>in ${plays.album['#text']}`: ''}</span><br /><span class='link'>{plays.url}</link>"/>
         </a>
     {/each}
 </div>

@@ -17,7 +17,7 @@
 */
 
 // The values in this section are REQUIRED for the widget to work! Keep them in quotes!
-var s_stylePath = '/lib/comment-widget-dark.css';
+var s_stylePath = '/jbsite3/lib/comment-widget-dark.css';
 var s_formId = '1FAIpQLSfDoGhnkYuiIsJ70RRFKUYVPskh_IvDJ3Ui0zPTIWQiofO2Cw';
 var s_nameId = '1438018472';
 var s_websiteId = '1977262085';
@@ -145,7 +145,7 @@ if (s_commentsOpen) {c_submitButton = document.getElementById('c_submitButton')}
 else {c_submitButton = document.createElement('button')}
 
 // Add invisible page input to document
-var v_pagePath = window.location.pathname;
+var v_pagePath = window.location.pathname.replace('jbsite3/', '');
 if (s_includeUrlParameters) {v_pagePath += window.location.search}
 if (s_fixRarebitIndexPage && v_pagePath == '/') {v_pagePath = '/?pg=1'}
 var c_pageInput = document.createElement('input');

@@ -11,7 +11,7 @@ export async function load({ fetch, params }) {
             const post = await import(`$lib/tutorials/${articleName}/index.svx`);
             const metadata = post.metadata;
             const tagSplit = metadata.tags? String(metadata.tags).split(', ') : []
-            const articleUrl = `/jbsite3/tutorials/${articleName}`
+            const articleUrl = `/tutorials/${articleName}`
             const articleSlug = articleName
 
             return {

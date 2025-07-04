@@ -119,7 +119,7 @@ const config = {
 		adapter: staticAdapter(),
 
 		paths: {
-			base: 'https://v3.jbc.lol/'
+			base: 'https://v3.jbc.lol'
 		},
 
 		prerender: {

@@ -118,10 +118,6 @@ const config = {
 	kit: {
 		adapter: staticAdapter(),
 
-		paths: {
-			base: 'https://v3.jbc.lol'
-		},
-
 		prerender: {
 			handleHttpError: ({ path, referrer, message }) => {
 				return;

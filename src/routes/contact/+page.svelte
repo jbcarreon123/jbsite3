@@ -12,9 +12,9 @@
     The recommended way to reach out to me on Discord is on any of these Discord servers: 
 </p>
 <div class="flex flex-row gap-4 pl-3" data-sveltekit-preload-data="hover">
-    <a href="/jbsite3/">jbCord</a>
-    <a href="/jbsite3/">Netherverse Discord</a>
-    <a href="/jbsite3/">Lua's Hotel</a>
+    <a href="/">jbCord</a>
+    <a href="/">Netherverse Discord</a>
+    <a href="/">Lua's Hotel</a>
 </div>
 
 <h3 class="nf headercolor text-2xl leading-snug pt-5">...on Bluesky</h3>

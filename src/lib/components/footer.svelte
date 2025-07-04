@@ -11,11 +11,11 @@
 
     <div class="fbtn flex flex-wrap justify-center pt-2 gap-2">
         <a target="_blank" rel="noopener" class="w-fit shrink-0" href="https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_animation_with_SMIL">
-            <img src="/jbsite3/imgs/buttons/smil.svg" alt="Enhanced with SMIL :D" title="Enhanced with SMIL :D" />
+            <img src="/imgs/buttons/smil.svg" alt="Enhanced with SMIL :D" title="Enhanced with SMIL :D" />
         </a>
         <a target="_blank" rel="noopener" class="w-fit shrink-0" href="https://team.indieseas.net">
             <img
-                src="/jbsite3/imgs/buttons/indiefellas.svg"
+                src="/imgs/buttons/indiefellas.svg"
                 alt="Indiefellas"
                 title="indieweb devs with no idea what they're doing"
             />
@@ -29,7 +29,7 @@
             /></a
         >
         <a href="https://districts.nekoweb.org/" target="_blank"><img alt="Nekoweb Districts" title="Nekoweb Districts" src="https://districts.nekoweb.org/img/districts002.png"></a>
-        <img src="/jbsite3/imgs/buttons/mobilefriendly.png" alt="Mobile friendly" title="This site is mobile friendly!" />
+        <img src="/imgs/buttons/mobilefriendly.png" alt="Mobile friendly" title="This site is mobile friendly!" />
     </div>
 </div>
 

@@ -18,7 +18,7 @@
 
 
 <div class="w-md">
-    <script src="/jbsite3/webrings/ssgring/pmoring.js"></script>
+    <script src="/webrings/ssgring/pmoring.js"></script>
 </div>
 
 <h2>Guidelines</h2>
@@ -122,7 +122,7 @@
         <tr>
             <td>
                 {console.log(mems)}
-                <a href="/jbsite3//{member.host}">{member.username}</a>
+                <a href="//{member.host}">{member.username}</a>
                 <p class="text-ctp-red">{(member.type)? 'Note: ' + member.type : ''}</p>
                 {#if member.button}
                 <img src="{member.button}" alt="" />

@@ -9,13 +9,13 @@
             class="flex flex-col justify-center gap-2"
             data-sveltekit-preload-data="hover"
         >
-            <a href="/jbsite3/">Home</a>
-            <a href="/jbsite3/posts">Posts</a>
-            <a href="/jbsite3/contact">Contact</a>
-            <a href="/jbsite3/projects">Projects</a>
-            <a href="/jbsite3/credits">Credits</a>
-            <a href="/jbsite3/links">Links</a>
-            <a href="/jbsite3/about">About</a>
+            <a href="/">Home</a>
+            <a href="/posts">Posts</a>
+            <a href="/contact">Contact</a>
+            <a href="/projects">Projects</a>
+            <a href="/credits">Credits</a>
+            <a href="/links">Links</a>
+            <a href="/about">About</a>
             <a href="https://jbcarreon123.atabook.org">Sign my guestbook!</a>
             <a href="https://nekoweb.org/follow/jbcarreon123" target="_blank" rel="noopener">Follow me on Nekoweb!</a>
         </div>

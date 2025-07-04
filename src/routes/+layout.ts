@@ -1,5 +1,5 @@
 export async function load({ url }) {
-    const currentPage = url.pathname || "/jbsite3/"
+    const currentPage = url.pathname || "/"
     const hostname = url.hostname;
 
     return { currentPage, hostname }

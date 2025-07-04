@@ -17,7 +17,7 @@
 */
 
 // The values in this section are REQUIRED for the widget to work! Keep them in quotes!
-var s_stylePath = '/jbsite3/lib/comment-widget-dark.css';
+var s_stylePath = '/lib/comment-widget-dark.css';
 var s_formId = '1FAIpQLSfDoGhnkYuiIsJ70RRFKUYVPskh_IvDJ3Ui0zPTIWQiofO2Cw';
 var s_nameId = '1438018472';
 var s_websiteId = '1977262085';

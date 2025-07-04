@@ -104,9 +104,9 @@
 	</div>
 </article>
 <div>
-	<script type="text/javascript" src="/jbsite3/lib/purify.min.js"></script>
-	<script src="/jbsite3/lib/showdown.min.js"></script>
-	<script src="/jbsite3/lib/comment-widget.js?post={data.slug}" defer></script>
+	<script type="text/javascript" src="/lib/purify.min.js"></script>
+	<script src="/lib/showdown.min.js"></script>
+	<script src="/lib/comment-widget.js?post={data.slug}" defer></script>
 	<div id="c_widget" use:autoAnimate></div>
 </div>
 

@@ -4,7 +4,7 @@
 
     let mems;
     onMount(async () => {
-        let req = await fetch('/jbsite3/webrings/responeko/members.json')
+        let req = await fetch('/webrings/responeko/members.json')
         mems = await req.json()
     })
 </script>
@@ -18,7 +18,7 @@
 
 
 <div class="w-md wb-responeko">
-    <script src="/jbsite3/webrings/responeko/pmoring.js"></script>
+    <script src="/webrings/responeko/pmoring.js"></script>
 </div>
 
 <h2>Guidelines</h2>
@@ -85,7 +85,7 @@
 <h2 id="members">Members</h2>
 <div class="flex flex-wrap gap-2">
     {#each mems as member}
-        <a href="/jbsite3//{member.host}">
+        <a href="//{member.host}">
             <div class="max-w-[105px]">
                 <p class="text-nowrap overflow-hidden text-ellipsis">{member.title}</p>
                 <div class="mem-plch">
